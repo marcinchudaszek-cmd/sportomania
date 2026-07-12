@@ -6,9 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "build:cap": "vite build --config vite.cap.config.ts",
+    "preview": "vite preview",
+    "cap:sync": "npm run build:cap && cap sync",
+    "cap:android": "npm run build:cap && cap sync android && cap open android"
   },
   "dependencies": {
+    "@capacitor/android": "^8.3.4",
+    "@capacitor/cli": "^8.3.4",
+    "@capacitor/core": "^8.3.4",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
