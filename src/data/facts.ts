@@ -22,6 +22,9 @@ export const CATEGORIES = [
   { id: "cycling", label: "Kolarstwo", emoji: "🚴", color: "from-yellow-500 to-amber-600" },
   { id: "poland", label: "Polski sport", emoji: "🇵🇱", color: "from-red-600 to-rose-700" },
   { id: "rugby", label: "Rugby i futbol amer.", emoji: "🏉", color: "from-orange-700 to-amber-800" },
+  { id: "equestrian", label: "Jeździectwo", emoji: "🏇", color: "from-lime-600 to-emerald-800" },
+  { id: "precision", label: "Sporty precyzyjne", emoji: "🎯", color: "from-teal-500 to-cyan-700" },
+  { id: "traditional", label: "Sporty tradycyjne", emoji: "🥍", color: "from-amber-600 to-orange-800" },
   { id: "strength", label: "Sporty siłowe", emoji: "🏋️", color: "from-red-700 to-rose-900" },
   { id: "gymnastics", label: "Gimnastyka", emoji: "🤸", color: "from-pink-500 to-rose-600" },
   { id: "extreme", label: "Sporty ekstremalne", emoji: "🪂", color: "from-cyan-600 to-sky-800" },
@@ -1458,7 +1461,7 @@ export const FACTS_DB: Fact[] = [
   {
     id: "r16",
     text: "Jeździectwo to jedyna dyscyplina olimpijska, w której kobiety i mężczyźni rywalizują ze sobą bezpośrednio, na równych zasadach i o te same medale.",
-    category: "records",
+    category: "equestrian",
     year: 1964,
     emoji: "🐎",
   },
@@ -1922,6 +1925,139 @@ export const FACTS_DB: Fact[] = [
     category: "extreme",
     year: 1986,
     emoji: "🏔️",
+  },
+
+  // === JEŹDZIECTWO I WYŚCIGI KONNE ===
+  {
+    id: "eq1",
+    text: "Japoński jeździec Hiroshi Hoketsu startował na igrzyskach w Londynie 2012 w wieku 71 lat — 48 lat po swoim olimpijskim debiucie w Tokio 1964.",
+    category: "equestrian",
+    year: 2012,
+    emoji: "👴",
+  },
+  {
+    id: "eq2",
+    text: "Secretariat, najsłynniejszy koń wyścigowy historii, wygrał Belmont Stakes 1973 o 31 długości, zdobywając Potrójną Koronę. Sekcja wykazała, że jego serce było ponad dwukrotnie większe od przeciętnego.",
+    category: "equestrian",
+    year: 1973,
+    emoji: "❤️",
+  },
+  {
+    id: "eq3",
+    text: "Wielka Pardubicka, rozgrywana od 1874 roku, uchodzi za najtrudniejszy wyścig przeszkodowy kontynentalnej Europy. Jej najgroźniejsza przeszkoda, Wielki Taxis, przez lata kończyła kariery koni i jeźdźców.",
+    category: "equestrian",
+    year: 1874,
+    emoji: "🐎",
+  },
+  {
+    id: "eq4",
+    text: "Konie olimpijskie latają na igrzyska samolotami cargo w specjalnych boksach, pod opieką lotniczych stajennych — i mają własne paszporty z dokładnym opisem umaszczenia.",
+    category: "equestrian",
+    year: 2021,
+    emoji: "✈️",
+  },
+  {
+    id: "eq5",
+    text: "W średniowiecznym wyścigu Palio w Sienie zwycięża koń, który pierwszy przekroczy metę — nawet jeśli po drodze... zgubił dżokeja. Dzielnice miasta rywalizują w nim od stuleci.",
+    category: "equestrian",
+    year: 1633,
+    emoji: "🏰",
+  },
+  {
+    id: "eq6",
+    text: "Polska hodowla koni arabskich z Janowa Podlaskiego słynie na cały świat. Na aukcji Pride of Poland w 2015 roku klacz Pepita została sprzedana za rekordowe 1,4 miliona euro.",
+    category: "equestrian",
+    year: 2015,
+    emoji: "🇵🇱",
+  },
+
+  // === SPORTY PRECYZYJNE ===
+  {
+    id: "pr1",
+    text: "Maksymalny brejk w snookerze to 147 punktów. Ronnie O'Sullivan ułożył go w 1997 roku w 5 minut i 8 sekund — rekord uznawany za jeden z najbardziej „nie do pobicia” w sporcie.",
+    category: "precision",
+    year: 1997,
+    emoji: "🎱",
+  },
+  {
+    id: "pr2",
+    text: "Phil Taylor zdobył 16 tytułów mistrza świata w darcie — żaden zawodnik w żadnym sporcie precyzyjnym nie zdominował swojej dyscypliny bardziej. Okrzyk „One hundred and eighty!” to znak firmowy tej gry.",
+    category: "precision",
+    year: 2013,
+    emoji: "🎯",
+  },
+  {
+    id: "pr3",
+    text: "Koreanki wygrywają drużynowy turniej łuczniczy na każdych igrzyskach od Seulu 1988 — to jedna z najdłuższych serii dominacji w historii sportu. Kandydatki selekcjonuje się tam surowiej niż olimpijczyków.",
+    category: "precision",
+    year: 1988,
+    emoji: "🏹",
+  },
+  {
+    id: "pr4",
+    text: "Perfekcyjny leg w darcie — zamknięcie 501 punktów dziewięcioma lotkami — po raz pierwszy w telewizji rzucił Paul Lim na MŚ 1990. Do dziś „dziewiątka” elektryzuje halę bardziej niż finał.",
+    category: "precision",
+    year: 1990,
+    emoji: "9️⃣",
+  },
+  {
+    id: "pr5",
+    text: "Perfekcyjna gra w bowlingu to 300 punktów — 12 strike'ów z rzędu. Szansa amatora na taki wynik jest szacowana na mniej niż 1 do 11 000.",
+    category: "precision",
+    year: 1997,
+    emoji: "🎳",
+  },
+  {
+    id: "pr6",
+    text: "Prawdopodobieństwo trafienia hole-in-one przez golfistę-amatora szacuje się na około 1 do 12 500. Mimo to zdarzały się dnie, w których na jednym turnieju padały dwa asy na tym samym dołku.",
+    category: "precision",
+    year: 1971,
+    emoji: "⛳",
+  },
+
+  // === SPORTY TRADYCYJNE ===
+  {
+    id: "tr1",
+    text: "Zapasy to prawdopodobnie najstarszy sport świata — sceny zapaśnicze widnieją na malowidłach jaskiniowych sprzed około 15 tysięcy lat i na egipskich freskach z Beni Hasan.",
+    category: "traditional",
+    emoji: "🤼",
+  },
+  {
+    id: "tr2",
+    text: "Lacrosse wywodzi się z rytualnych gier rdzennych Amerykanów, zwanych „małym bratem wojny”. W dawnych meczach potrafiło uczestniczyć po kilkuset graczy, a boisko miało kilometry długości.",
+    category: "traditional",
+    emoji: "🥍",
+  },
+  {
+    id: "tr3",
+    text: "Irlandzki hurling ma około 3000 lat i uchodzi za najszybszą grę zespołową na trawie. Co ciekawe, jego gwiazdy to amatorzy — po finale na 80-tysięcznym Croke Park wracają do pracy w biurze czy na farmie.",
+    category: "traditional",
+    emoji: "🇮🇪",
+  },
+  {
+    id: "tr4",
+    text: "Buzkaszi, narodowy sport Azji Środkowej, to gra jeźdźców o... tuszę kozy. Mecze potrafią trwać wiele godzin, a najlepsi zawodnicy (czapandazi) osiągają szczyt formy po czterdziestce.",
+    category: "traditional",
+    emoji: "🐐",
+  },
+  {
+    id: "tr5",
+    text: "Calcio storico, rozgrywane we Florencji od XVI wieku, łączy piłkę nożną, rugby i walki wręcz. Gra się w historycznych strojach, a nagrodą dla zwycięskiej dzielnicy tradycyjnie była... krowa rasy chianina.",
+    category: "traditional",
+    year: 1580,
+    emoji: "🐄",
+  },
+  {
+    id: "tr6",
+    text: "W kabaddi zawodnik atakuje, powtarzając bez przerwy „kabaddi, kabaddi” — tradycyjnie na jednym oddechu. Zawodową ligę kabaddi ogląda w Indiach kilkaset milionów widzów.",
+    category: "traditional",
+    emoji: "🫁",
+  },
+  {
+    id: "tr7",
+    text: "W baskijskiej pelocie (jai alai) piłka odbijana wiklinowym koszem osiąga ponad 300 km/h — to najszybciej poruszająca się piłka w jakimkolwiek sporcie świata.",
+    category: "traditional",
+    emoji: "🧺",
   },
 ];
 
