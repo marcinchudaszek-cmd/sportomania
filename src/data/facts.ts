@@ -15,6 +15,8 @@ export const CATEGORIES = [
   { id: "tennis", label: "Tenis", emoji: "🎾", color: "from-lime-500 to-green-600" },
   { id: "basketball", label: "Koszykówka", emoji: "🏀", color: "from-orange-600 to-amber-700" },
   { id: "volleyball", label: "Siatkówka", emoji: "🏐", color: "from-sky-500 to-blue-600" },
+  { id: "handball", label: "Piłka ręczna", emoji: "🤾", color: "from-indigo-500 to-blue-700" },
+  { id: "hockey", label: "Hokej", emoji: "🏒", color: "from-slate-400 to-blue-800" },
   { id: "motorsport", label: "Motorsport", emoji: "🏎️", color: "from-red-500 to-rose-600" },
   { id: "combat", label: "Sporty walki", emoji: "🥊", color: "from-red-600 to-rose-800" },
   { id: "winter", label: "Sporty zimowe", emoji: "⛷️", color: "from-cyan-500 to-blue-600" },
@@ -2058,6 +2060,94 @@ export const FACTS_DB: Fact[] = [
     text: "W baskijskiej pelocie (jai alai) piłka odbijana wiklinowym koszem osiąga ponad 300 km/h — to najszybciej poruszająca się piłka w jakimkolwiek sporcie świata.",
     category: "traditional",
     emoji: "🧺",
+  },
+
+  // === PIŁKA RĘCZNA ===
+  {
+    id: "hb1",
+    text: "Piłka ręczna zaczynała jako gra 11-osobowa na boisku trawiastym — właśnie w takiej formie zadebiutowała na igrzyskach w Berlinie 1936. Halowa „siódemka” weszła do programu olimpijskiego dopiero w 1972 roku.",
+    category: "handball",
+    year: 1936,
+    emoji: "🌱",
+  },
+  {
+    id: "hb2",
+    text: "Reprezentacja Polski pod wodzą Bogdana Wenty zdobyła srebro MŚ 2007 i brąz MŚ 2009. Mecze „biało-czerwonych” oglądało wtedy po kilka milionów widzów.",
+    category: "handball",
+    year: 2007,
+    emoji: "🇵🇱",
+  },
+  {
+    id: "hb3",
+    text: "Karol Bielecki stracił oko po uderzeniu palcem rywala w meczu w 2010 roku. Wrócił na parkiet w specjalnych goglach i grał na najwyższym poziomie jeszcze przez wiele lat, zdobywając z Polską brąz MŚ 2015.",
+    category: "handball",
+    year: 2010,
+    emoji: "🥽",
+  },
+  {
+    id: "hb4",
+    text: "Francuscy „Les Experts” jako pierwsza drużyna w historii piłki ręcznej posiadali jednocześnie tytuły mistrzów świata, Europy i igrzysk olimpijskich (2010).",
+    category: "handball",
+    year: 2010,
+    emoji: "🇫🇷",
+  },
+  {
+    id: "hb5",
+    text: "Najmocniejsze rzuty w zawodowej piłce ręcznej przekraczają 120 km/h — piłka leci szybciej, niż jedzie samochód na ekspresówce, a bramkarz ma na reakcję ułamek sekundy.",
+    category: "handball",
+    year: 2012,
+    emoji: "💨",
+  },
+  {
+    id: "hb6",
+    text: "Duńczycy dokonali rzeczy bezprecedensowej: wygrali cztery mistrzostwa świata z rzędu (2019, 2021, 2023, 2025). Wcześniej nikomu nie udało się nawet trzy razy pod rząd.",
+    category: "handball",
+    year: 2025,
+    emoji: "🇩🇰",
+  },
+
+  // === HOKEJ ===
+  {
+    id: "hk1",
+    text: "Puchar Stanleya to jedyne wielkie trofeum, na którym graweruje się nazwiska wszystkich zwycięzców — razem z błędami (np. „TORONTO MAPLE LEAES” z 1963). Każdy mistrz spędza z pucharem jeden dzień, gdzie tylko chce.",
+    category: "hockey",
+    year: 1893,
+    emoji: "🏆",
+  },
+  {
+    id: "hk2",
+    text: "Krążki hokejowe przed meczami NHL się zamraża — schłodzona guma mniej odbija się od lodu i krążek pewniej trzyma się tafli. Podczas meczu krążki wymienia się co kilka minut.",
+    category: "hockey",
+    year: 1990,
+    emoji: "🧊",
+  },
+  {
+    id: "hk3",
+    text: "Radziecka „Czerwona Maszyna” zdominowała światowy hokej na cztery dekady: między 1954 a 1991 rokiem wygrała zdecydowaną większość mistrzostw świata i 7 z 9 turniejów olimpijskich, w których startowała.",
+    category: "hockey",
+    year: 1972,
+    emoji: "🚂",
+  },
+  {
+    id: "hk4",
+    text: "Zdeno Chára (206 cm) był najwyższym zawodnikiem w historii NHL — liga wydała mu specjalne zezwolenie na kij dłuższy, niż dopuszczają przepisy. Jego strzał zmierzono na 175,1 km/h.",
+    category: "hockey",
+    year: 2012,
+    emoji: "📏",
+  },
+  {
+    id: "hk5",
+    text: "W hokeju na trawie Indie zdobyły 6 złotych medali olimpijskich z rzędu (1928–1956). Gwiazdą tej ery był Dhyan Chand — „czarodziej”, któremu po jednym z pokazów rozkręcono kij, by sprawdzić, czy nie ma w nim magnesu.",
+    category: "hockey",
+    year: 1936,
+    emoji: "🪄",
+  },
+  {
+    id: "hk6",
+    text: "Najdłuższy mecz w historii NHL: Detroit Red Wings – Montreal Maroons (1936) trwał 176 minut i 30 sekund gry — zwycięskiego gola w szóstej dogrywce strzelił debiutant Mud Bruneteau ok. 2:25 w nocy.",
+    category: "hockey",
+    year: 1936,
+    emoji: "🌙",
   },
 ];
 
