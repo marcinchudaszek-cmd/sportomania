@@ -1100,6 +1100,368 @@ export const FACTS_DB: Fact[] = [
     year: 1904,
     emoji: "🚗",
   },
+
+  // === PIŁKA NOŻNA (cz. 3) ===
+  {
+    id: "f18",
+    text: "Reprezentacja Włoch ustanowiła rekord świata, grając 37 meczów z rzędu bez porażki (2018–2021). Seria objęła m.in. całe zwycięskie Euro 2020.",
+    category: "football",
+    year: 2021,
+    emoji: "🇮🇹",
+  },
+  {
+    id: "f19",
+    text: "Brazylijski bramkarz Rogério Ceni strzelił w karierze ponad 130 goli — z rzutów wolnych i karnych. Żaden golkiper w historii nie zbliżył się do tego wyniku.",
+    category: "football",
+    year: 2015,
+    emoji: "🧤",
+  },
+  {
+    id: "f20",
+    text: "Estadio Azteca w Meksyku to jedyny stadion, który gościł dwa finały mistrzostw świata (1970 i 1986). Na obu triumfowały drużyny z Ameryki Południowej.",
+    category: "football",
+    year: 1986,
+    emoji: "🏟️",
+  },
+  {
+    id: "f21",
+    text: "Pierwszy wielki turniej rozstrzygnięty „złotym golem”: Euro 1996, kiedy Oliver Bierhoff dał Niemcom tytuł w finale z Czechami. Przepis zniesiono w 2004 roku.",
+    category: "football",
+    year: 1996,
+    emoji: "🥇",
+  },
+  {
+    id: "f22",
+    text: "Najdroższy transfer w historii futbolu: Neymar przeszedł w 2017 roku z Barcelony do PSG za 222 miliony euro — PSG po prostu wpłaciło pełną klauzulę odstępnego.",
+    category: "football",
+    year: 2017,
+    emoji: "💶",
+  },
+  {
+    id: "f23",
+    text: "San Marino, najsłabsza reprezentacja świata, na pierwsze zwycięstwo w meczu o punkty czekało desperacko długo — wygraną 1:0 z Liechtensteinem świętowało dopiero w 2024 roku.",
+    category: "football",
+    year: 2024,
+    emoji: "🎉",
+  },
+
+  // === OLIMPIADY (cz. 3) ===
+  {
+    id: "o17",
+    text: "Tylko dwa miasta organizowały letnie igrzyska trzykrotnie: Londyn (1908, 1948, 2012) i Paryż (1900, 1924, 2024). W 2028 roku dołączy do nich Los Angeles.",
+    category: "olympics",
+    year: 2024,
+    emoji: "🏙️",
+  },
+  {
+    id: "o18",
+    text: "Igrzyska w Moskwie 1980 zbojkotowało ponad 60 państw w proteście przeciw inwazji ZSRR na Afganistan. Cztery lata później blok wschodni zrewanżował się bojkotem Los Angeles.",
+    category: "olympics",
+    year: 1980,
+    emoji: "🚫",
+  },
+  {
+    id: "o19",
+    text: "Eric „Węgorz” Moussambani z Gwinei Równikowej przepłynął na IO 2000 swoje 100 m w 1:52,72 — ponad dwa razy wolniej od rywali. Trenował w hotelowym basenie i nigdy wcześniej nie widział 50-metrowej niecki.",
+    category: "olympics",
+    year: 2000,
+    emoji: "🐍",
+  },
+  {
+    id: "o20",
+    text: "Wszystkie medale igrzysk w Tokio 2020 wykonano z metali odzyskanych z elektroniki — Japończycy oddali na ten cel ponad 6 milionów starych telefonów.",
+    category: "olympics",
+    year: 2021,
+    emoji: "♻️",
+  },
+  {
+    id: "o21",
+    text: "Igrzyska olimpijskie odwołano trzykrotnie — w 1916, 1940 i 1944 roku, z powodu wojen światowych. Tokio straciło igrzyska w 1940 i musiało czekać na nie do 1964 roku.",
+    category: "olympics",
+    year: 1944,
+    emoji: "⚔️",
+  },
+
+  // === LEKKOATLETYKA (cz. 3) ===
+  {
+    id: "a13",
+    text: "Fin Paavo Nurmi zdobył 9 złotych medali olimpijskich w biegach. Na IO 1924 wygrał finały 1500 m i 5000 m rozegrane... w odstępie niecałej godziny.",
+    category: "athletics",
+    year: 1924,
+    emoji: "🇫🇮",
+  },
+  {
+    id: "a14",
+    text: "Kobiety mogły pobiec maraton olimpijski dopiero w 1984 roku w Los Angeles. Wcześniej uważano, że dystans jest dla nich „zbyt niebezpieczny”. Pierwsze złoto zdobyła Joan Benoit.",
+    category: "athletics",
+    year: 1984,
+    emoji: "👩",
+  },
+  {
+    id: "a15",
+    text: "Rekord świata w skoku wzwyż — 2,45 m Kubańczyka Javiera Sotomayora — pochodzi z 1993 roku. To najdłużej niepobity rekord w męskich konkurencjach technicznych.",
+    category: "athletics",
+    year: 1993,
+    emoji: "📏",
+  },
+  {
+    id: "a16",
+    text: "Większość najlepszych maratończyków świata pochodzi z jednego regionu: Wielkiego Rowu Afrykańskiego w Kenii i Etiopii. Trenują na wysokości ponad 2000 m n.p.m.",
+    category: "athletics",
+    year: 2019,
+    emoji: "⛰️",
+  },
+  {
+    id: "a17",
+    text: "Rekord świata w sztafecie 4×100 m — 36,84 s — Jamajczycy z Boltem na ostatniej zmianie ustanowili na IO 2012. Średnia prędkość zespołu przekraczała 39 km/h.",
+    category: "athletics",
+    year: 2012,
+    emoji: "🤝",
+  },
+
+  // === TENIS (cz. 3) ===
+  {
+    id: "t11",
+    text: "Nad Wimbledonem codziennie o świcie patroluje jastrząb Rufus, którego jedynym zadaniem jest odstraszanie gołębi z kortów. Ma własną akredytację i profil w mediach społecznościowych.",
+    category: "tennis",
+    year: 2008,
+    emoji: "🦅",
+  },
+  {
+    id: "t12",
+    text: "Maraton Isner–Mahut (70:68 w piątym secie) zmusił Wimbledon do zmiany zasad — od 2019 roku przy stanie 12:12 w decydującym secie gra się tie-breaka.",
+    category: "tennis",
+    year: 2019,
+    emoji: "📜",
+  },
+  {
+    id: "t13",
+    text: "Rod Laver jako jedyny tenisista w historii zdobył klasycznego Wielkiego Szlema (wszystkie 4 turnieje w jednym roku) dwukrotnie — w 1962 i 1969 roku.",
+    category: "tennis",
+    year: 1969,
+    emoji: "🎖️",
+  },
+  {
+    id: "t14",
+    text: "US Open jako pierwszy turniej wielkoszlemowy wyrównał nagrody kobiet i mężczyzn — już w 1973 roku, po kampanii Billie Jean King. Wimbledon zrobił to dopiero w 2007.",
+    category: "tennis",
+    year: 1973,
+    emoji: "⚖️",
+  },
+
+  // === KOSZYKÓWKA (cz. 3) ===
+  {
+    id: "b10",
+    text: "Rekord punktowy Kareema Abdul-Jabbara (38 387 pkt) przetrwał w NBA 39 lat — pobił go dopiero LeBron James w 2023 roku.",
+    category: "basketball",
+    year: 2023,
+    emoji: "👑",
+  },
+  {
+    id: "b11",
+    text: "Stephen Curry zrewolucjonizował koszykówkę rzutami z dystansu — w sezonie 2015/16 trafił 402 trójki, bijąc własny rekord NBA o ponad sto rzutów.",
+    category: "basketball",
+    year: 2016,
+    emoji: "🌊",
+  },
+  {
+    id: "b12",
+    text: "Marcin Gortat jest jedynym Polakiem, który zagrał w finałach NBA — w 2009 roku z Orlando Magic. W lidze rozegrał łącznie 12 sezonów.",
+    category: "basketball",
+    year: 2009,
+    emoji: "🇵🇱",
+  },
+
+  // === SIATKÓWKA (cz. 3) ===
+  {
+    id: "v10",
+    text: "Wilfredo León, reprezentant Polski kubańskiego pochodzenia, posyłał serwisy z prędkością ponad 130 km/h — szybciej niż samochody na autostradzie.",
+    category: "volleyball",
+    year: 2019,
+    emoji: "🚀",
+  },
+  {
+    id: "v11",
+    text: "Polskie siatkarki zdobyły mistrzostwo Europy dwa razy z rzędu — w 2003 i 2005 roku pod wodzą Andrzeja Niemczyka. Drużynę ochrzczono „Złotkami”.",
+    category: "volleyball",
+    year: 2003,
+    emoji: "🥇",
+  },
+
+  // === MOTORSPORT (cz. 3) ===
+  {
+    id: "m10",
+    text: "Niki Lauda wrócił do ścigania zaledwie 42 dni po tym, jak w płonącym bolidzie na Nürburgringu doznał ciężkich poparzeń i otrzymał ostatnie namaszczenie (1976).",
+    category: "motorsport",
+    year: 1976,
+    emoji: "🔥",
+  },
+  {
+    id: "m11",
+    text: "Uliczny tor w Monako jest najwolniejszym i zarazem najbardziej prestiżowym w kalendarzu F1. Wyścigi odbywają się tam od 1929 roku na niemal niezmienionej trasie.",
+    category: "motorsport",
+    year: 1929,
+    emoji: "🏰",
+  },
+  {
+    id: "m12",
+    text: "Włoszka Lella Lombardi to jedyna kobieta, która zdobyła punkty w wyścigu F1 — pół punktu za GP Hiszpanii 1975, przerwane po wypadku.",
+    category: "motorsport",
+    year: 1975,
+    emoji: "👩",
+  },
+
+  // === SPORTY WALKI (cz. 3) ===
+  {
+    id: "c10",
+    text: "Najdłuższa walka bokserska w historii: Andy Bowen i Jack Burke bili się w 1893 roku przez 110 rund i 7 godzin 19 minut. Sędziowie ogłosili... brak rozstrzygnięcia.",
+    category: "combat",
+    year: 1893,
+    emoji: "⏰",
+  },
+  {
+    id: "c11",
+    text: "Kubański bokser Teófilo Stevenson, 3-krotny mistrz olimpijski, odrzucił milionowe oferty walki z Muhammadem Alim, mówiąc: „Czym jest milion dolarów wobec miłości ośmiu milionów Kubańczyków?”.",
+    category: "combat",
+    year: 1976,
+    emoji: "🇨🇺",
+  },
+  {
+    id: "c12",
+    text: "Joanna Jędrzejczyk jako pierwsza osoba z Polski zdobyła mistrzostwo UFC (2015). Pas wagi słomkowej obroniła pięć razy z rzędu.",
+    category: "combat",
+    year: 2015,
+    emoji: "🇵🇱",
+  },
+
+  // === SPORTY ZIMOWE (cz. 3) ===
+  {
+    id: "w11",
+    text: "Wszystkie kamienie do curlingu na igrzyskach wykonuje się z granitu z jednej maleńkiej szkockiej wyspy Ailsa Craig. Jeden kamień waży prawie 20 kg.",
+    category: "winter",
+    year: 2018,
+    emoji: "🥌",
+  },
+  {
+    id: "w12",
+    text: "Norweg Ole Einar Bjørndalen zdobył 13 medali olimpijskich w biathlonie (8 złotych) — ostatnie złoto wywalczył w wieku 40 lat.",
+    category: "winter",
+    year: 2014,
+    emoji: "🎯",
+  },
+  {
+    id: "w13",
+    text: "Kamil Stoch wygrał Turniej Czterech Skoczni 2017/18 z kompletem zwycięstw we wszystkich czterech konkursach — wcześniej dokonał tego tylko Sven Hannawald.",
+    category: "winter",
+    year: 2018,
+    emoji: "🏆",
+  },
+
+  // === SPORTY WODNE (cz. 3) ===
+  {
+    id: "s8",
+    text: "Amerykanka Katie Ledecky potrafiła wygrywać finały na 800 m stylem dowolnym z przewagą kilkunastu sekund — na basenie oznacza to prawie pełną długość niecki.",
+    category: "water",
+    year: 2016,
+    emoji: "🏊‍♀️",
+  },
+  {
+    id: "s9",
+    text: "Mateusz Kusznierewicz zdobył w Atlancie 1996 pierwsze polskie złoto olimpijskie w żeglarstwie — w klasie Finn, mając zaledwie 21 lat.",
+    category: "water",
+    year: 1996,
+    emoji: "⛵",
+  },
+
+  // === KOLARSTWO (cz. 3) ===
+  {
+    id: "k8",
+    text: "Różowa koszulka lidera Giro d'Italia ma ten sam rodowód co żółta z Touru: to kolor papieru gazety-organizatora, La Gazzetta dello Sport.",
+    category: "cycling",
+    year: 1931,
+    emoji: "🩷",
+  },
+  {
+    id: "k9",
+    text: "Katarzyna Niewiadoma wygrała Tour de France Femmes 2024, broniąc na ostatnim podjeździe przewagi... 4 sekund — to najmniejsza różnica w historii wielkich tourów.",
+    category: "cycling",
+    year: 2024,
+    emoji: "🇵🇱",
+  },
+
+  // === POLSKI SPORT (cz. 3) ===
+  {
+    id: "p14",
+    text: "Stanisław Marusarz, przedwojenny wicemistrz świata w skokach, podczas okupacji był kurierem tatrzańskim. Skazany przez gestapo na śmierć, uciekł z celi... skokiem z okna więzienia.",
+    category: "poland",
+    year: 1938,
+    emoji: "🪂",
+  },
+  {
+    id: "p15",
+    text: "Kazimierz Górski, trener „Orłów”, przeszedł do historii także językiem: „Dopóki piłka w grze, wszystko jest możliwe” i „Piłka jest okrągła, a bramki są dwie” cytowane są do dziś.",
+    category: "poland",
+    year: 1974,
+    emoji: "💬",
+  },
+  {
+    id: "p16",
+    text: "Hubert Hurkacz w drodze do półfinału Wimbledonu 2021 pokonał Rogera Federera, wygrywając trzeciego seta 6:0. Był to ostatni mecz Szwajcara na Wimbledonie w karierze.",
+    category: "poland",
+    year: 2021,
+    emoji: "🎾",
+  },
+  {
+    id: "p17",
+    text: "Jan Kowalczyk na koniu Artemor zdobył w Moskwie 1980 jedyne w historii Polski złoto olimpijskie w jeździectwie — w skokach przez przeszkody.",
+    category: "poland",
+    year: 1980,
+    emoji: "🐴",
+  },
+
+  // === SPORT STAROŻYTNY (cz. 3) ===
+  {
+    id: "an9",
+    text: "Wbrew filmom gladiatorzy rzadko walczyli na śmierć — byli zbyt kosztowni w wyszkoleniu i utrzymaniu. Większość walk kończyła się poddaniem, a gwiazdy areny miały fanów jak dzisiejsi sportowcy.",
+    category: "ancient",
+    emoji: "🗡️",
+  },
+  {
+    id: "an10",
+    text: "Przez pierwsze 13 starożytnych igrzysk rozgrywano tylko jedną konkurencję: bieg na jeden stadion, czyli ok. 192 metry. Od długości tej areny pochodzi dzisiejsze słowo „stadion”.",
+    category: "ancient",
+    emoji: "🏃",
+  },
+
+  // === REKORDY I KURIOZA (cz. 3) ===
+  {
+    id: "r14",
+    text: "Indianapolis 500 to największe jednodniowe wydarzenie sportowe świata — wyścig ogląda z trybun ponad 300 tysięcy widzów. Zwycięzca tradycyjnie pije na mecie... mleko.",
+    category: "records",
+    year: 1936,
+    emoji: "🥛",
+  },
+  {
+    id: "r15",
+    text: "Najmłodszym arcymistrzem szachowym w historii został w 2021 roku Abhimanyu Mishra — miał 12 lat i 4 miesiące.",
+    category: "records",
+    year: 2021,
+    emoji: "♟️",
+  },
+  {
+    id: "r16",
+    text: "Jeździectwo to jedyna dyscyplina olimpijska, w której kobiety i mężczyźni rywalizują ze sobą bezpośrednio, na równych zasadach i o te same medale.",
+    category: "records",
+    year: 1964,
+    emoji: "🐎",
+  },
+  {
+    id: "r17",
+    text: "Fauja Singh w 2011 roku jako pierwszy stulatek w historii ukończył maraton (Toronto, 8 godz. 11 min). Biegać zaczął... po osiemdziesiątce.",
+    category: "records",
+    year: 2011,
+    emoji: "💯",
+  },
 ];
 
 export function getRandomFact(category: string, facts: Fact[] = FACTS_DB): Fact {
