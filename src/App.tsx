@@ -15,8 +15,10 @@ import QuizMode from "./components/QuizMode";
 import FactEditor from "./components/FactEditor";
 import OnThisDay from "./components/OnThisDay";
 import Timeline from "./components/Timeline";
+import Legends from "./components/Legends";
+import Achievements from "./components/Achievements";
 
-type ViewMode = "random" | "search" | "browse" | "quiz" | "favorites" | "today" | "timeline";
+type ViewMode = "random" | "search" | "browse" | "quiz" | "favorites" | "today" | "timeline" | "legends";
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -27,6 +29,7 @@ export default function App() {
   const [browseList, setBrowseList] = useState<Fact[]>([]);
   const [factKey, setFactKey] = useState(0);
   const [showEditor, setShowEditor] = useState(false);
+  const [showAchievements, setShowAchievements] = useState(false);
   const touchStartX = useRef<number | null>(null);
 
   // Persisted state
@@ -38,6 +41,17 @@ export default function App() {
   const allFacts = useMemo(() => [...FACTS_DB, ...customFacts], [customFacts]);
 
   const [currentFact, setCurrentFact] = useState<Fact>(() => getRandomFact("all", allFacts));
+
+  // Rejestruj dzień odwiedzin (do osiągnięć)
+  useEffect(() => {
+    try {
+      const today = new Date().toISOString().slice(0, 10);
+      const days: string[] = JSON.parse(localStorage.getItem("sm_days") ?? "[]");
+      if (!days.includes(today)) {
+        localStorage.setItem("sm_days", JSON.stringify([...days, today]));
+      }
+    } catch {}
+  }, []);
 
   // Load fact from URL hash on mount (for shared links)
   useEffect(() => {
@@ -208,6 +222,13 @@ export default function App() {
             {likedIds.length > 0 && (
               <StatPill emoji="❤️" value={`${likedIds.length}`} label="polubionych" />
             )}
+            <button
+              onClick={() => setShowAchievements(true)}
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border bg-amber-500/20 border-amber-400/40 text-amber-200 hover:bg-amber-500/30 transition-colors"
+            >
+              <span>🏅</span>
+              <span className="text-xs">Osiągnięcia</span>
+            </button>
           </div>
         </header>
 
@@ -223,6 +244,7 @@ export default function App() {
           <TabButton active={viewMode === "timeline"} onClick={() => switchView("timeline")} emoji="🕰️" label="Oś czasu" />
           <TabButton active={viewMode === "browse"} onClick={() => switchView("browse")} emoji="📋" label="Przeglądaj" />
           <TabButton active={viewMode === "quiz"} onClick={() => switchView("quiz")} emoji="🎯" label="Quiz" />
+          <TabButton active={viewMode === "legends"} onClick={() => switchView("legends")} emoji="⭐" label="Legendy" />
           <TabButton
             active={viewMode === "favorites"}
             onClick={() => switchView("favorites")}
@@ -274,6 +296,13 @@ export default function App() {
         {viewMode === "timeline" && (
           <section>
             <Timeline allFacts={allFacts} likedIds={likedIds} onToggleLike={handleToggleLike} />
+          </section>
+        )}
+
+        {/* === LEGENDS === */}
+        {viewMode === "legends" && (
+          <section>
+            <Legends />
           </section>
         )}
 
@@ -472,6 +501,9 @@ export default function App() {
       {showEditor && (
         <FactEditor onSave={handleAddFact} onClose={() => setShowEditor(false)} />
       )}
+
+      {/* === ACHIEVEMENTS MODAL === */}
+      {showAchievements && <Achievements onClose={() => setShowAchievements(false)} />}
     </div>
   );
 }
