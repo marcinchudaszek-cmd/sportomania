@@ -738,6 +738,368 @@ export const FACTS_DB: Fact[] = [
     year: 1932,
     emoji: "🔢",
   },
+
+  // === PIŁKA NOŻNA (cd.) ===
+  {
+    id: "f12",
+    text: "W 1966 roku puchar mistrzostw świata (trofeum Julesa Rimeta) skradziono z wystawy w Londynie tuż przed mundialem. Odnalazł go pod żywopłotem pies o imieniu Pickles.",
+    category: "football",
+    year: 1966,
+    emoji: "🐕",
+  },
+  {
+    id: "f13",
+    text: "Najwyższy wynik w historii futbolu: AS Adema pokonała SO l'Emyrne 149:0 (Madagaskar, 2002). Wszystkie gole były samobójcze — przegrani strzelali je w proteście przeciwko sędziemu.",
+    category: "football",
+    year: 2002,
+    emoji: "🤯",
+  },
+  {
+    id: "f14",
+    text: "Francuz Just Fontaine strzelił 13 goli na jednym mundialu (Szwecja 1958). Ten rekord pozostaje niepobity od ponad 60 lat.",
+    category: "football",
+    year: 1958,
+    emoji: "🎯",
+  },
+  {
+    id: "f15",
+    text: "Mundial w Szwajcarii w 1954 roku był pierwszym transmitowanym w telewizji. Finał Niemcy–Węgry 3:2 przeszedł do historii jako „cud w Bernie”.",
+    category: "football",
+    year: 1954,
+    emoji: "📺",
+  },
+  {
+    id: "f16",
+    text: "Kameruńczyk Roger Milla jest najstarszym strzelcem gola na mistrzostwach świata — trafił do siatki na mundialu 1994 w wieku 42 lat.",
+    category: "football",
+    year: 1994,
+    emoji: "👴",
+  },
+  {
+    id: "f17",
+    text: "FC Barcelona przez ponad sto lat nie miała sponsora na koszulkach. Pierwszym „sponsorem” w 2006 roku został UNICEF — i to klub płacił organizacji, a nie odwrotnie.",
+    category: "football",
+    year: 2006,
+    emoji: "👕",
+  },
+
+  // === OLIMPIADY (cd.) ===
+  {
+    id: "o12",
+    text: "Na igrzyskach w Paryżu w 1900 roku jedyny raz w historii strzelano do żywych gołębi. Rozegrano tam też zawody w krokiecie i przeciąganiu liny.",
+    category: "olympics",
+    year: 1900,
+    emoji: "🐦",
+  },
+  {
+    id: "o13",
+    text: "Do 1992 roku zimowe i letnie igrzyska odbywały się w tym samym roku. Dopiero od Lillehammer 1994 rozdzielono je dwuletnim odstępem.",
+    category: "olympics",
+    year: 1994,
+    emoji: "🗓️",
+  },
+  {
+    id: "o14",
+    text: "Etiopczyk Abebe Bikila wygrał maraton olimpijski w Rzymie w 1960 roku, biegnąc całą trasę boso. Cztery lata później obronił tytuł — już w butach.",
+    category: "olympics",
+    year: 1960,
+    emoji: "🦶",
+  },
+  {
+    id: "o15",
+    text: "Igrzyska 1956 odbyły się w... dwóch krajach. Przez kwarantannę koni w Australii konkurencje jeździeckie rozegrano w Sztokholmie, a resztę w Melbourne.",
+    category: "olympics",
+    year: 1956,
+    emoji: "🐴",
+  },
+  {
+    id: "o16",
+    text: "Pierre de Coubertin, twórca nowożytnych igrzysk, sam zdobył złoty medal olimpijski — w konkursie literatury w 1912 roku, za „Odę do sportu” zgłoszoną pod pseudonimem.",
+    category: "olympics",
+    year: 1912,
+    emoji: "✍️",
+  },
+
+  // === LEKKOATLETYKA (cd.) ===
+  {
+    id: "a9",
+    text: "Emil Zátopek dokonał na IO 1952 rzeczy niemożliwej: wygrał 5000 m, 10 000 m i maraton — który biegł pierwszy raz w życiu. Nikt nigdy tego nie powtórzył.",
+    category: "athletics",
+    year: 1952,
+    emoji: "🚂",
+  },
+  {
+    id: "a10",
+    text: "Rekordy świata Florence Griffith-Joyner na 100 m (10,49 s) i 200 m (21,34 s) pochodzą z 1988 roku i wciąż pozostają niepobite.",
+    category: "athletics",
+    year: 1988,
+    emoji: "💅",
+  },
+  {
+    id: "a11",
+    text: "Rekord świata w biegu na milę — 3:43,13 Marokańczyka Hichama El Guerrouja — pochodzi z 1999 roku i jest jednym z najtrwalszych w lekkoatletyce.",
+    category: "athletics",
+    year: 1999,
+    emoji: "⏱️",
+  },
+  {
+    id: "a12",
+    text: "Szwed Armand Duplantis poprawiał rekord świata w skoku o tyczce kilkanaście razy — niemal zawsze o dokładnie 1 centymetr, wzorem Siergieja Bubki.",
+    category: "athletics",
+    year: 2025,
+    emoji: "🪜",
+  },
+
+  // === TENIS (cd.) ===
+  {
+    id: "t8",
+    text: "Martina Navratilova wygrała Wimbledon w singlu rekordowe 9 razy, a swój ostatni wielkoszlemowy tytuł (w mikście) zdobyła w wieku 49 lat.",
+    category: "tennis",
+    year: 2006,
+    emoji: "🏆",
+  },
+  {
+    id: "t9",
+    text: "Rafael Nadal wygrał Roland Garros 14 razy. Jego bilans meczów na kortach Paryża to 112 zwycięstw i zaledwie 4 porażki.",
+    category: "tennis",
+    year: 2022,
+    emoji: "🟠",
+  },
+  {
+    id: "t10",
+    text: "Do 1968 roku w turniejach wielkoszlemowych mogli grać wyłącznie amatorzy. Dopiero „era open” dopuściła zawodowców i nagrody pieniężne.",
+    category: "tennis",
+    year: 1968,
+    emoji: "💰",
+  },
+
+  // === KOSZYKÓWKA (cd.) ===
+  {
+    id: "b7",
+    text: "Najniższym graczem w historii NBA był Muggsy Bogues — 160 cm wzrostu. Mimo to zablokował w karierze 39 rzutów, w tym rzut 213-centymetrowego Patricka Ewinga.",
+    category: "basketball",
+    year: 1993,
+    emoji: "📏",
+  },
+  {
+    id: "b8",
+    text: "Bill Russell zdobył z Boston Celtics 11 mistrzostw NBA w ciągu 13 sezonów — żaden zawodnik w amerykańskich ligach nie ma więcej pierścieni.",
+    category: "basketball",
+    year: 1969,
+    emoji: "💍",
+  },
+  {
+    id: "b9",
+    text: "Pierwszy w historii mecz koszykówki (1891) zakończył się wynikiem 1:0. Jedyny celny rzut oddano z odległości ponad 7 metrów.",
+    category: "basketball",
+    year: 1891,
+    emoji: "1️⃣",
+  },
+
+  // === SIATKÓWKA (cd.) ===
+  {
+    id: "v8",
+    text: "Amerykanin Karch Kiraly to jedyny siatkarz w historii ze złotem olimpijskim i w hali (1984, 1988), i na plaży (1996).",
+    category: "volleyball",
+    year: 1996,
+    emoji: "🏖️",
+  },
+  {
+    id: "v9",
+    text: "Siatkówka halowa zadebiutowała na igrzyskach w Tokio w 1964 roku. Pierwsze złoto wśród mężczyzn zdobył ZSRR, a wśród kobiet — Japonki.",
+    category: "volleyball",
+    year: 1964,
+    emoji: "🇯🇵",
+  },
+
+  // === MOTORSPORT (cd.) ===
+  {
+    id: "m7",
+    text: "Sebastian Vettel został najmłodszym mistrzem świata F1 w historii — tytuł z 2010 roku zdobył mając 23 lata i 134 dni.",
+    category: "motorsport",
+    year: 2010,
+    emoji: "👶",
+  },
+  {
+    id: "m8",
+    text: "Ayrton Senna na GP Europy 1993 w Donington awansował w deszczu z 5. na 1. miejsce w ciągu jednego okrążenia. To okrążenie uchodzi za najlepsze w historii F1.",
+    category: "motorsport",
+    year: 1993,
+    emoji: "🌧️",
+  },
+  {
+    id: "m9",
+    text: "Rajd Dakar przez dekady prowadził z Paryża do stolicy Senegalu. Ze względów bezpieczeństwa przeniesiono go najpierw do Ameryki Południowej (2009), a od 2020 roku odbywa się w Arabii Saudyjskiej.",
+    category: "motorsport",
+    year: 2020,
+    emoji: "🏜️",
+  },
+
+  // === SPORTY WALKI (cd.) ===
+  {
+    id: "c7",
+    text: "Mike Tyson został najmłodszym mistrzem świata wagi ciężkiej w historii — pas WBC zdobył w 1986 roku, mając 20 lat i 4 miesiące.",
+    category: "combat",
+    year: 1986,
+    emoji: "🐅",
+  },
+  {
+    id: "c8",
+    text: "W 1976 roku Muhammad Ali stoczył w Tokio pokazową walkę z zapaśnikiem Antonio Inokim. Dziwaczny pojedynek bokser kontra zapaśnik uchodzi dziś za prekursora MMA.",
+    category: "combat",
+    year: 1976,
+    emoji: "🤼",
+  },
+  {
+    id: "c9",
+    text: "Chabib Nurmagomiedow zakończył karierę w UFC z bilansem 29 zwycięstw i 0 porażek — jako niepokonany mistrz wagi lekkiej.",
+    category: "combat",
+    year: 2020,
+    emoji: "🦅",
+  },
+
+  // === SPORTY ZIMOWE (cd.) ===
+  {
+    id: "w8",
+    text: "Biathlon wywodzi się bezpośrednio z wojska — z ćwiczeń norweskich patroli narciarskich. Na igrzyskach do 1948 roku istniała nawet konkurencja „patrol wojskowy”.",
+    category: "winter",
+    year: 1948,
+    emoji: "🎖️",
+  },
+  {
+    id: "w9",
+    text: "Norweska biegaczka Marit Bjørgen to najbardziej utytułowana zimowa olimpijka w historii: 15 medali, w tym 8 złotych.",
+    category: "winter",
+    year: 2018,
+    emoji: "🇳🇴",
+  },
+  {
+    id: "w10",
+    text: "Wojciech Fortuna zdobył w Sapporo 1972 pierwsze zimowe złoto dla Polski — w skokach narciarskich. Do sukcesu Małysza pozostawał jedynym polskim medalistą zimowych igrzysk w skokach.",
+    category: "winter",
+    year: 1972,
+    emoji: "🎿",
+  },
+
+  // === SPORTY WODNE (cd.) ===
+  {
+    id: "s6",
+    text: "Mark Spitz zdobył w Monachium 1972 siedem złotych medali — i w każdym z siedmiu startów pobił rekord świata. Jego wyczyn przebił dopiero Phelps w 2008 roku.",
+    category: "water",
+    year: 1972,
+    emoji: "🥇",
+  },
+  {
+    id: "s7",
+    text: "Skoczek do wody Greg Louganis uderzył głową w trampolinę podczas eliminacji na IO 1988. Mimo szwów na głowie następnego dnia zdobył złoty medal.",
+    category: "water",
+    year: 1988,
+    emoji: "🤕",
+  },
+
+  // === KOLARSTWO (cd.) ===
+  {
+    id: "k6",
+    text: "Eddy Merckx, zwany „Kanibalem”, odniósł około 525 zawodowych zwycięstw — wygrał m.in. po 5 razy Tour de France i Giro d'Italia. Uchodzi za najlepszego kolarza wszech czasów.",
+    category: "cycling",
+    year: 1974,
+    emoji: "🍽️",
+  },
+  {
+    id: "k7",
+    text: "Rekord godzinny to najbardziej prestiżowy rekord kolarstwa torowego: ile kilometrów da się przejechać w 60 minut. Merckx wybrał na próbę w 1972 roku miasto Meksyk — dla rzadszego powietrza.",
+    category: "cycling",
+    year: 1972,
+    emoji: "⏰",
+  },
+
+  // === POLSKI SPORT (cd.) ===
+  {
+    id: "p9",
+    text: "Anita Włodarczyk to trzykrotna mistrzyni olimpijska w rzucie młotem i pierwsza kobieta w historii, która rzuciła ponad 80 metrów. Jej rekord świata to 82,98 m.",
+    category: "poland",
+    year: 2016,
+    emoji: "🔨",
+  },
+  {
+    id: "p10",
+    text: "Widzew Łódź dotarł w 1983 roku do półfinału Pucharu Europy, eliminując po drodze wielki Liverpool. To jeden z największych sukcesów polskich klubów w Europie.",
+    category: "poland",
+    year: 1983,
+    emoji: "⚽",
+  },
+  {
+    id: "p11",
+    text: "Wanda Rutkiewicz jako pierwsza osoba z Polski i trzecia kobieta na świecie stanęła na Mount Everest — 16 października 1978 roku, w dniu wyboru Karola Wojtyły na papieża.",
+    category: "poland",
+    year: 1978,
+    emoji: "🏔️",
+  },
+  {
+    id: "p12",
+    text: "Tomasz Gollob po niemal dwóch dekadach ścigania się o tytuł został indywidualnym mistrzem świata na żużlu w 2010 roku, w wieku 39 lat.",
+    category: "poland",
+    year: 2010,
+    emoji: "🏍️",
+  },
+  {
+    id: "p13",
+    text: "Aleksandra Mirosław zdobyła złoto olimpijskie w Paryżu 2024 we wspinaczce sportowej na czas. Wielokrotnie biła rekord świata, schodząc poniżej 6,1 sekundy na 15-metrowej ścianie.",
+    category: "poland",
+    year: 2024,
+    emoji: "🧗",
+  },
+
+  // === SPORT STAROŻYTNY (cd.) ===
+  {
+    id: "an7",
+    text: "Milon z Krotonu, sześciokrotny mistrz olimpijski w zapasach z VI w. p.n.e., według legendy trenował nosząc na barkach cielaka — codziennie, aż ten wyrósł na byka.",
+    category: "ancient",
+    emoji: "🐂",
+  },
+  {
+    id: "an8",
+    text: "Spartanka Kyniska została pierwszą kobietą „zwyciężczynią” starożytnych igrzysk — jako właścicielka zwycięskiego zaprzęgu konnego. Wieniec przyznawano bowiem właścicielowi, nie woźnicy.",
+    category: "ancient",
+    emoji: "🐎",
+  },
+
+  // === REKORDY I KURIOZA (cd.) ===
+  {
+    id: "r9",
+    text: "Najdłuższa partia szachowa w historii turniejów: Nikolić–Arsović (Belgrad 1989) trwała 269 posunięć i ponad 20 godzin gry. Zakończyła się remisem.",
+    category: "records",
+    year: 1989,
+    emoji: "♟️",
+  },
+  {
+    id: "r10",
+    text: "Magnus Carlsen osiągnął najwyższy ranking szachowy w historii — 2882 punkty. Mistrzem świata był nieprzerwanie od 2013 do 2023 roku, po czym... sam zrezygnował z obrony tytułu.",
+    category: "records",
+    year: 2013,
+    emoji: "♚",
+  },
+  {
+    id: "r11",
+    text: "Pula nagród turnieju e-sportowego The International w Dota 2 przekroczyła w 2021 roku 40 milionów dolarów — więcej niż w wielu klasycznych turniejach sportowych.",
+    category: "records",
+    year: 2021,
+    emoji: "🎮",
+  },
+  {
+    id: "r12",
+    text: "Japoński zapaśnik sumo Hakuhō wygrał rekordowe 45 wielkich turniejów. Wielcy mistrzowie (yokozuna) nie mogą zostać zdegradowani — mogą tylko odejść z honorem.",
+    category: "records",
+    year: 2021,
+    emoji: "🇯🇵",
+  },
+  {
+    id: "r13",
+    text: "Fred Lorz „wygrał” maraton olimpijski 1904, ale wyszło na jaw, że 18 km trasy przejechał samochodem. Dożywotnią dyskwalifikację cofnięto po przeprosinach — rok później uczciwie wygrał maraton bostoński.",
+    category: "records",
+    year: 1904,
+    emoji: "🚗",
+  },
 ];
 
 export function getRandomFact(category: string, facts: Fact[] = FACTS_DB): Fact {

@@ -14,8 +14,9 @@ import SearchBar from "./components/SearchBar";
 import QuizMode from "./components/QuizMode";
 import FactEditor from "./components/FactEditor";
 import OnThisDay from "./components/OnThisDay";
+import Timeline from "./components/Timeline";
 
-type ViewMode = "random" | "search" | "browse" | "quiz" | "favorites" | "today";
+type ViewMode = "random" | "search" | "browse" | "quiz" | "favorites" | "today" | "timeline";
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -219,6 +220,7 @@ export default function App() {
         <div className="flex items-center justify-center gap-2 mb-6 flex-wrap">
           <TabButton active={viewMode === "random"} onClick={() => switchView("random")} emoji="🎲" label="Losowa" />
           <TabButton active={viewMode === "today"} onClick={() => switchView("today")} emoji="📅" label="W tym dniu" />
+          <TabButton active={viewMode === "timeline"} onClick={() => switchView("timeline")} emoji="🕰️" label="Oś czasu" />
           <TabButton active={viewMode === "browse"} onClick={() => switchView("browse")} emoji="📋" label="Przeglądaj" />
           <TabButton active={viewMode === "quiz"} onClick={() => switchView("quiz")} emoji="🎯" label="Quiz" />
           <TabButton
@@ -265,6 +267,13 @@ export default function App() {
         {viewMode === "today" && (
           <section>
             <OnThisDay />
+          </section>
+        )}
+
+        {/* === TIMELINE === */}
+        {viewMode === "timeline" && (
+          <section>
+            <Timeline allFacts={allFacts} likedIds={likedIds} onToggleLike={handleToggleLike} />
           </section>
         )}
 
