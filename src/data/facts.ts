@@ -3123,6 +3123,566 @@ export const FACTS_DB: Fact[] = [
     year: 2009,
     emoji: "🎮",
   },
+
+  // === WIELKA ROZBUDOWA WSZYSTKICH KATEGORII ===
+
+  // Piłka nożna
+  {
+    id: "f25",
+    text: "Arsenal w sezonie 2003/04 przeszedł całą Premier League bez porażki — 38 meczów. „The Invincibles” otrzymali za to unikatowe, złote trofeum mistrzowskie.",
+    category: "football",
+    year: 2004,
+    emoji: "🛡️",
+  },
+  {
+    id: "f26",
+    text: "Paragwajski bramkarz José Luis Chilavert strzelił w karierze ponad 60 goli — z karnych i wolnych — a w 1999 roku jako jedyny golkiper w historii zawodowego futbolu zaliczył hat-tricka.",
+    category: "football",
+    year: 1999,
+    emoji: "🧤",
+  },
+
+  // Mundiale
+  {
+    id: "wc19",
+    text: "Pierwszą maskotką mundialu był lew Willie z Anglii 1966 — wynalazek, który zapoczątkował całą epokę turniejowych maskotek i pamiątkowego przemysłu.",
+    category: "worldcup",
+    year: 1966,
+    emoji: "🦁",
+  },
+  {
+    id: "wc20",
+    text: "Lionel Messi jako jedyny piłkarz w historii dwukrotnie otrzymał Złotą Piłkę dla najlepszego zawodnika mundialu — w 2014 i 2022 roku.",
+    category: "worldcup",
+    year: 2022,
+    emoji: "⭐",
+  },
+
+  // Euro
+  {
+    id: "eu12",
+    text: "Trofeum mistrzostw Europy nosi imię Henriego Delaunaya — francuskiego działacza, który wymyślił turniej już w latach 20. Zmarł 5 lat przed pierwszą edycją i nigdy nie zobaczył swojego dzieła.",
+    category: "euro",
+    year: 1960,
+    emoji: "🏆",
+  },
+  {
+    id: "eu13",
+    text: "Euro 2016: 330-tysięczna Islandia dotarła do ćwierćfinału, ogrywając po drodze Anglię. Wikińska „klaskana” celebracja z kibicami stała się hitem kopiowanym na całym świecie.",
+    category: "euro",
+    year: 2016,
+    emoji: "🇮🇸",
+  },
+
+  // Olimpiady
+  {
+    id: "o30",
+    text: "Olimpijskie motto „Citius, Altius, Fortius” (szybciej, wyżej, silniej) po 127 latach doczekało się zmiany — w 2021 roku dodano słowo „Communiter”: „razem”.",
+    category: "olympics",
+    year: 2021,
+    emoji: "📜",
+  },
+  {
+    id: "o31",
+    text: "„Złote” medale olimpijskie są w rzeczywistości srebrne — czyste złoto to tylko ok. 6 gramów powłoki. Ostatnie medale z litego złota wręczono w 1912 roku.",
+    category: "olympics",
+    year: 1912,
+    emoji: "🥇",
+  },
+
+  // Letnie igrzyska
+  {
+    id: "sg23",
+    text: "Na igrzyskach w Paryżu 1900 rozegrano pływanie z przeszkodami: zawodnicy wspinali się na słup, przełazili przez łodzie i nurkowali pod kolejnymi. Konkurencję rozegrano tylko raz.",
+    category: "summergames",
+    year: 1900,
+    emoji: "🚣",
+  },
+  {
+    id: "sg24",
+    text: "Atlanta 1996: Michael Johnson w pozłacanych kolcach pobiegł 200 m w 19,32 s, poprawiając rekord świata o ponad 0,3 sekundy. Wynik przetrwał 12 lat — do czasów Bolta.",
+    category: "summergames",
+    year: 1996,
+    emoji: "👟",
+  },
+
+  // Zimowe igrzyska
+  {
+    id: "wg17",
+    text: "Zimowe igrzyska 1976 miały odbyć się w Denver, ale mieszkańcy Kolorado w referendum odmówili ich finansowania — to jedyny przypadek w historii, gdy miasto oddało przyznane igrzyska. Imprezę uratował Innsbruck.",
+    category: "wintergames",
+    year: 1976,
+    emoji: "🗳️",
+  },
+  {
+    id: "wg18",
+    text: "Nagano 1998: pierwszemu mistrzowi olimpijskiemu w snowboardzie, Rossowi Rebagliatiemu, odebrano złoto za śladowe ilości marihuany — i oddano po 3 dniach, bo substancji nie było na liście zakazanych.",
+    category: "wintergames",
+    year: 1998,
+    emoji: "🌿",
+  },
+
+  // Lekkoatletyka
+  {
+    id: "a19",
+    text: "Kenijka Ruth Chepng'etich w Chicago w 2024 roku jako pierwsza kobieta w historii przebiegła maraton poniżej 2:10 (2:09:56) — jeszcze dekadę wcześniej taki czas dawałby medale w męskich mistrzostwach.",
+    category: "athletics",
+    year: 2024,
+    emoji: "⏱️",
+  },
+  {
+    id: "a20",
+    text: "Jelena Isinbajewa poprawiała rekord świata w skoku o tyczce 28 razy i jako pierwsza kobieta pokonała granicę 5 metrów (2005).",
+    category: "athletics",
+    year: 2005,
+    emoji: "🪜",
+  },
+
+  // Tenis
+  {
+    id: "t16",
+    text: "Elektroniczny system Hawk-Eye i „challenge” zadebiutowały w Wielkim Szlemie na US Open 2006. Wcześniej o piłkach na linii decydowało wyłącznie ludzkie oko — i niekończące się awantury.",
+    category: "tennis",
+    year: 2006,
+    emoji: "👁️",
+  },
+  {
+    id: "t17",
+    text: "Podczas dwóch tygodni Wimbledonu kibice zjadają około 30 ton truskawek z bitą śmietaną. Owoce zbierane są dzień wcześniej o świcie z pól w hrabstwie Kent.",
+    category: "tennis",
+    year: 2019,
+    emoji: "🍓",
+  },
+
+  // Sporty rakietowe
+  {
+    id: "rq7",
+    text: "W 2000 roku tenis stołowy powiększył piłeczkę z 38 do 40 mm — specjalnie po to, by spowolnić grę i uczynić ją bardziej widowiskową w telewizji.",
+    category: "racquet",
+    year: 2000,
+    emoji: "⚪",
+  },
+  {
+    id: "rq8",
+    text: "Profesjonalne lotki do badmintona robi się z 16 gęsich piór — tradycyjnie najlepiej z lewego skrzydła, by wszystkie były zakrzywione w tę samą stronę. Podczas ważnego meczu zużywa się kilkadziesiąt lotek.",
+    category: "racquet",
+    year: 1950,
+    emoji: "🪶",
+  },
+
+  // Golf
+  {
+    id: "gf7",
+    text: "Piłka golfowa ma 300–500 wgłębień (dimples) nie dla ozdoby: turbulentna warstwa powietrza zmniejsza opór i sprawia, że piłka leci nawet dwa razy dalej niż gładka.",
+    category: "golf",
+    year: 1905,
+    emoji: "🔬",
+  },
+  {
+    id: "gf8",
+    text: "Augusta National, dom turnieju Masters, przyjęła pierwsze kobiety w poczet członków dopiero w 2012 roku — jedną z dwóch pierwszych była Condoleezza Rice.",
+    category: "golf",
+    year: 2012,
+    emoji: "🚪",
+  },
+
+  // Koszykówka
+  {
+    id: "b14",
+    text: "Zegar 24 sekund uratował NBA przed nudą — wprowadzono go w 1954 roku, a liczbę wyliczył właściciel klubu z Syracuse, dzieląc 2880 sekund meczu przez średnią liczbę rzutów (120).",
+    category: "basketball",
+    year: 1954,
+    emoji: "⏲️",
+  },
+  {
+    id: "b15",
+    text: "Najwyższy wynik meczu NBA: Detroit Pistons pokonali Denver Nuggets 186:184 po trzech dogrywkach (1983). Obie drużyny rzuciły łącznie 370 punktów.",
+    category: "basketball",
+    year: 1983,
+    emoji: "🔥",
+  },
+
+  // Siatkówka
+  {
+    id: "v12",
+    text: "Do 1999 roku punkt w siatkówce można było zdobyć tylko przy własnej zagrywce — mecze potrafiły ciągnąć się w nieskończoność. System „każda akcja = punkt” wprowadzono głównie dla telewizji.",
+    category: "volleyball",
+    year: 1999,
+    emoji: "🔢",
+  },
+  {
+    id: "v13",
+    text: "Japonki z lat 60., zwane „Czarownicami ze Wschodu”, wygrały ponad 250 meczów z rzędu i złoto olimpijskie 1964. Ich trener słynął z morderczych treningów po 7 godzin dziennie.",
+    category: "volleyball",
+    year: 1964,
+    emoji: "🧙‍♀️",
+  },
+
+  // Piłka ręczna
+  {
+    id: "hb7",
+    text: "Francja to najbardziej utytułowana reprezentacja w historii męskiej piłki ręcznej — sześć tytułów mistrza świata i trzy złota olimpijskie.",
+    category: "handball",
+    year: 2017,
+    emoji: "🐓",
+  },
+  {
+    id: "hb8",
+    text: "W piłce ręcznej plażowej efektowność popłaca dosłownie: gol z obrotu (piruetu) lub w locie liczy się za dwa punkty zamiast jednego.",
+    category: "handball",
+    year: 2004,
+    emoji: "🏖️",
+  },
+
+  // Hokej
+  {
+    id: "hk7",
+    text: "Termin „hat-trick” w hokeju wziął się od torontońskiego kapelusznika, który w latach 40. obiecał darmowy kapelusz każdemu strzelcowi trzech goli. Kibice do dziś rzucają wtedy czapki na lód.",
+    category: "hockey",
+    year: 1946,
+    emoji: "🎩",
+  },
+  {
+    id: "hk8",
+    text: "Bramkarze NHL grali bez masek aż do 1959 roku, gdy Jacques Plante po złamaniu nosa wrócił na lód w masce — wbrew własnemu trenerowi. Ostatni bramkarz bez maski grał jeszcze w 1974 roku.",
+    category: "hockey",
+    year: 1959,
+    emoji: "🎭",
+  },
+
+  // Motorsport
+  {
+    id: "m14",
+    text: "Podczas pit stopu w F1 ponad 20 mechaników zmienia cztery koła szybciej, niż mrugniesz — rekord należy do Red Bulla: 1,82 sekundy (2019).",
+    category: "motorsport",
+    year: 2019,
+    emoji: "🔧",
+  },
+  {
+    id: "m15",
+    text: "Motocyklowy wyścig Isle of Man TT, rozgrywany na zwykłych drogach od 1907 roku, pochłonął ponad 260 ofiar — a mimo to co roku ustawiają się kolejki chętnych. Średnia prędkość najlepszych przekracza 220 km/h.",
+    category: "motorsport",
+    year: 1907,
+    emoji: "🏝️",
+  },
+
+  // Sporty walki
+  {
+    id: "c14",
+    text: "Nikołaj Wałujew, mierzący 213 cm i ważący ponad 140 kg, był najwyższym i najcięższym mistrzem świata wagi ciężkiej w historii boksu. Po karierze został... deputowanym rosyjskiej Dumy.",
+    category: "combat",
+    year: 2005,
+    emoji: "🗿",
+  },
+  {
+    id: "c15",
+    text: "Szermierka jako pierwszy sport walki dostała elektroniczny system sędziowania — szpada już w 1936 roku. Trafienia są zbyt szybkie dla ludzkiego oka: czubek szpady to jeden z najszybszych obiektów w sporcie.",
+    category: "combat",
+    year: 1936,
+    emoji: "🤺",
+  },
+
+  // Sporty zimowe
+  {
+    id: "w15",
+    text: "W skeletonie zawodnik pędzi po lodowej rynnie głową do przodu, z twarzą kilka centymetrów nad torem, osiągając ponad 130 km/h. Na igrzyska wrócił po 54 latach przerwy dopiero w 2002 roku.",
+    category: "winter",
+    year: 2002,
+    emoji: "💀",
+  },
+  {
+    id: "w16",
+    text: "Amerykanka Mikaela Shiffrin jako pierwsza osoba w historii — wśród kobiet i mężczyzn — wygrała 100 zawodów alpejskiego Pucharu Świata (2025).",
+    category: "winter",
+    year: 2025,
+    emoji: "💯",
+  },
+
+  // Sporty wodne
+  {
+    id: "s11",
+    text: "W zawodach Red Bull Cliff Diving skacze się z ok. 27 metrów — zawodnik leci 3 sekundy i uderza w wodę z prędkością 85 km/h. Do wody zawsze wchodzi się nogami; wejście głową groziłoby śmiercią.",
+    category: "water",
+    year: 2009,
+    emoji: "🪨",
+  },
+  {
+    id: "s12",
+    text: "Duke Kahanamoku, hawajski mistrz olimpijski w pływaniu (1912, 1920), między startami popularyzował na świecie surfing — dziś nazywany jest ojcem tego sportu.",
+    category: "water",
+    year: 1920,
+    emoji: "🏄",
+  },
+
+  // Kolarstwo
+  {
+    id: "k10",
+    text: "Na górskich etapach Tour de France kolarze spalają po 6000–8000 kalorii dziennie — jedzą więc niemal bez przerwy, także na rowerze, a i tak kończą wyścig lżejsi o kilka kilogramów.",
+    category: "cycling",
+    year: 2015,
+    emoji: "🍝",
+  },
+  {
+    id: "k11",
+    text: "Najstarszy wielki klasyk kolarski, Liège–Bastogne–Liège, rozgrywany jest od 1892 roku — nazywany jest po prostu „La Doyenne”, czyli „Najstarsza Dama”.",
+    category: "cycling",
+    year: 1892,
+    emoji: "👵",
+  },
+
+  // Polski sport
+  {
+    id: "p26",
+    text: "Władysław Komar (złoto w kuli, 1972) i Tadeusz Ślusarski (złoto w tyczce, 1976) byli przyjaciółmi z jednej epoki polskiej lekkoatletyki. Zginęli razem, w tym samym wypadku samochodowym w 1998 roku.",
+    category: "poland",
+    year: 1998,
+    emoji: "🕯️",
+  },
+  {
+    id: "p27",
+    text: "Mecz otwarcia siatkarskich MŚ 2014 Polska–Serbia rozegrano na Stadionie Narodowym przed 61 tysiącami widzów — to rekord frekwencji w historii światowej siatkówki. Polacy wygrali mecz i cały turniej.",
+    category: "poland",
+    year: 2014,
+    emoji: "🏟️",
+  },
+
+  // Polska na igrzyskach
+  {
+    id: "pg22",
+    text: "Tokio 2020: Maria Andrejczyk zlicytowała swoje srebro z rzutu oszczepem, by opłacić operację serca 8-miesięcznego Miłoszka. Sieć sklepów, która wygrała aukcję, zapłaciła 200 tys. zł i... oddała jej medal.",
+    category: "polandgames",
+    year: 2021,
+    emoji: "💛",
+  },
+  {
+    id: "pg23",
+    text: "Paryż 2024: polscy siatkarze zdobyli srebro — pierwszy olimpijski medal tej drużyny od złota Huberta Wagnera w 1976 roku, po 48 latach oczekiwania.",
+    category: "polandgames",
+    year: 2024,
+    emoji: "🥈",
+  },
+
+  // Polska na mundialach
+  {
+    id: "pwc11",
+    text: "Cichym bohaterem mundialu 1974 był Andrzej Szarmach — strzelił 5 goli i razem z Latą (7) i Gadochą tworzył najgroźniejszy tercet ataku turnieju. Polacy strzelili łącznie 16 bramek — najwięcej ze wszystkich.",
+    category: "polandwc",
+    year: 1974,
+    emoji: "⚔️",
+  },
+  {
+    id: "pwc12",
+    text: "Do Kataru 2022 Polska awansowała w barażach bez rozegrania półfinału — Rosję wykluczono po inwazji na Ukrainę. W finale barażu biało-czerwoni pokonali Szwecję 2:0.",
+    category: "polandwc",
+    year: 2022,
+    emoji: "🎫",
+  },
+
+  // Polskie kluby i areny
+  {
+    id: "pc11",
+    text: "Wisła Kraków w latach 1999–2011 zdobyła 8 z 13 swoich tytułów mistrza Polski i regularnie ogrywała w Europie renomowane firmy — z Schalke, Parmą i Lazio na czele.",
+    category: "polandclubs",
+    year: 2005,
+    emoji: "⭐",
+  },
+  {
+    id: "pc12",
+    text: "Cracovia była ukochanym klubem Józefa Piłsudskiego. Marszałek bywał na meczach „Pasów”, a klub do dziś szczyci się mianem najstarszego istniejącego w polskim futbolu.",
+    category: "polandclubs",
+    year: 1921,
+    emoji: "🎖️",
+  },
+
+  // Polska na Euro
+  {
+    id: "pe9",
+    text: "Wygrana po karnych ze Szwajcarią na Euro 2016 była pierwszym zwycięstwem Polski w fazie pucharowej wielkiego turnieju od MŚ 1982. Wszystkie pięć jedenastek wykorzystali m.in. Lewandowski i Krychowiak.",
+    category: "polandeuro",
+    year: 2016,
+    emoji: "🎯",
+  },
+
+  // Polskie pierwszyzny
+  {
+    id: "pf11",
+    text: "Wanda Rutkiewicz w 1986 roku jako pierwsza kobieta w historii stanęła na szczycie K2 — góry uważanej za trudniejszą i groźniejszą od Everestu. Zginęła sześć lat później na Kanczendzondze.",
+    category: "polandfirsts",
+    year: 1986,
+    emoji: "🏔️",
+  },
+
+  // Sport starożytny
+  {
+    id: "an11",
+    text: "Oszustów na starożytnych igrzyskach karano grzywnami, z których fundowano... posągi hańby (zanes) ustawiane przy wejściu na stadion — z imieniem i przewiną oszusta, ku przestrodze zawodników.",
+    category: "ancient",
+    emoji: "🗿",
+  },
+  {
+    id: "an12",
+    text: "Legenda o Filippidesie, który przybiegł z Maratonu do Aten, krzyknął „zwyciężyliśmy!” i padł martwy, została spisana dopiero setki lat po bitwie — historycy uważają ją za piękną fikcję.",
+    category: "ancient",
+    emoji: "📖",
+  },
+
+  // Rekordy i kurioza
+  {
+    id: "r18",
+    text: "Tour de France to największe cyklicznie wydarzenie sportowe świata pod względem publiczności: wzdłuż tras staje co roku 10–12 milionów widzów — i nikt nie płaci za bilet.",
+    category: "records",
+    year: 2019,
+    emoji: "👥",
+  },
+  {
+    id: "r19",
+    text: "Najwyżej rozegrany mecz w historii? Zawody krykieta na Kilimandżaro (5730 m) i futbolowe mecze charytatywne na Evereście — sport potrafi dotrzeć wszędzie tam, gdzie brakuje tlenu.",
+    category: "records",
+    year: 2014,
+    emoji: "⛰️",
+  },
+
+  // Szachy
+  {
+    id: "ch7",
+    text: "W 1999 roku Garri Kasparow zagrał przez internet przeciwko „reszcie świata” — ponad 58 tysięcy ludzi głosowało nad każdym posunięciem. Kasparow wygrał po 62 ruchach i nazwał tę partię jedną z najtrudniejszych w życiu.",
+    category: "chess",
+    year: 1999,
+    emoji: "🌍",
+  },
+  {
+    id: "ch8",
+    text: "Szachy są oficjalnie uznawane przez MKOl za sport, ale nigdy nie trafiły do programu igrzysk. Zawodowi szachiści podczas partii potrafią spalać tyle kalorii, co sportowcy — samym myśleniem i stresem.",
+    category: "chess",
+    emoji: "🧠",
+  },
+
+  // E-sport
+  {
+    id: "e6",
+    text: "Michał „Nisha” Jankowski w 2024 roku jako pierwszy Polak wygrał The International — najważniejszy turniej Dota 2. Jego drużyna Team Liquid zgarnęła ponad milion dolarów na gracza.",
+    category: "esport",
+    year: 2024,
+    emoji: "🇵🇱",
+  },
+  {
+    id: "e7",
+    text: "W Korei Południowej StarCraft stał się sportem narodowym: już pod koniec lat 90. mecze pokazywały całodobowe kanały telewizyjne, a najlepsi gracze mieli status gwiazd rocka.",
+    category: "esport",
+    year: 1999,
+    emoji: "📺",
+  },
+
+  // Rugby i futbol amerykański
+  {
+    id: "rg7",
+    text: "Finał Pucharu Świata w rugby 1995: Nelson Mandela wręczył trofeum kapitanowi RPA ubrany w koszulkę Springboks — symbol znienawidzonego niegdyś apartheidu — jednocząc podzielony kraj. Historię opowiada film „Invictus”.",
+    category: "rugby",
+    year: 1995,
+    emoji: "🤝",
+  },
+  {
+    id: "rg8",
+    text: "Trzygodzinna transmisja meczu NFL zawiera średnio... zaledwie około 11 minut faktycznej gry. Resztę wypełniają przerwy, ustawienia i powtórki — idealne środowisko dla reklam.",
+    category: "rugby",
+    year: 2010,
+    emoji: "⏸️",
+  },
+
+  // Sporty siłowe
+  {
+    id: "st7",
+    text: "Islandczyk Hafthor Björnsson — filmowa „Góra” z „Gry o tron” — podniósł w 2020 roku w martwym ciągu 501 kg, najwięcej w historii ludzkości.",
+    category: "strength",
+    year: 2020,
+    emoji: "⛰️",
+  },
+  {
+    id: "st8",
+    text: "Kanadyjczyk Louis Cyr, XIX-wieczny „najsilniejszy człowiek świata”, według relacji prasowych utrzymał w miejscu cztery konie ciągnące w przeciwne strony i podniósł plecami platformę z 18 mężczyznami.",
+    category: "strength",
+    year: 1891,
+    emoji: "🐴",
+  },
+
+  // Gimnastyka
+  {
+    id: "g7",
+    text: "Věra Čáslavská, 7-krotna mistrzyni olimpijska, na igrzyskach 1968 odwróciła głowę podczas hymnu ZSRR w proteście przeciw inwazji na Czechosłowację. Zapłaciła za to latami zawodowego wykluczenia w ojczyźnie.",
+    category: "gymnastics",
+    year: 1968,
+    emoji: "✊",
+  },
+  {
+    id: "g8",
+    text: "Skok Produnowej — przerzut i dwa salta kurczone w przód — nazywany jest „skokiem śmierci”. Wykonała go zaledwie garstka gimnastyczek; błąd przy lądowaniu grozi złamaniem karku.",
+    category: "gymnastics",
+    year: 1999,
+    emoji: "☠️",
+  },
+
+  // Sporty ekstremalne
+  {
+    id: "x7",
+    text: "Szerpa Kami Rita zdobył Mount Everest ponad 30 razy — rekord wszech czasów. Pierwszy raz stanął na szczycie w 1994 roku i wspina się tam niemal co sezon.",
+    category: "extreme",
+    year: 2024,
+    emoji: "🔁",
+  },
+  {
+    id: "x8",
+    text: "Parkour narodził się na paryskich przedmieściach — David Belle rozwinął go z wojskowego toru przeszkód, którego uczył go ojciec, strażak i żołnierz z Wietnamu.",
+    category: "extreme",
+    year: 1997,
+    emoji: "🏃",
+  },
+
+  // Jeździectwo
+  {
+    id: "eq7",
+    text: "Hiszpańska Szkoła Jazdy w Wiedniu od ponad 450 lat szkoli białe lipicany w barokowej sztuce jeździeckiej. Umiejętności koni — skoki i „tańce” — wywodzą się z manewrów bojowych kawalerii.",
+    category: "equestrian",
+    year: 1572,
+    emoji: "🤍",
+  },
+  {
+    id: "eq8",
+    text: "Ogier Fusaichi Pegasus, zwycięzca Kentucky Derby 2000, został sprzedany za rekordowe ok. 70 milionów dolarów — głównie z myślą o karierze... reproduktora.",
+    category: "equestrian",
+    year: 2000,
+    emoji: "💰",
+  },
+
+  // Sporty precyzyjne
+  {
+    id: "pr7",
+    text: "Ronnie O'Sullivan w 2019 roku jako pierwszy snookerzysta w historii skompletował tysiąc brejków stupunktowych. Okrągły numer wbił — oczywiście — w decydującym frejmie finału, przy pełnej widowni.",
+    category: "precision",
+    year: 2019,
+    emoji: "🎱",
+  },
+  {
+    id: "pr8",
+    text: "Koreański łucznik Im Dong-hyun bił rekordy świata, mając poważną wadę wzroku — tarczę widział jako rozmytą plamę. Twierdził, że to bez znaczenia: liczy się powtarzalność ruchu, nie ostrość obrazu.",
+    category: "precision",
+    year: 2012,
+    emoji: "👓",
+  },
+
+  // Sporty tradycyjne
+  {
+    id: "tr8",
+    text: "Podczas szkockich Highland Games zawodnicy rzucają pniem o długości ok. 6 m (caber toss) — ale nie liczy się odległość, tylko styl: pień ma się obrócić i upaść idealnie „na godzinę 12”.",
+    category: "traditional",
+    year: 1848,
+    emoji: "🪵",
+  },
+  {
+    id: "tr9",
+    text: "Sepak takraw, „siatkonoga” z Azji Południowo-Wschodniej, to siatkówka grana wyłącznie nogami, głową i klatką piersiową. Ścinając piłkę, zawodnicy wykonują salta na wysokości siatki.",
+    category: "traditional",
+    emoji: "🦶",
+  },
 ];
 
 export function getRandomFact(category: string, facts: Fact[] = FACTS_DB): Fact {
