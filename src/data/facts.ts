@@ -31,6 +31,7 @@ export const CATEGORIES = [
   { id: "polandgames", label: "Polska na igrzyskach", emoji: "🎽", color: "from-red-500 to-red-800" },
   { id: "polandwc", label: "Polska na mundialach", emoji: "🦅", color: "from-rose-600 to-red-900" },
   { id: "polandclubs", label: "Polskie kluby i areny", emoji: "🏟️", color: "from-red-700 to-orange-800" },
+  { id: "polandeuro", label: "Polska na Euro", emoji: "📣", color: "from-red-500 to-rose-700" },
   { id: "rugby", label: "Rugby i futbol amer.", emoji: "🏉", color: "from-orange-700 to-amber-800" },
   { id: "equestrian", label: "Jeździectwo", emoji: "🏇", color: "from-lime-600 to-emerald-800" },
   { id: "precision", label: "Sporty precyzyjne", emoji: "🎯", color: "from-teal-500 to-cyan-700" },
@@ -2960,6 +2961,94 @@ export const FACTS_DB: Fact[] = [
     category: "polandclubs",
     year: 2020,
     emoji: "🏍️",
+  },
+
+  // === POLSKA NA EURO ===
+  {
+    id: "pe1",
+    text: "Na debiut w mistrzostwach Europy Polska czekała aż do 2008 roku — wcześniej przegrała kwalifikacje do dwunastu kolejnych turniejów, choć w międzyczasie zdobywała medale mundiali i igrzysk.",
+    category: "polandeuro",
+    year: 2008,
+    emoji: "⏳",
+  },
+  {
+    id: "pe2",
+    text: "Euro 2008: w debiutanckim meczu Polskę pokonały Niemcy 2:0, a oba gole strzelił... urodzony w Gliwicach Lukas Podolski. Z szacunku dla kraju urodzenia nie celebrował żadnego z trafień.",
+    category: "polandeuro",
+    year: 2008,
+    emoji: "😶",
+  },
+  {
+    id: "pe3",
+    text: "Pierwszy punkt na Euro Polska straciła w dramatycznych okolicznościach: z Austrią było 1:0 do 93. minuty, gdy sędzia Howard Webb podyktował rzut karny. W Polsce Webb z dnia na dzień stał się najbardziej znanym arbitrem świata.",
+    category: "polandeuro",
+    year: 2008,
+    emoji: "😤",
+  },
+  {
+    id: "pe4",
+    text: "Euro 2012 Polska współorganizowała z Ukrainą. W meczu otwarcia z Grecją czerwoną kartkę zobaczył Wojciech Szczęsny, a wprowadzony z ławki Przemysław Tytoń pierwszym dotknięciem piłki obronił rzut karny.",
+    category: "polandeuro",
+    year: 2012,
+    emoji: "🧤",
+  },
+  {
+    id: "pe5",
+    text: "Wyrównujący gol Jakuba Błaszczykowskiego z Rosją na Stadionie Narodowym (2012) — huknięcie z woleja po rajdzie przez pół boiska — uchodzi za najważniejszą bramkę w polskiej historii Euro.",
+    category: "polandeuro",
+    year: 2012,
+    emoji: "🚀",
+  },
+  {
+    id: "pe6",
+    text: "Pierwsze zwycięstwo Polski na Euro padło dopiero w 2016 roku: 1:0 z Irlandią Północną po golu Arkadiusza Milika. Turniej zakończył się historycznym ćwierćfinałem.",
+    category: "polandeuro",
+    year: 2016,
+    emoji: "✅",
+  },
+  {
+    id: "pe7",
+    text: "Euro 2020: Wojciech Szczęsny przeszedł do historii jako pierwszy bramkarz, któremu w meczu mistrzostw Europy zapisano gola samobójczego — piłka wpadła do siatki po słupku i jego plecach w meczu ze Słowacją.",
+    category: "polandeuro",
+    year: 2021,
+    emoji: "🙈",
+  },
+  {
+    id: "pe8",
+    text: "Euro 2024: Polacy pożegnali się z turniejem najszybciej ze wszystkich, ale na koniec urwali punkt późniejszym finalistom — w meczu z Francją (1:1) karnego pewnie wykorzystał Robert Lewandowski.",
+    category: "polandeuro",
+    year: 2024,
+    emoji: "🇫🇷",
+  },
+
+  // === POLSKA NA IGRZYSKACH — WĄTKI ZIMOWE ===
+  {
+    id: "pg18",
+    text: "Cortina d'Ampezzo 1956: Franciszek Gąsienica-Groń zdobył brąz w kombinacji norweskiej — pierwszy polski medal zimowych igrzysk w historii. Na kolejny Polska czekała 16 lat, do złota Fortuny.",
+    category: "polandgames",
+    year: 1956,
+    emoji: "🥉",
+  },
+  {
+    id: "pg19",
+    text: "Squaw Valley 1960: łyżwiarki szybkie Elwira Seroczyńska i Helena Pilejczyk zdobyły srebro i brąz na 1500 m tego samego dnia — to wciąż jedyne polskie medale olimpijskie w tej dyscyplinie... do czasu Zbigniewa Bródki.",
+    category: "polandgames",
+    year: 1960,
+    emoji: "⛸️",
+  },
+  {
+    id: "pg20",
+    text: "Turyn 2006: srebro biathlonisty Tomasza Sikory i pierwszy medal (brąz) młodziutkiej Justyny Kowalczyk zwiastowały nadejście najlepszej zimowej dekady w historii polskiego sportu.",
+    category: "polandgames",
+    year: 2006,
+    emoji: "🎯",
+  },
+  {
+    id: "pg21",
+    text: "Soczi 2014 to najlepsze zimowe igrzyska Polski: 4 złota (dwa Stocha, Kowalczyk ze złamaną stopą i panczenista Zbigniew Bródka, który wygrał o 0,003 sekundy) i 6 medali łącznie.",
+    category: "polandgames",
+    year: 2014,
+    emoji: "🌟",
   },
 ];
 
