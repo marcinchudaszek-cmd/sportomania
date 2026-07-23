@@ -50,6 +50,7 @@ export const CATEGORIES = [
   { id: "coaches", label: "Trenerzy legendy", emoji: "📋", color: "from-stone-600 to-neutral-800" },
   { id: "animals", label: "Zwierzęta w sporcie", emoji: "🐾", color: "from-amber-500 to-yellow-700" },
   { id: "science", label: "Sport w liczbach", emoji: "🔬", color: "from-cyan-500 to-blue-700" },
+  { id: "rivalries", label: "Wielkie rywalizacje", emoji: "⚔️", color: "from-amber-600 to-red-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -4346,6 +4347,108 @@ export const FACTS_DB: Fact[] = [
     category: "winter",
     year: 1949,
     emoji: "🧊",
+  },
+
+  // === WIELKIE RYWALIZACJE ===
+  {
+    id: "rv1",
+    text: "Muhammad Ali i Joe Frazier stoczyli trzy legendarne walki. Ostatnia, „Thrilla in Manila” (1975) w upale i wilgoci, była tak wyniszczająca, że obaj przyznali później, iż byli blisko śmierci.",
+    category: "rivalries",
+    year: 1975,
+    emoji: "🥊",
+  },
+  {
+    id: "rv2",
+    text: "Alain Prost i Ayrton Senna, koledzy z zespołu McLaren, znienawidzili się tak, że dwukrotnie rozstrzygnęli mistrzostwo świata, zderzając się bolidami na tym samym japońskim zakręcie — w 1989 i 1990 roku.",
+    category: "rivalries",
+    year: 1990,
+    emoji: "💥",
+  },
+  {
+    id: "rv3",
+    text: "Roger Federer i Rafael Nadal zagrali ze sobą 40 razy. Ich finał Wimbledonu 2008, zakończony po zmroku wynikiem 9:7 w piątym secie, wielu uznaje za najlepszy mecz tenisowy w historii.",
+    category: "rivalries",
+    year: 2008,
+    emoji: "🎾",
+  },
+  {
+    id: "rv4",
+    text: "Martina Navratilova i Chris Evert spotkały się na korcie aż 80 razy w ciągu 16 lat — to najdłuższa rywalizacja w historii tenisa. Poza kortem były bliskimi przyjaciółkami.",
+    category: "rivalries",
+    year: 1988,
+    emoji: "🤝",
+  },
+  {
+    id: "rv5",
+    text: "Larry Bird i Magic Johnson rywalizowali od finału akademickiego w 1979 roku po całe lata 80. w NBA. To ich pojedynki Celtics–Lakers wyciągnęły ligę z kryzysu i uczyniły globalnym fenomenem.",
+    category: "rivalries",
+    year: 1984,
+    emoji: "🏀",
+  },
+  {
+    id: "rv6",
+    text: "Brytyjczycy Sebastian Coe i Steve Ovett byli tak zacięcie skłóceni, że prawie nigdy nie startowali razem. Na igrzyskach 1980 każdy wygrał... koronny dystans rywala: Ovett 800 m, a Coe 1500 m.",
+    category: "rivalries",
+    year: 1980,
+    emoji: "🏃",
+  },
+  {
+    id: "rv7",
+    text: "Rywalizacja Jacka Nicklausa z Arnoldem Palmerem w latach 60. wyniosła golf do telewizyjnej wielkości. Palmer miał nawet własną armię kibiców — słynną „Arnie's Army”.",
+    category: "rivalries",
+    year: 1962,
+    emoji: "⛳",
+  },
+  {
+    id: "rv8",
+    text: "Na igrzyskach 2008 Michael Phelps pokonał Serba Milorada Čavicia na 100 m motylkiem o zaledwie 0,01 sekundy — ostatnim, krótszym uderzeniem w ścianę. Ta setna sekundy dała mu siódme z ośmiu złotych medali.",
+    category: "rivalries",
+    year: 2008,
+    emoji: "🏊",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "a22",
+    text: "Jim Hines na igrzyskach w Meksyku 1968 jako pierwszy człowiek zszedł na 100 m poniżej 10 sekund w oficjalnym, elektronicznym pomiarze — 9,95 s. Rekord przetrwał 15 lat.",
+    category: "athletics",
+    year: 1968,
+    emoji: "🔟",
+  },
+  {
+    id: "c18",
+    text: "George Foreman odzyskał mistrzostwo świata wagi ciężkiej w 1994 roku, mając 45 lat — jako najstarszy mistrz w historii. Zrobił to 20 lat po tym, jak przegrał z Alim w „Rumble in the Jungle”.",
+    category: "combat",
+    year: 1994,
+    emoji: "👴",
+  },
+  {
+    id: "gf9",
+    text: "Ryder Cup — drużynowy pojedynek golfistów USA i Europy — rozgrywany jest od 1927 roku wyłącznie o honor. Zawodnicy, na co dzień grający o miliony, nie dostają za niego ani centa.",
+    category: "golf",
+    year: 1927,
+    emoji: "🇪🇺",
+  },
+  {
+    id: "sg26",
+    text: "Barcelona 1992: w półfinale biegu na 400 m Derek Redmond zerwał mięsień i upadł. Na trasę wbiegł jego ojciec i pomógł mu dokuśtykać do mety — jedna z najbardziej wzruszających scen w historii igrzysk.",
+    category: "summergames",
+    year: 1992,
+    emoji: "🤍",
+  },
+  {
+    id: "rg9",
+    text: "Nowozelandczyk Jonah Lomu na mistrzostwach świata 1995 dosłownie przebiegał po rywalach. Ważący 120 kg skrzydłowy stał się pierwszą globalną gwiazdą rugby i zmienił wyobrażenie o tym sporcie.",
+    category: "rugby",
+    year: 1995,
+    emoji: "🌪️",
+  },
+  {
+    id: "wm11",
+    text: "Siostry Venus i Serena Williams zagrały ze sobą cztery finały wielkoszlemowe z rzędu (2002–2003). Wszystkie wygrała Serena, kompletując tzw. „Serena Slam” — cztery główne tytuły naraz.",
+    category: "women",
+    year: 2003,
+    emoji: "👯",
   },
 ];
 
