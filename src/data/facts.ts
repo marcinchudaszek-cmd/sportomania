@@ -51,6 +51,7 @@ export const CATEGORIES = [
   { id: "animals", label: "Zwierzęta w sporcie", emoji: "🐾", color: "from-amber-500 to-yellow-700" },
   { id: "science", label: "Sport w liczbach", emoji: "🔬", color: "from-cyan-500 to-blue-700" },
   { id: "rivalries", label: "Wielkie rywalizacje", emoji: "⚔️", color: "from-amber-600 to-red-800" },
+  { id: "money", label: "Sport i pieniądze", emoji: "💰", color: "from-yellow-600 to-amber-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -4449,6 +4450,94 @@ export const FACTS_DB: Fact[] = [
     category: "women",
     year: 2003,
     emoji: "👯",
+  },
+
+  // === SPORT I PIENIĄDZE ===
+  {
+    id: "mo1",
+    text: "Michael Jordan został w 2014 roku pierwszym sportowcem-miliarderem — nie dzięki grze, lecz marce Air Jordan i udziałom w klubie NBA. Buty sygnowane jego nazwiskiem sprzedają się do dziś za miliardy rocznie.",
+    category: "money",
+    year: 2014,
+    emoji: "👟",
+  },
+  {
+    id: "mo2",
+    text: "Tiger Woods jako pierwszy sportowiec w historii przekroczył miliard dolarów zarobków w karierze — głównie z reklam. Uczynił golf sportem, w którym płynęły naprawdę wielkie pieniądze.",
+    category: "money",
+    year: 2009,
+    emoji: "🐯",
+  },
+  {
+    id: "mo3",
+    text: "Cristiano Ronaldo po przejściu do saudyjskiego Al-Nassr w 2023 roku zaczął zarabiać około 200 milionów euro rocznie — to jeden z najwyższych kontraktów w historii sportu.",
+    category: "money",
+    year: 2023,
+    emoji: "🇸🇦",
+  },
+  {
+    id: "mo4",
+    text: "Przez ponad sto lat medaliści olimpijscy nie dostawali ani grosza nagrody. Dopiero na igrzyska 2024 lekkoatletyka jako pierwsza dyscyplina ogłosiła premie — 50 tysięcy dolarów za złoto.",
+    category: "money",
+    year: 2024,
+    emoji: "🥇",
+  },
+  {
+    id: "mo5",
+    text: "Amerykańska telewizja NBC zapłaciła 7,75 miliarda dolarów za prawa do transmisji igrzysk olimpijskich w USA do 2032 roku. To pokazuje, jak ogromną machiną finansową stały się igrzyska.",
+    category: "money",
+    year: 2014,
+    emoji: "📺",
+  },
+  {
+    id: "mo6",
+    text: "Indyjska liga krykieta IPL to najbogatsza liga tego sportu na świecie. Zawodników kupuje się na aukcjach za miliony dolarów, a mecze ogląda kilkaset milionów widzów.",
+    category: "money",
+    year: 2008,
+    emoji: "🏏",
+  },
+  {
+    id: "mo7",
+    text: "W 1992 roku angielskie kluby oderwały się od ligowej struktury i założyły Premier League, by samodzielnie sprzedawać prawa telewizyjne. Dziś to najbogatsza liga piłkarska świata.",
+    category: "money",
+    year: 1992,
+    emoji: "📈",
+  },
+  {
+    id: "mo8",
+    text: "W 2022 roku finansowana z Arabii Saudyjskiej seria LIV Golf zwabiła gwiazdy gigantycznymi, gwarantowanymi kontraktami i podzieliła świat golfa. Podobne miliardy popłynęły później do piłki i innych sportów.",
+    category: "money",
+    year: 2022,
+    emoji: "⛳",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "f30",
+    text: "Zasada „50+1” w niemieckiej Bundeslidze wymaga, by większość udziałów klubu należała do jego kibiców-członków. Dzięki temu bilety są tanie, a kluby trudniej przejąć inwestorom.",
+    category: "football",
+    year: 1998,
+    emoji: "🇩🇪",
+  },
+  {
+    id: "b19",
+    text: "Ligę NBA (pod pierwotną nazwą BAA) założono w 1946 roku. Pierwszy mecz rozegrano w Toronto, a pierwszy zdobyty w historii ligi kosz padł... z rzutu za dwa punkty Ossiego Schectmana.",
+    category: "basketball",
+    year: 1946,
+    emoji: "📜",
+  },
+  {
+    id: "c19",
+    text: "Pierwsza walka bokserska, która przyniosła z biletów ponad milion dolarów, odbyła się w 1921 roku (Dempsey–Carpentier). Zapoczątkowała erę wielkich gal jako dochodowego widowiska.",
+    category: "combat",
+    year: 1921,
+    emoji: "💵",
+  },
+  {
+    id: "r21",
+    text: "Najcenniejszą marką sportową świata jest od lat klub futbolu amerykańskiego Dallas Cowboys, wyceniany na ponad 10 miliardów dolarów — więcej niż niejedno duże przedsiębiorstwo giełdowe.",
+    category: "records",
+    year: 2024,
+    emoji: "🤠",
   },
 ];
 
