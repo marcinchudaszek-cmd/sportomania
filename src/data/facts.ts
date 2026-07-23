@@ -45,6 +45,7 @@ export const CATEGORIES = [
   { id: "ancient", label: "Sport starożytny", emoji: "🏛️", color: "from-stone-500 to-amber-800" },
   { id: "records", label: "Rekordy i kurioza", emoji: "🤯", color: "from-violet-500 to-purple-600" },
   { id: "scandals", label: "Skandale i afery", emoji: "🚨", color: "from-red-600 to-rose-800" },
+  { id: "stadiums", label: "Legendarne areny", emoji: "🏟️", color: "from-green-700 to-teal-900" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -3899,6 +3900,114 @@ export const FACTS_DB: Fact[] = [
     category: "worldcup",
     year: 1970,
     emoji: "⚽",
+  },
+
+  // === LEGENDARNE ARENY ŚWIATA ===
+  {
+    id: "sd1",
+    text: "Największym stadionem świata pod względem pojemności jest Rungrado 1 Maja w Pjongjangu (Korea Płn.) — mieści ok. 114 tysięcy widzów. Odbywają się na nim głównie masowe pokazy propagandowe.",
+    category: "stadiums",
+    year: 1989,
+    emoji: "🇰🇵",
+  },
+  {
+    id: "sd2",
+    text: "Indianapolis Motor Speedway to największy obiekt sportowy świata — trybuny mieszczą ponad 250 tysięcy widzów. Wewnątrz owalnego toru zmieściłyby się boiska do baseballu, tenisa i całe Koloseum naraz.",
+    category: "stadiums",
+    year: 1909,
+    emoji: "🏎️",
+  },
+  {
+    id: "sd3",
+    text: "Estadio Centenario w Montevideo, zbudowany na pierwszy mundial 1930, to jedyny obiekt na świecie uznany przez FIFA za „historyczny pomnik światowego futbolu”.",
+    category: "stadiums",
+    year: 1930,
+    emoji: "🏛️",
+  },
+  {
+    id: "sd4",
+    text: "Camp Nou to największy stadion Europy — przed przebudową mieścił blisko 99 tysięcy kibiców. Jego nazwa znaczy po katalońsku po prostu „Nowe Boisko”.",
+    category: "stadiums",
+    year: 1957,
+    emoji: "🔵",
+  },
+  {
+    id: "sd5",
+    text: "Łuk nad stadionem Wembley ma 133 metry wysokości i jest widoczny z wielu punktów Londynu. To najdłuższa na świecie samonośna konstrukcja dachowa tego typu.",
+    category: "stadiums",
+    year: 2007,
+    emoji: "🌉",
+  },
+  {
+    id: "sd6",
+    text: "Mediolański San Siro dzielą od 1947 roku dwaj zacięci rywale — AC Milan i Inter. To jeden z niewielu wielkich stadionów świata, na którym „u siebie” gra się w derby.",
+    category: "stadiums",
+    year: 1947,
+    emoji: "🔴",
+  },
+  {
+    id: "sd7",
+    text: "Fenway Park w Bostonie (1912) to najstarszy wciąż używany stadion ligi MLB. Jego lewą część zamyka „Zielony Potwór” — mur wysoki na ponad 11 metrów, który połyka mnóstwo potencjalnych home runów.",
+    category: "stadiums",
+    year: 1912,
+    emoji: "👹",
+  },
+  {
+    id: "sd8",
+    text: "Lord's w Londynie, „dom krykieta”, ma boisko z wyraźnym nachyleniem — jeden kraniec murawy leży o ok. 2,5 metra niżej niż drugi. Gracze muszą uwzględniać ten spadek w taktyce.",
+    category: "stadiums",
+    year: 1814,
+    emoji: "🏏",
+  },
+  {
+    id: "sd9",
+    text: "Madison Square Garden w Nowym Jorku, „najsłynniejsza arena świata”, to już czwarty budynek noszący tę nazwę. Obecny wybudowano... nad czynnym dworcem kolejowym Penn Station.",
+    category: "stadiums",
+    year: 1968,
+    emoji: "🗽",
+  },
+  {
+    id: "sd10",
+    text: "Kort centralny Wimbledonu dostał rozsuwany dach dopiero w 2009 roku. Jego zamknięcie i osuszenie powietrza trwa ok. 30–45 minut — od tego czasu deszcz nie przerywa już wielkich finałów.",
+    category: "stadiums",
+    year: 2009,
+    emoji: "🌧️",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "hb9",
+    text: "Bramkarz w piłce ręcznej broni zaledwie co trzeci–czwarty rzut, a mimo to bywa najważniejszym zawodnikiem meczu. Seria kilku obron z rzędu potrafi w kilka minut odwrócić losy całego spotkania.",
+    category: "handball",
+    year: 2016,
+    emoji: "🧤",
+  },
+  {
+    id: "hk9",
+    text: "Wayne Gretzky ma w NHL tyle rekordów (ponad 60), że gdyby odjąć mu wszystkie gole, wciąż byłby najlepszym punktującym w historii ligi — dzięki samym asystom.",
+    category: "hockey",
+    year: 1999,
+    emoji: "🐐",
+  },
+  {
+    id: "g9",
+    text: "Rosyjska gimnastyczka Swietłana Chorkina była tak wysoka jak na gimnastyczkę (165 cm), że musiała wymyślać własne elementy na poręczach — pięć figur nosi dziś jej nazwisko.",
+    category: "gymnastics",
+    year: 2003,
+    emoji: "📏",
+  },
+  {
+    id: "e8",
+    text: "W 2019 roku 16-letni Kyle „Bugha” Giersdorf wygrał indywidualne mistrzostwa świata w Fortnite i 3 miliony dolarów — więcej, niż tego roku dostał zwycięzca tenisowego US Open.",
+    category: "esport",
+    year: 2019,
+    emoji: "💰",
+  },
+  {
+    id: "an13",
+    text: "Zwycięzców starożytnej Olimpii uwieczniano w odach układanych przez najsłynniejszych poetów, m.in. Pindara. Sportowa sława bywała więc dosłownie „nieśmiertelna” — przetrwała 2500 lat w literaturze.",
+    category: "ancient",
+    emoji: "📜",
   },
 ];
 
