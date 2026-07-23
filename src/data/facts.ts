@@ -44,6 +44,7 @@ export const CATEGORIES = [
   { id: "esport", label: "E-sport", emoji: "🎮", color: "from-purple-500 to-fuchsia-700" },
   { id: "ancient", label: "Sport starożytny", emoji: "🏛️", color: "from-stone-500 to-amber-800" },
   { id: "records", label: "Rekordy i kurioza", emoji: "🤯", color: "from-violet-500 to-purple-600" },
+  { id: "scandals", label: "Skandale i afery", emoji: "🚨", color: "from-red-600 to-rose-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -3789,6 +3790,115 @@ export const FACTS_DB: Fact[] = [
     category: "records",
     year: 1939,
     emoji: "🚢",
+  },
+
+  // === SKANDALE I AFERY ===
+  {
+    id: "sc1",
+    text: "Black Sox 1919: ośmiu graczy Chicago White Sox sprzedało za łapówki finał baseballowej World Series. Zawodników uniewinnił sąd, ale komisarz ligi zdyskwalifikował ich dożywotnio — do dziś.",
+    category: "scandals",
+    year: 1919,
+    emoji: "🧦",
+  },
+  {
+    id: "sc2",
+    text: "Boris Oniszczenko na igrzyskach 1976 zamontował w szpadzie ukryty przycisk, którym sam zapalał sygnał trafienia. Zdemaskowany, wyleciał z igrzysk, a rodacy ochrzcili go „Boris Disoniszczenko”.",
+    category: "scandals",
+    year: 1976,
+    emoji: "🤺",
+  },
+  {
+    id: "sc3",
+    text: "Afera Festina (Tour de France 1998): w samochodzie ekipy znaleziono setki dawek dopingu. Wybuchł największy skandal w historii kolarstwa, a policja przeszukiwała hotele w trakcie wyścigu.",
+    category: "scandals",
+    year: 1998,
+    emoji: "💉",
+  },
+  {
+    id: "sc4",
+    text: "Calciopoli (2006): Juventus odebrano dwa tytuły mistrza Włoch i zdegradowano do Serie B za ustawianie składów sędziowskich. Skandal wybuchł tuż przed mundialem, który... Włochy wygrały.",
+    category: "scandals",
+    year: 2006,
+    emoji: "☎️",
+  },
+  {
+    id: "sc5",
+    text: "„Spygate” w Formule 1 (2007): McLaren dostał rekordową karę 100 milionów dolarów i stracił punkty konstruktorów za posiadanie tajnych danych technicznych Ferrari.",
+    category: "scandals",
+    year: 2007,
+    emoji: "🕵️",
+  },
+  {
+    id: "sc6",
+    text: "„Bloodgate” (2009): rugbysta Harlequins udał krwawiącą ranę, gryząc sztuczną kapsułę z krwią, by wprowadzić lepszego kopacza. Klub ukarano wielką grzywną, a lekarkę zawieszono.",
+    category: "scandals",
+    year: 2009,
+    emoji: "🩸",
+  },
+  {
+    id: "sc7",
+    text: "Państwowy doping Rosji: raport McLarena (2016) ujawnił, że podczas igrzysk w Soczi 2014 służby podmieniały próbki moczu przez dziurę w ścianie laboratorium. Rosja od lat startuje pod neutralną flagą.",
+    category: "scandals",
+    year: 2016,
+    emoji: "🧪",
+  },
+  {
+    id: "sc8",
+    text: "Maradonę wyrzucono z mundialu 1994 po wykryciu efedryny. Jego dzikie spojrzenie w kamerę po golu z Grecją stało się jednym z symboli końca kariery „Boskiego Diego”.",
+    category: "scandals",
+    year: 1994,
+    emoji: "👁️",
+  },
+  {
+    id: "sc9",
+    text: "„Deflategate” (2015): NFL oskarżyła New England Patriots o celowe spuszczanie powietrza z piłek. Tom Brady dostał 4 mecze zawieszenia w aferze, która ciągnęła się przez sądy ponad rok.",
+    category: "scandals",
+    year: 2015,
+    emoji: "🏈",
+  },
+
+  // === ROZBUDOWA KILKU KATEGORII ===
+  {
+    id: "f28",
+    text: "Sir Alex Ferguson prowadził Manchester United przez 26 lat i zdobył 13 tytułów mistrza Anglii. Słynął z „Fergie time” — doliczonego czasu, w którym jego drużyna zdumiewająco często strzelała zwycięskie gole.",
+    category: "football",
+    year: 1999,
+    emoji: "🕐",
+  },
+  {
+    id: "b17",
+    text: "Wsad kończący mecz nazywa się „buzzer beater”, ale najsłynniejszy w historii to rzut Michaela Jordana z 1998 roku — ostatni w koszulce Bulls, dający szósty tytuł. Zawisł w powietrzu na wieczność w milionach powtórek.",
+    category: "basketball",
+    year: 1998,
+    emoji: "🎯",
+  },
+  {
+    id: "o33",
+    text: "Znicz olimpijski płonie nieprzerwanie od zapalenia w Olimpii aż po ceremonię zamknięcia. W razie zgaśnięcia zapala się go wyłącznie od zapasowego ognia z tego samego źródła — nigdy zwykłą zapalniczką.",
+    category: "olympics",
+    year: 1936,
+    emoji: "🔥",
+  },
+  {
+    id: "t19",
+    text: "Björn Borg wygrał Wimbledon pięć razy z rzędu (1976–1980), po czym w wieku 26 lat nagle zakończył karierę na szczycie. Jego zimny spokój na korcie kontrastował z żywiołowym rywalem Johnem McEnroe.",
+    category: "tennis",
+    year: 1980,
+    emoji: "🧊",
+  },
+  {
+    id: "p29",
+    text: "Bartłomiej Bonk, Adrian Zieliński, Szymon Kołecki — polskie podnoszenie ciężarów przez dekady dostarczało olimpijskich medali. Szymon Kołecki po latach odzyskał złoto z Pekinu 2008, gdy zwycięzcę zdyskwalifikowano za doping.",
+    category: "poland",
+    year: 2008,
+    emoji: "🏋️",
+  },
+  {
+    id: "wc22",
+    text: "Piłka Telstar z mundialu 1970 — pierwsza czarno-biała, z 32 panelami — miała lepiej kontrastować na czarno-białych telewizorach. Jej wzór do dziś jest w powszechnej wyobraźni „wzorcem” piłki nożnej.",
+    category: "worldcup",
+    year: 1970,
+    emoji: "⚽",
   },
 ];
 
