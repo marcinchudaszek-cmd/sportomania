@@ -46,6 +46,7 @@ export const CATEGORIES = [
   { id: "records", label: "Rekordy i kurioza", emoji: "🤯", color: "from-violet-500 to-purple-600" },
   { id: "scandals", label: "Skandale i afery", emoji: "🚨", color: "from-red-600 to-rose-800" },
   { id: "stadiums", label: "Legendarne areny", emoji: "🏟️", color: "from-green-700 to-teal-900" },
+  { id: "women", label: "Kobiety w sporcie", emoji: "👩", color: "from-pink-500 to-purple-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -4008,6 +4009,108 @@ export const FACTS_DB: Fact[] = [
     text: "Zwycięzców starożytnej Olimpii uwieczniano w odach układanych przez najsłynniejszych poetów, m.in. Pindara. Sportowa sława bywała więc dosłownie „nieśmiertelna” — przetrwała 2500 lat w literaturze.",
     category: "ancient",
     emoji: "📜",
+  },
+
+  // === KOBIETY W SPORCIE ===
+  {
+    id: "wm1",
+    text: "Charlotte Cooper wygrała turniej tenisowy na igrzyskach 1900 i została pierwszą w historii indywidualną mistrzynią olimpijską. Grała w długiej sukni do kostek i pod krawatem.",
+    category: "women",
+    year: 1900,
+    emoji: "👗",
+  },
+  {
+    id: "wm2",
+    text: "Kathrine Switzer w 1967 roku pobiegła w maratonie bostońskim jako pierwsza oficjalnie zgłoszona kobieta. W trakcie biegu organizator próbował siłą zepchnąć ją z trasy — zdjęcia tej szarpaniny obiegły świat.",
+    category: "women",
+    year: 1967,
+    emoji: "📸",
+  },
+  {
+    id: "wm3",
+    text: "Fanny Blankers-Koen, „Latająca gospodyni”, zdobyła na igrzyskach 1948 cztery złote medale w biegach — jako 30-letnia matka dwójki dzieci, której mówiono, że jest już za stara na sport.",
+    category: "women",
+    year: 1948,
+    emoji: "🏃‍♀️",
+  },
+  {
+    id: "wm4",
+    text: "Junko Tabei w 1975 roku jako pierwsza kobieta w historii stanęła na Mount Evereście. Kilka dni przed szczytem lawina przygniotła jej obóz — wygrzebano ją nieprzytomną spod śniegu.",
+    category: "women",
+    year: 1975,
+    emoji: "🏔️",
+  },
+  {
+    id: "wm5",
+    text: "Nawal El Moutawakel wygrała bieg na 400 m przez płotki na igrzyskach 1984 — jako pierwsza kobieta z kraju muzułmańskiego ze złotem olimpijskim. Król Maroka ogłosił, że wszystkie dziewczynki urodzone tego dnia mogą nosić jej imię.",
+    category: "women",
+    year: 1984,
+    emoji: "🇲🇦",
+  },
+  {
+    id: "wm6",
+    text: "Amerykańska ustawa Title IX z 1972 roku zakazała dyskryminacji płci w szkołach i uczelniach. Efekt dla sportu był lawinowy: liczba dziewcząt uprawiających sport w USA wzrosła w kolejnych dekadach kilkunastokrotnie.",
+    category: "women",
+    year: 1972,
+    emoji: "⚖️",
+  },
+  {
+    id: "wm7",
+    text: "Manon Rhéaume w 1992 roku jako pierwsza kobieta w historii zagrała w meczu jednej z czterech wielkich lig Ameryki Płn. — broniła w bramce hokejowej Tampa Bay Lightning w spotkaniu przedsezonowym.",
+    category: "women",
+    year: 1992,
+    emoji: "🥅",
+  },
+  {
+    id: "wm8",
+    text: "Danica Patrick w 2008 roku wygrała wyścig serii IndyCar w Japonii — jako jedyna kobieta w historii tej kategorii. Kilka lat później startowała też w najsłynniejszym wyścigu NASCAR, Daytona 500.",
+    category: "women",
+    year: 2008,
+    emoji: "🏎️",
+  },
+  {
+    id: "wm9",
+    text: "Pierwsze mistrzostwa świata w piłce nożnej kobiet rozegrano dopiero w 1991 roku w Chinach — 61 lat po męskich. Wygrały je Amerykanki, które do dziś są potęgą kobiecego futbolu.",
+    category: "women",
+    year: 1991,
+    emoji: "🏆",
+  },
+  {
+    id: "wm10",
+    text: "Enriqueta Basilio na igrzyskach w Meksyku 1968 jako pierwsza kobieta w historii zapaliła znicz olimpijski. Wbiegła po schodach na szczyt stadionu na oczach miliardów widzów na całym świecie.",
+    category: "women",
+    year: 1968,
+    emoji: "🔥",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "v14",
+    text: "Reprezentacja Brazylii to potęga męskiej siatkówki — trzy złota olimpijskie (1992, 2004, 2016) i lata dominacji w Lidze Światowej. Brazylijczycy rozsławili też efektowny serwis z wyskoku.",
+    category: "volleyball",
+    year: 2016,
+    emoji: "🇧🇷",
+  },
+  {
+    id: "c17",
+    text: "Manny Pacquiao to jedyny bokser w historii, który zdobył mistrzowskie pasy w ośmiu różnych kategoriach wagowych. Po karierze w ringu został senatorem Filipin.",
+    category: "combat",
+    year: 2009,
+    emoji: "🇵🇭",
+  },
+  {
+    id: "pr9",
+    text: "Fallon Sherrock w 2019 roku jako pierwsza kobieta w historii pokonała mężczyznę w mistrzostwach świata w darcie PDC. Wygrała dwa mecze z rzędu, a hala „Ally Pally” oszalała na jej punkcie.",
+    category: "precision",
+    year: 2019,
+    emoji: "🎯",
+  },
+  {
+    id: "k13",
+    text: "Tadej Pogačar w 2024 roku wygrał w jednym sezonie Giro d'Italia, Tour de France i mistrzostwa świata — potrójną koronę, której przed nim dokonał tylko Eddy Merckx w 1974 roku.",
+    category: "cycling",
+    year: 2024,
+    emoji: "👑",
   },
 ];
 
