@@ -55,6 +55,7 @@ export const CATEGORIES = [
   { id: "culture", label: "Sport w kulturze", emoji: "🎬", color: "from-rose-600 to-fuchsia-800" },
   { id: "politics", label: "Sport i polityka", emoji: "🌐", color: "from-blue-700 to-slate-800" },
   { id: "comebacks", label: "Kontuzje i powroty", emoji: "🩹", color: "from-orange-500 to-pink-700" },
+  { id: "gear", label: "Stroje i sprzęt", emoji: "👕", color: "from-sky-600 to-indigo-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -4812,6 +4813,149 @@ export const FACTS_DB: Fact[] = [
     category: "combat",
     year: 1951,
     emoji: "🥊",
+  },
+
+  // === STROJE I SPRZĘT ===
+  {
+    id: "gear1",
+    text: "Karbonowe buty do biegania Nike (Vaporfly) od 2017 roku wywołały lawinę rekordów w maratonie. Efekt był tak duży, że władze lekkoatletyki musiały ograniczyć przepisami grubość podeszwy.",
+    category: "gear",
+    year: 2019,
+    emoji: "👟",
+  },
+  {
+    id: "gear2",
+    text: "Wprowadzony w 2018 roku system „halo” — tytanowy pałąk nad głową kierowcy F1 — początkowo krytykowano za wygląd. Dziś przypisuje mu się uratowanie życia w kilku spektakularnych wypadkach.",
+    category: "gear",
+    year: 2018,
+    emoji: "🛡️",
+  },
+  {
+    id: "gear3",
+    text: "Technologia bramkowa (goal-line technology), która w ułamku sekundy rozstrzyga, czy piłka przekroczyła linię, zadebiutowała na mundialu w 2014 roku. Wcześniej decydowało wyłącznie oko sędziego.",
+    category: "gear",
+    year: 2014,
+    emoji: "🥅",
+  },
+  {
+    id: "gear4",
+    text: "W 1986 roku przekonstruowano męski oszczep, przesuwając jego środek ciężkości — po to, by lądował krócej i bliżej ziemi. Rzuty stały się zbyt długie i groziły dolecieniem do bieżni i trybun.",
+    category: "gear",
+    year: 1986,
+    emoji: "🎯",
+  },
+  {
+    id: "gear5",
+    text: "Tyczki z włókna szklanego, które zastąpiły bambusowe i metalowe, dosłownie wyniosły skok o tyczce na nowy poziom — sprężysty materiał pozwolił skakać znacznie wyżej niż kiedykolwiek wcześniej.",
+    category: "gear",
+    year: 1961,
+    emoji: "🪜",
+  },
+  {
+    id: "gear6",
+    text: "Panczen z odczepianą piętą (tzw. klapskate) zrewolucjonizował łyżwiarstwo szybkie pod koniec lat 90. Na igrzyskach 1998 rekordy świata posypały się jeden za drugim.",
+    category: "gear",
+    year: 1998,
+    emoji: "⛸️",
+  },
+  {
+    id: "gear7",
+    text: "Drewniane rakiety tenisowe, używane przez ponad sto lat, w latach 80. ustąpiły miejsca grafitowym i kompozytowym. Lżejszy, mocniejszy sprzęt całkowicie zmienił szybkość i siłę gry.",
+    category: "gear",
+    year: 1985,
+    emoji: "🎾",
+  },
+  {
+    id: "gear8",
+    text: "Skok Fosbury'ego — plecami nad poprzeczką — stał się możliwy dopiero, gdy w latach 60. lądowiska w skoku wzwyż wyścielono grubą pianką. Wcześniej, przy piasku i trocinach, lądowanie na plecach groziło urazem.",
+    category: "gear",
+    year: 1968,
+    emoji: "🛏️",
+  },
+
+  // === SZEROKA ROZBUDOWA KATEGORII ===
+  {
+    id: "wc23",
+    text: "System powtórek wideo VAR zadebiutował na mistrzostwach świata w 2018 roku. Sędziowie po raz pierwszy mogli obejrzeć kontrowersyjne sytuacje na ekranie przy linii bocznej.",
+    category: "worldcup",
+    year: 2018,
+    emoji: "📺",
+  },
+  {
+    id: "o39",
+    text: "Tradycję wspólnego, wymieszanego wejścia sportowców na ceremonię zamknięcia igrzysk zapoczątkowano w 1956 roku. Pomysł podsunął w liście nastoletni chłopak z Melbourne.",
+    category: "olympics",
+    year: 1956,
+    emoji: "🤝",
+  },
+  {
+    id: "a25",
+    text: "Mila to jedyny dystans w niemetrycznych jednostkach, dla którego lekkoatletyka wciąż oficjalnie uznaje rekordy świata — hołd dla jej historycznego znaczenia w biegach średnich.",
+    category: "athletics",
+    year: 1975,
+    emoji: "📏",
+  },
+  {
+    id: "t23",
+    text: "Tenisowe „love” oznaczające zero pochodzi — według popularnej teorii — od francuskiego „l'œuf”, czyli „jajko”, którego kształt przypomina zero. Podobnie mówi się o „zerze” w krykiecie („duck”).",
+    category: "tennis",
+    year: 1890,
+    emoji: "🥚",
+  },
+  {
+    id: "b21",
+    text: "Kobieca liga koszykówki WNBA powstała w 1996 roku pod skrzydłami NBA. Dziś to najsilniejsza kobieca liga koszykówki świata, z gwiazdami rozpoznawalnymi na całym globie.",
+    category: "basketball",
+    year: 1996,
+    emoji: "🏀",
+  },
+  {
+    id: "c21",
+    text: "Jack Johnson w 1908 roku został pierwszym czarnoskórym mistrzem świata wagi ciężkiej. Jego panowanie wywołało w rasistowskiej Ameryce histeryczne poszukiwanie „białej nadziei”, która by go pokonała.",
+    category: "combat",
+    year: 1908,
+    emoji: "🥊",
+  },
+  {
+    id: "k14",
+    text: "Jazda w peletonie, w cieniu aerodynamicznym innych kolarzy, pozwala zaoszczędzić nawet 30–40% energii. Dlatego samotna ucieczka pod wiatr to jedno z najtrudniejszych zadań w kolarstwie.",
+    category: "cycling",
+    year: 2015,
+    emoji: "💨",
+  },
+  {
+    id: "w21",
+    text: "Saneczkarz w konkurencji singla pędzi lodową rynną z prędkością ponad 140 km/h — leżąc na plecach, nogami do przodu, bez hamulców. Torem steruje samymi ruchami łydek i ramion.",
+    category: "winter",
+    year: 2010,
+    emoji: "🛷",
+  },
+  {
+    id: "rg11",
+    text: "Piłka do rugby jest owalna, bo pierwsze takie piłki wykonywano z... świńskich pęcherzy, które miały naturalnie wydłużony kształt. Gdy zaczęto używać gumy, owalną formę zachowano celowo.",
+    category: "rugby",
+    year: 1870,
+    emoji: "🐷",
+  },
+  {
+    id: "v15",
+    text: "W siatkówce plażowej zawodnicy pokazują sobie za plecami sygnały palcami, ustalając plan bloku — tak, by rywale ich nie zobaczyli. Każdy układ palców to inne zadanie w obronie.",
+    category: "volleyball",
+    year: 2004,
+    emoji: "🤟",
+  },
+  {
+    id: "m17",
+    text: "Amerykański NASCAR wyrósł z czasów prohibicji: przemytnicy alkoholu podrasowywali auta, by uciekać policji, a po godzinach ścigali się między sobą. Z tych wyścigów narodził się cały sport.",
+    category: "motorsport",
+    year: 1948,
+    emoji: "🥃",
+  },
+  {
+    id: "tr10",
+    text: "Zapaśnicy sumo przed każdą walką rzucają na ring garść soli. To rytuał oczyszczenia wywodzący się z religii shintō — jeden z wielu wielowiekowych ceremoniałów tej dyscypliny.",
+    category: "traditional",
+    emoji: "🧂",
   },
 ];
 

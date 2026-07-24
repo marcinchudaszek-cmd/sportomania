@@ -20,6 +20,26 @@ import Achievements from "./components/Achievements";
 
 type ViewMode = "random" | "search" | "browse" | "quiz" | "favorites" | "today" | "timeline" | "legends";
 
+// === Anty-powtórkowe losowanie ("worek losujący") ===
+// Zapamiętujemy już pokazane ciekawostki i losujemy tylko spośród
+// jeszcze nie widzianych. Gdy cały zestaw się wyczerpie — nowa tura.
+function loadSeenIds(): string[] {
+  try {
+    return JSON.parse(localStorage.getItem("sm_seen") || "[]");
+  } catch {
+    return [];
+  }
+}
+function saveSeenIds(ids: string[]) {
+  try {
+    localStorage.setItem("sm_seen", JSON.stringify(ids));
+  } catch {}
+}
+function markSeen(ref: { current: string[] }, id: string) {
+  ref.current = [...ref.current.filter((x) => x !== id), id].slice(-2000);
+  saveSeenIds(ref.current);
+}
+
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [isAnimating, setIsAnimating] = useState(false);
@@ -31,6 +51,8 @@ export default function App() {
   const [showEditor, setShowEditor] = useState(false);
   const [showAchievements, setShowAchievements] = useState(false);
   const touchStartX = useRef<number | null>(null);
+  const seenRef = useRef<string[]>(loadSeenIds());
+  const currentFactRef = useRef<Fact | null>(null);
 
   // Persisted state
   const [likedIds, setLikedIds] = useLocalStorage<string[]>("sm_liked", []);
@@ -41,6 +63,12 @@ export default function App() {
   const allFacts = useMemo(() => [...FACTS_DB, ...customFacts], [customFacts]);
 
   const [currentFact, setCurrentFact] = useState<Fact>(() => getRandomFact("all", allFacts));
+
+  // Trzymaj aktualną ciekawostkę w refie + oznaczaj ją jako widzianą
+  useEffect(() => {
+    currentFactRef.current = currentFact;
+    markSeen(seenRef, currentFact.id);
+  }, [currentFact]);
 
   // Rejestruj dzień odwiedzin (do osiągnięć)
   useEffect(() => {
@@ -78,7 +106,18 @@ export default function App() {
       const usedCat = cat ?? selectedCategory;
       setIsAnimating(true);
       setTimeout(() => {
-        const next = getRandomFact(usedCat, allFacts);
+        const pool = getFactsByCategory(usedCat, allFacts);
+        const curId = currentFactRef.current?.id;
+        // losuj tylko spośród jeszcze nie widzianych (i nigdy tej samej co teraz)
+        let available = pool.filter((f) => !seenRef.current.includes(f.id) && f.id !== curId);
+        if (available.length === 0) {
+          // cały zestaw obejrzany → zaczynamy nową turę
+          seenRef.current = curId ? [curId] : [];
+          saveSeenIds(seenRef.current);
+          available = pool.filter((f) => f.id !== curId);
+          if (available.length === 0) available = pool;
+        }
+        const next = available[Math.floor(Math.random() * available.length)];
         setCurrentFact(next);
         setHistory((h) => [next, ...h].slice(0, 10));
         setStreak((s) => s + 1);
