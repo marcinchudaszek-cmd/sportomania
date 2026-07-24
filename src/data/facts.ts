@@ -54,6 +54,7 @@ export const CATEGORIES = [
   { id: "money", label: "Sport i pieniądze", emoji: "💰", color: "from-yellow-600 to-amber-800" },
   { id: "culture", label: "Sport w kulturze", emoji: "🎬", color: "from-rose-600 to-fuchsia-800" },
   { id: "politics", label: "Sport i polityka", emoji: "🌐", color: "from-blue-700 to-slate-800" },
+  { id: "comebacks", label: "Kontuzje i powroty", emoji: "🩹", color: "from-orange-500 to-pink-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -4723,6 +4724,94 @@ export const FACTS_DB: Fact[] = [
     category: "basketball",
     year: 1950,
     emoji: "🏀",
+  },
+
+  // === KONTUZJE I WIELKIE POWROTY ===
+  {
+    id: "cb1",
+    text: "Ben Hogan w 1949 roku o mało nie zginął w czołowym zderzeniu z autobusem — lekarze wątpili, czy jeszcze będzie chodził. Wrócił do golfa i wygrał sześć z dziewięciu swoich turniejów wielkoszlemowych już po wypadku.",
+    category: "comebacks",
+    year: 1950,
+    emoji: "⛳",
+  },
+  {
+    id: "cb2",
+    text: "Monica Seles, liderka światowego tenisa, została w 1993 roku ugodzona nożem podczas meczu przez fanatycznego kibica jej rywalki. Wróciła na korty po ponad dwóch latach i zdobyła jeszcze tytuł wielkoszlemowy.",
+    category: "comebacks",
+    year: 1996,
+    emoji: "🔪",
+  },
+  {
+    id: "cb3",
+    text: "Brazylijczyk Ronaldo dwukrotnie zrywał ścięgno w kolanie i groziło mu zakończenie kariery. Wrócił i na mundialu 2002 strzelił 8 goli, został królem strzelców i mistrzem świata — to jeden z największych powrotów w historii futbolu.",
+    category: "comebacks",
+    year: 2002,
+    emoji: "🦵",
+  },
+  {
+    id: "cb4",
+    text: "Bethany Hamilton straciła rękę w ataku rekina jako 13-letnia surferka. Zaledwie kilka tygodni później wróciła na deskę, a później została zawodową surferką — jej historię opowiada film „Soul Surfer”.",
+    category: "comebacks",
+    year: 2004,
+    emoji: "🦈",
+  },
+  {
+    id: "cb5",
+    text: "Futbolista NFL Alex Smith doznał tak potwornego złamania nogi, że przez zakażenie groziła mu amputacja. Po kilkunastu operacjach wrócił na boisko i został wybrany najlepszym powrotem sezonu 2020.",
+    category: "comebacks",
+    year: 2020,
+    emoji: "🏈",
+  },
+  {
+    id: "cb6",
+    text: "Bramkarz Petr Čech doznał w 2006 roku wgniecenia czaszki po zderzeniu z rywalem. Wrócił do gry i przez resztę kariery — kilkanaście lat — występował w charakterystycznym ochronnym kasku na głowie.",
+    category: "comebacks",
+    year: 2006,
+    emoji: "🪖",
+  },
+  {
+    id: "cb7",
+    text: "Kerri Strug na igrzyskach 1996 oddała decydujący skok przez konia na kontuzjowanej kostce, by zapewnić Amerykankom drużynowe złoto w gimnastyce. Lądowanie na jednej nodze i grymas bólu obiegły cały świat.",
+    category: "comebacks",
+    year: 1996,
+    emoji: "🤸",
+  },
+  {
+    id: "cb8",
+    text: "Peyton Manningowi po serii operacji kręgosłupa mówiono, że może już nigdy nie zagrać. Wrócił, zmienił klub i kilka lat później wygrał Super Bowl — jako jeden z najlepszych rozgrywających w historii NFL.",
+    category: "comebacks",
+    year: 2016,
+    emoji: "💪",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "w20",
+    text: "Franz Klammer zjechał po złoto olimpijskie w Innsbrucku 1976 przed własną, austriacką publicznością tak brawurowo, balansując na granicy upadku, że jego przejazd uchodzi za najsłynniejszy zjazd w historii narciarstwa.",
+    category: "winter",
+    year: 1976,
+    emoji: "⛷️",
+  },
+  {
+    id: "s13",
+    text: "Australijczyk Ian Thorpe, „Torpeda”, zdobył 5 złotych medali olimpijskich jako nastolatek. Pomagały mu stopy o rozmiarze ponad 50 — działały niemal jak wbudowane płetwy.",
+    category: "water",
+    year: 2000,
+    emoji: "🦶",
+  },
+  {
+    id: "a24",
+    text: "Zwycięzcę dziesięcioboju tradycyjnie nazywa się „najwszechstronniejszym sportowcem świata”. Tytuł ten sięga 1912 roku, gdy król Szwecji tak nazwał triumfatora Jima Thorpe'a.",
+    category: "athletics",
+    year: 1912,
+    emoji: "🔟",
+  },
+  {
+    id: "c20",
+    text: "Sugar Ray Robinson jest przez wielu uważany za najlepszego boksera wszech czasów „funt za funt”. To właśnie na jego określenie ukuto ten popularny dziś w sportach walki zwrot.",
+    category: "combat",
+    year: 1951,
+    emoji: "🥊",
   },
 ];
 
