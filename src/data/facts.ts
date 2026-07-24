@@ -53,6 +53,7 @@ export const CATEGORIES = [
   { id: "rivalries", label: "Wielkie rywalizacje", emoji: "⚔️", color: "from-amber-600 to-red-800" },
   { id: "money", label: "Sport i pieniądze", emoji: "💰", color: "from-yellow-600 to-amber-800" },
   { id: "culture", label: "Sport w kulturze", emoji: "🎬", color: "from-rose-600 to-fuchsia-800" },
+  { id: "politics", label: "Sport i polityka", emoji: "🌐", color: "from-blue-700 to-slate-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -4634,6 +4635,94 @@ export const FACTS_DB: Fact[] = [
     category: "athletics",
     year: 1930,
     emoji: "🕳️",
+  },
+
+  // === SPORT I POLITYKA ===
+  {
+    id: "pol1",
+    text: "W proteście przeciwko apartheidowi RPA była wykluczona z igrzysk olimpijskich przez blisko trzy dekady — od 1964 do 1992 roku. Na igrzyska wróciła dopiero po demontażu segregacji rasowej.",
+    category: "politics",
+    year: 1992,
+    emoji: "✊",
+  },
+  {
+    id: "pol2",
+    text: "W 1969 roku napięcia wokół meczów eliminacji mundialu przelały się w krótką „wojnę futbolową” między Salwadorem a Hondurasem. Trwała około stu godzin i pochłonęła tysiące ofiar.",
+    category: "politics",
+    year: 1969,
+    emoji: "⚔️",
+  },
+  {
+    id: "pol3",
+    text: "Na zimowych igrzyskach 2018 sportowcy obu Korei przeszli razem pod wspólną flagą, a kobiety wystawiły zjednoczoną drużynę hokejową — rzadki gest pojednania między skłóconymi państwami.",
+    category: "politics",
+    year: 2018,
+    emoji: "🕊️",
+  },
+  {
+    id: "pol4",
+    text: "Na igrzyskach 1936 w hitlerowskim Berlinie niemiecki skoczek w dal Luz Long publicznie doradzał i gratulował czarnoskóremu Jesse Owensowi. Ich przyjaźń przeczyła nazistowskiej propagandzie na oczach świata.",
+    category: "politics",
+    year: 1936,
+    emoji: "🤝",
+  },
+  {
+    id: "pol5",
+    text: "Hasło FC Barcelony „Més que un club” („Więcej niż klub”) narodziło się z jej roli symbolu katalońskiej tożsamości — zwłaszcza w czasach dyktatury generała Franco.",
+    category: "politics",
+    year: 1968,
+    emoji: "🔵",
+  },
+  {
+    id: "pol6",
+    text: "Tajwan z powodów politycznych nie może startować w zawodach pod własną nazwą ani flagą — występuje jako „Chińskie Tajpej”, z osobnym symbolem olimpijskim zamiast flagi narodowej.",
+    category: "politics",
+    year: 1981,
+    emoji: "🏳️",
+  },
+  {
+    id: "pol7",
+    text: "W czasach zimnej wojny NRD i RFN wystawiały osobne reprezentacje olimpijskie, zaciekle rywalizując o medale. Zjednoczone Niemcy wróciły jako jedna drużyna dopiero w 1992 roku.",
+    category: "politics",
+    year: 1968,
+    emoji: "🧱",
+  },
+  {
+    id: "pol8",
+    text: "Mecze krykieta między Indiami a Pakistanem to nie tylko sport — bywają okazją do „krykietowej dyplomacji”, gdy przywódcy obu skłóconych mocarstw spotykają się na trybunach.",
+    category: "politics",
+    year: 2005,
+    emoji: "🏏",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "rg10",
+    text: "Reprezentacja RPA (Springboks) zdobyła rekordowe cztery tytuły mistrza świata w rugby (1995, 2007, 2019, 2023) — więcej niż jakikolwiek inny kraj w historii tego sportu.",
+    category: "rugby",
+    year: 2023,
+    emoji: "🏆",
+  },
+  {
+    id: "t22",
+    text: "Puchar Davisa, drużynowe mistrzostwa świata w tenisie mężczyzn, rozgrywany jest od 1900 roku — to jedne z najstarszych międzynarodowych rozgrywek zespołowych w całym sporcie.",
+    category: "tennis",
+    year: 1900,
+    emoji: "🏆",
+  },
+  {
+    id: "o38",
+    text: "Igrzyska paraolimpijskie wyrosły z zawodów dla weteranów z urazami rdzenia kręgowego, zorganizowanych w 1948 roku przez doktora Ludwiga Guttmanna w brytyjskim Stoke Mandeville.",
+    category: "olympics",
+    year: 1948,
+    emoji: "♿",
+  },
+  {
+    id: "b20",
+    text: "Earl Lloyd w 1950 roku jako pierwszy czarnoskóry koszykarz zagrał w meczu NBA. Dziś zawodnicy o korzeniach afroamerykańskich stanowią zdecydowaną większość ligi.",
+    category: "basketball",
+    year: 1950,
+    emoji: "🏀",
   },
 ];
 
