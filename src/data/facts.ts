@@ -52,6 +52,7 @@ export const CATEGORIES = [
   { id: "science", label: "Sport w liczbach", emoji: "🔬", color: "from-cyan-500 to-blue-700" },
   { id: "rivalries", label: "Wielkie rywalizacje", emoji: "⚔️", color: "from-amber-600 to-red-800" },
   { id: "money", label: "Sport i pieniądze", emoji: "💰", color: "from-yellow-600 to-amber-800" },
+  { id: "culture", label: "Sport w kulturze", emoji: "🎬", color: "from-rose-600 to-fuchsia-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -4538,6 +4539,101 @@ export const FACTS_DB: Fact[] = [
     category: "records",
     year: 2024,
     emoji: "🤠",
+  },
+
+  // === SPORT W KULTURZE I FILMIE ===
+  {
+    id: "cu1",
+    text: "Film „Rocky” (1976), napisany przez nieznanego wówczas Sylvestra Stallone'a, zdobył Oscara dla najlepszego filmu. Do dziś turyści wbiegają po „schodach Rocky'ego” przed muzeum w Filadelfii, gdzie stoi pomnik boksera.",
+    category: "culture",
+    year: 1976,
+    emoji: "🥊",
+  },
+  {
+    id: "cu2",
+    text: "„Rydwany ognia” (1981) o brytyjskich biegaczach z igrzysk 1924 zdobyły Oscara dla najlepszego filmu, a elektroniczny motyw Vangelisa stał się jedną z najbardziej rozpoznawalnych melodii w sporcie.",
+    category: "culture",
+    year: 1981,
+    emoji: "🎼",
+  },
+  {
+    id: "cu3",
+    text: "„Pole marzeń” (1989) z kwestią „Jeśli to zbudujesz, on przyjdzie” tak zrosło się z baseballem, że w 2021 roku liga MLB rozegrała prawdziwy mecz na boisku pośród kukurydzy z filmu.",
+    category: "culture",
+    year: 1989,
+    emoji: "🌽",
+  },
+  {
+    id: "cu4",
+    text: "W „Kosmicznym meczu” (1996) Michael Jordan zagrał w koszykówkę u boku Królika Bugsa i Zwariowanych Melodii. Film stał się kultowy i pokazał, jak sportowa gwiazda podbija popkulturę.",
+    category: "culture",
+    year: 1996,
+    emoji: "🐰",
+  },
+  {
+    id: "cu5",
+    text: "Albumy z naklejkami piłkarskimi Panini to fenomen od mundialu 1970. Kompletowanie kolekcji i wymienianie dubli — „mam, mam, brak” — pochłania kibiców na całym świecie co cztery lata.",
+    category: "culture",
+    year: 1970,
+    emoji: "📖",
+  },
+  {
+    id: "cu6",
+    text: "Seria gier FIFA (EA Sports) to najlepiej sprzedająca się seria gier sportowych w historii — rozeszła się w setkach milionów egzemplarzy i dla wielu młodych kibiców jest pierwszym kontaktem z futbolem.",
+    category: "culture",
+    year: 2010,
+    emoji: "🎮",
+  },
+  {
+    id: "cu7",
+    text: "„Meksykańska fala” — kibice wstający kolejno, by przez trybuny przebiegła fala — zyskała światową sławę podczas mundialu w Meksyku w 1986 roku i stąd wzięła swoją nazwę.",
+    category: "culture",
+    year: 1986,
+    emoji: "🌊",
+  },
+  {
+    id: "cu8",
+    text: "Przez dekady amerykański program „Wide World of Sports” otwierała scena „agonii porażki” — spektakularny upadek skoczka narciarskiego. Był to Słoweniec Vinko Bogataj, który przeżył swój wypadek z 1970 roku.",
+    category: "culture",
+    year: 1970,
+    emoji: "💥",
+  },
+  {
+    id: "cu9",
+    text: "„Waka Waka” Shakiry, oficjalny hymn mundialu 2010 w RPA, to jeden z najlepiej sprzedających się utworów w historii mistrzostw świata, a jego teledysk ma miliardy wyświetleń.",
+    category: "culture",
+    year: 2010,
+    emoji: "🎵",
+  },
+  {
+    id: "cu10",
+    text: "Film „Podkręć jak Beckham” (2002) o dziewczynie marzącej o wielkim futbolu pomógł rozsławić kobiecą piłkę nożną na całym świecie i stał się jednym z najpopularniejszych filmów sportowych o kobietach.",
+    category: "culture",
+    year: 2002,
+    emoji: "⚽",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "o37",
+    text: "Pierwszą oficjalną maskotką igrzysk był jamnik Waldi z Monachium 1972. Od tamtej pory każde igrzyska mają własne maskotki — często dziwaczne i wzbudzające żywe dyskusje.",
+    category: "olympics",
+    year: 1972,
+    emoji: "🐕",
+  },
+  {
+    id: "f31",
+    text: "Przez większość historii futbolu numery na koszulkach oznaczały pozycje (1 — bramkarz, 9 — napastnik). Stałe numery i nazwiska zawodników na plecach weszły na dobre dopiero w latach 90.",
+    category: "football",
+    year: 1993,
+    emoji: "🔢",
+  },
+  {
+    id: "a23",
+    text: "Zanim w latach 30. XX wieku upowszechniły się bloki startowe, sprinterzy kopali w żużlowej bieżni małe dołki na stopy, by mieć się od czego odbić na starcie.",
+    category: "athletics",
+    year: 1930,
+    emoji: "🕳️",
   },
 ];
 
