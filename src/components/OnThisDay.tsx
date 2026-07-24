@@ -1,78 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-interface OtdEvent {
+type Kind = "event" | "born" | "died";
+
+interface OtdItem {
   year: number;
   text: string;
-  link?: string;
+  kind: Kind;
 }
 
 interface CachedDay {
   fetchedAt: number;
-  events: OtdEvent[];
-}
-
-const SPORT_KEYWORDS = [
-  "sport",
-  "olimpi",
-  "igrzysk",
-  "piłkar",
-  "piłki nożnej",
-  "piłkę nożną",
-  "futbol",
-  "mistrzostw",
-  "mistrzem",
-  "mistrzyni",
-  "medal",
-  "mecz",
-  "turniej",
-  "puchar",
-  "rekord świata",
-  "rekordzist",
-  "lekkoatlet",
-  "maraton",
-  "tenis",
-  "siatk",
-  "koszyk",
-  "hokej",
-  "bokser",
-  "boksu",
-  "pięściarz",
-  "kolarz",
-  "kolarsk",
-  "żużl",
-  "narciar",
-  "skocz",
-  "łyżwiar",
-  "pływa",
-  "wioślar",
-  "żeglar",
-  "szachow",
-  "formuły 1",
-  "formula 1",
-  "grand prix",
-  "wyścig",
-  "fifa",
-  "uefa",
-  "nba",
-  "nhl",
-  "klub sportow",
-  "stadion",
-  "bramk",
-  "gol",
-  "trener",
-  "zawodnik",
-  "zawodnicz",
-  "reprezentacj",
-];
-
-function isSportEvent(text: string): boolean {
-  const t = text.toLowerCase();
-  return SPORT_KEYWORDS.some((k) => t.includes(k));
-}
-
-function todayKey(): string {
-  const d = new Date();
-  return `${d.getMonth() + 1}-${d.getDate()}`;
+  items: OtdItem[];
 }
 
 const MONTHS_PL = [
@@ -80,20 +18,80 @@ const MONTHS_PL = [
   "lipca", "sierpnia", "września", "października", "listopada", "grudnia",
 ];
 
-/** Zamienia wikitekst na czysty tekst: [[a|b]] → b, [[a]] → a, usuwa pogrubienia itd. */
+// Wydarzenia sportowe — szeroki, ale ostrożny zestaw (bez łapania "burmistrz" itp.)
+const EVENT_RE =
+  /(sport|olimpij|igrzysk|paraolimp|piłkarz|piłkarsk|piłki nożnej|piłkę nożną|futbol|mistrzostw|wicemistrz|mistrzem świata|mistrzem olimpij|medal olimpij|olimpiad|rozegrano|rozegrał|mecz |turniej|puchar|ligi mistrzów|liga mistrzów|ekstraklas|rekord świata|rekordzist|lekkoatlet|maraton|tenis|siatków|siatkar|koszyków|koszykar|hokej|bokser|boksu|pięściar|kolarz|kolarsk|kolarstw|żużl|narciar|skoczni|skoczek narciar|łyżwiar|pływak|pływacki|wioślar|żeglar|szachow|formuł|grand prix|wyścig|fifa|uefa|\bnba\b|\bnhl\b|\bmma\b|stadion|bramk|reprezentacj|zdobył złot|zdobyła złot|zdobyli złot|zdobył mistrzostwo|zdobyła mistrzostwo|zdobył tytuł mistrz|olimpijczyk|olimpijk)/i;
+
+// Osoby związane ze sportem (do sekcji "Urodzili się" / "Zmarli")
+const PERSON_RE =
+  /(piłkarz|piłkarka|piłkarsk|lekkoatlet|tenisist|tenisow|siatkarz|siatkarka|koszykarz|koszykarka|bokser|pięściar|kolarz|kolarka|kolarsk|żużlowiec|żużlow|narciar|skoczek|skoczkini|łyżwiar|pływak|pływaczk|wioślar|żeglar|szachist|szachow|kierowca wyścigow|kierowca rajdow|motocyklist|kajakarz|kajakarka|sztangist|ciężarowiec|biathlonist|panczenist|hokeist|rugbyst|rugbist|gimnastyk|zapaśnik|judok|karatek|szermierz|florecist|szpadzist|strzelec sportow|snowboardzist|bobsleist|saneczkar|surfer|wspinacz|maratończyk|biegacz|oszczepnik|kulomiot|młociarz|tyczkarz|dyskobol|płotkarz|sprinter|olimpijczyk|olimpijk|sportowiec|sportsmen|trener|sędzia sportow|działacz sportow|komentator sportow)/i;
+
 function stripWikitext(s: string): string {
   return s
     .replace(/\[\[(?:[^\]|]*\|)?([^\]]+)\]\]/g, "$1")
     .replace(/'{2,}/g, "")
     .replace(/<ref[^>]*\/>/g, "")
-    .replace(/<ref[^>]*>.*?<\/ref>/g, "")
+    .replace(/<ref[^>]*>[\s\S]*?<\/ref>/g, "")
     .replace(/<[^>]+>/g, "")
     .replace(/\{\{[^}]*\}\}/g, "")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-async function fetchSportEvents(): Promise<OtdEvent[]> {
+/** Wytnij treść sekcji o danym nagłówku (może być kilka, np. "Wydarzenia w Polsce/na świecie"). */
+function extractSections(wikitext: string, heading: string): string {
+  const re = new RegExp(`==\\s*${heading}[^=]*==([\\s\\S]*?)(?=\\n==[^=]|$)`, "g");
+  const matches = [...wikitext.matchAll(re)];
+  return matches.map((m) => m[1]).join("\n");
+}
+
+/** Parsuje sekcję listy, śledząc rok z nadrzędnego punktu (obsługa zagnieżdżeń **). */
+function parseSection(section: string, kind: Kind, filter: (t: string) => boolean): OtdItem[] {
+  const items: OtdItem[] = [];
+  let currentYear: number | null = null;
+
+  for (const raw of section.split("\n")) {
+    const trimmed = raw.replace(/^\s+/, "");
+    if (!trimmed.startsWith("*")) continue;
+
+    const content = stripWikitext(trimmed.replace(/^\*+\s*/, ""));
+    if (!content) continue;
+
+    let year: number | null = null;
+    let rest: string | null = null;
+
+    const m = content.match(/^(\d{3,4})\s*[–—:\-]\s*(.*)$/);
+    if (m) {
+      year = parseInt(m[1], 10);
+      rest = m[2].trim();
+    } else if (/^\d{3,4}$/.test(content)) {
+      year = parseInt(content, 10);
+      rest = "";
+    }
+
+    let itemYear: number | null;
+    let bodyText: string | null;
+
+    if (year !== null) {
+      currentYear = year;
+      itemYear = year;
+      bodyText = rest && rest.length > 0 ? rest : null; // "1908 –" (sam rok) → tylko ustaw rok
+    } else {
+      itemYear = currentYear;
+      bodyText = content; // zagnieżdżone wydarzenie pod bieżącym rokiem
+    }
+
+    if (!bodyText || bodyText.length < 8 || itemYear === null) continue;
+    if (!filter(bodyText)) continue;
+
+    // usuń kropkę na końcu i ewentualny zwis "|"
+    const clean = bodyText.replace(/\s*\|\s*/g, " ").replace(/\s+\./g, ".").trim();
+    items.push({ year: itemYear, text: clean, kind });
+  }
+  return items;
+}
+
+async function fetchOtd(): Promise<OtdItem[]> {
   const d = new Date();
   const pageTitle = `${d.getDate()} ${MONTHS_PL[d.getMonth()]}`;
   const url =
@@ -105,32 +103,36 @@ async function fetchSportEvents(): Promise<OtdEvent[]> {
   const wikitext: string = data?.parse?.wikitext ?? "";
   if (!wikitext) throw new Error("Brak treści");
 
-  // Zbierz wszystkie sekcje "Wydarzenia..." (np. "w Polsce" i "na świecie")
-  const sectionMatches = [...wikitext.matchAll(/==\s*Wydarzenia[^=]*==([\s\S]*?)(?=\n==[^=]|$)/g)];
-  const section = sectionMatches.length > 0 ? sectionMatches.map((m) => m[1]).join("\n") : wikitext;
+  const events = parseSection(extractSections(wikitext, "Wydarzenia"), "event", (t) => EVENT_RE.test(t));
+  const born = parseSection(extractSections(wikitext, "Urodzili się"), "born", (t) => PERSON_RE.test(t)).slice(0, 40);
+  const died = parseSection(extractSections(wikitext, "Zmarli"), "died", (t) => PERSON_RE.test(t)).slice(0, 40);
 
-  const events: OtdEvent[] = [];
-  for (const rawLine of section.split("\n")) {
-    if (!rawLine.startsWith("*")) continue;
-    const line = stripWikitext(rawLine.replace(/^\*+\s*/, ""));
-    const m = line.match(/^(\d{3,4})\s*[–—-]\s*(.+)$/);
-    if (!m) continue;
-    const year = parseInt(m[1], 10);
-    const text = m[2];
-    if (!isSportEvent(text)) continue;
-    events.push({
-      year,
-      text,
-      link: `https://pl.wikipedia.org/wiki/${encodeURIComponent(pageTitle.replace(/ /g, "_"))}`,
-    });
-  }
-  return events.sort((a, b) => b.year - a.year);
+  const byYearDesc = (a: OtdItem, b: OtdItem) => b.year - a.year;
+  return [
+    ...events.sort(byYearDesc),
+    ...born.sort(byYearDesc),
+    ...died.sort(byYearDesc),
+  ];
 }
 
+function todayKey(): string {
+  const d = new Date();
+  return `${d.getMonth() + 1}-${d.getDate()}`;
+}
+
+const KIND_META: Record<Kind, { label: string; emoji: string; bar: string; chip: string }> = {
+  event: { label: "Wydarzenie", emoji: "🏆", bar: "from-amber-500 to-yellow-600", chip: "bg-amber-100 text-amber-700" },
+  born: { label: "Urodził(a) się", emoji: "🎂", bar: "from-emerald-500 to-green-600", chip: "bg-emerald-100 text-emerald-700" },
+  died: { label: "Zmarł(a)", emoji: "🕯️", bar: "from-slate-400 to-slate-600", chip: "bg-slate-100 text-slate-600" },
+};
+
+type FilterKey = "all" | Kind;
+
 export default function OnThisDay() {
-  const [events, setEvents] = useState<OtdEvent[] | null>(null);
+  const [items, setItems] = useState<OtdItem[] | null>(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [filter, setFilter] = useState<FilterKey>("all");
 
   const load = async (force = false) => {
     setLoading(true);
@@ -141,18 +143,17 @@ export default function OnThisDay() {
         const cached = localStorage.getItem(cacheKey);
         if (cached) {
           const parsed = JSON.parse(cached) as CachedDay;
-          // odśwież cache co 6 godzin
-          if (Date.now() - parsed.fetchedAt < 6 * 60 * 60 * 1000) {
-            setEvents(parsed.events);
+          if (parsed.items && Date.now() - parsed.fetchedAt < 6 * 60 * 60 * 1000) {
+            setItems(parsed.items);
             setLoading(false);
             return;
           }
         }
       }
-      const fresh = await fetchSportEvents();
-      setEvents(fresh);
+      const fresh = await fetchOtd();
+      setItems(fresh);
       try {
-        localStorage.setItem(cacheKey, JSON.stringify({ fetchedAt: Date.now(), events: fresh } satisfies CachedDay));
+        localStorage.setItem(cacheKey, JSON.stringify({ fetchedAt: Date.now(), items: fresh } satisfies CachedDay));
       } catch {}
     } catch {
       setError(true);
@@ -166,15 +167,34 @@ export default function OnThisDay() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const counts = useMemo(() => {
+    const c = { all: items?.length ?? 0, event: 0, born: 0, died: 0 };
+    items?.forEach((i) => (c[i.kind] += 1));
+    return c;
+  }, [items]);
+
+  const visible = useMemo(
+    () => (items ?? []).filter((i) => filter === "all" || i.kind === filter),
+    [items, filter]
+  );
+
   const now = new Date();
   const dateLabel = `${now.getDate()} ${MONTHS_PL[now.getMonth()]}`;
+  const pageUrl = `https://pl.wikipedia.org/wiki/${encodeURIComponent(dateLabel.replace(/ /g, "_"))}`;
+
+  const chips: Array<{ key: FilterKey; label: string; emoji: string; n: number }> = [
+    { key: "all", label: "Wszystko", emoji: "📅", n: counts.all },
+    { key: "event", label: "Wydarzenia", emoji: "🏆", n: counts.event },
+    { key: "born", label: "Urodzeni", emoji: "🎂", n: counts.born },
+    { key: "died", label: "Zmarli", emoji: "🕯️", n: counts.died },
+  ];
 
   return (
     <div className="space-y-4">
       <div className="text-center mb-2">
         <h2 className="text-white font-black text-2xl">📅 W tym dniu w historii sportu</h2>
         <p className="text-white/60 text-sm mt-1">
-          {dateLabel} — wydarzenia pobierane na bieżąco z Wikipedii
+          {dateLabel} — wydarzenia oraz sportowcy urodzeni i zmarli tego dnia, na bieżąco z Wikipedii
         </p>
       </div>
 
@@ -200,7 +220,7 @@ export default function OnThisDay() {
         </div>
       )}
 
-      {!loading && !error && events && events.length === 0 && (
+      {!loading && !error && items && items.length === 0 && (
         <div className="text-center py-16 bg-white/5 rounded-3xl border border-white/10">
           <div className="text-5xl mb-4">🤷</div>
           <p className="text-white/70 font-medium">
@@ -209,40 +229,66 @@ export default function OnThisDay() {
         </div>
       )}
 
-      {!loading && !error && events && events.length > 0 && (
+      {!loading && !error && items && items.length > 0 && (
         <>
-          {events.map((e, i) => (
-            <div
-              key={`${e.year}-${i}`}
-              className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 animate-fade-in"
-              style={{ animationDelay: `${Math.min(i * 60, 400)}ms` }}
-            >
-              <div className="h-2 w-full bg-gradient-to-r from-amber-500 to-yellow-600" />
-              <div className="p-5 sm:p-6">
-                <div className="flex items-start gap-4">
-                  <span className="flex-shrink-0 inline-flex items-center px-3 py-1.5 rounded-full text-sm font-black text-white bg-gradient-to-r from-amber-500 to-yellow-600 shadow-md">
-                    {e.year}
-                  </span>
-                  <p className="text-gray-800 text-base sm:text-lg leading-relaxed font-medium flex-1">
-                    {e.text}
-                  </p>
+          {/* Filtry */}
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {chips.map((c) => (
+              <button
+                key={c.key}
+                onClick={() => setFilter(c.key)}
+                disabled={c.n === 0}
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all border ${
+                  filter === c.key
+                    ? "bg-white text-emerald-700 border-transparent shadow-md"
+                    : "bg-white/10 text-white/70 border-white/15 hover:bg-white/20"
+                } disabled:opacity-30 disabled:cursor-not-allowed`}
+              >
+                <span>{c.emoji}</span> {c.label}
+                <span className="text-xs opacity-70">{c.n}</span>
+              </button>
+            ))}
+          </div>
+
+          {visible.map((e, i) => {
+            const meta = KIND_META[e.kind];
+            return (
+              <div
+                key={`${e.kind}-${e.year}-${i}`}
+                className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 animate-fade-in"
+                style={{ animationDelay: `${Math.min(i * 30, 300)}ms` }}
+              >
+                <div className={`h-2 w-full bg-gradient-to-r ${meta.bar}`} />
+                <div className="p-5 sm:p-6">
+                  <div className="flex items-start gap-4">
+                    <span className={`flex-shrink-0 inline-flex items-center px-3 py-1.5 rounded-full text-sm font-black text-white bg-gradient-to-r ${meta.bar} shadow-md`}>
+                      {e.year}
+                    </span>
+                    <div className="flex-1">
+                      <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold mb-1 ${meta.chip}`}>
+                        {meta.emoji} {meta.label}
+                      </span>
+                      <p className="text-gray-800 text-base sm:text-lg leading-relaxed font-medium">
+                        {e.text}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                {e.link && (
-                  <a
-                    href={e.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 mt-3 text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors"
-                  >
-                    📖 Czytaj więcej na Wikipedii →
-                  </a>
-                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
+
+          <a
+            href={pageUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-center py-3 text-white/50 hover:text-white/80 text-sm font-semibold transition-colors"
+          >
+            📖 Zobacz pełną stronę „{dateLabel}” na Wikipedii →
+          </a>
           <button
             onClick={() => load(true)}
-            className="w-full py-3 text-white/40 hover:text-white/70 text-sm font-semibold transition-colors flex items-center justify-center gap-2"
+            className="w-full py-2 text-white/30 hover:text-white/60 text-sm font-semibold transition-colors flex items-center justify-center gap-2"
           >
             <span>🔄</span> Odśwież dane
           </button>
