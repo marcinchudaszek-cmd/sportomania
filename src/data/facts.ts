@@ -56,6 +56,8 @@ export const CATEGORIES = [
   { id: "politics", label: "Sport i polityka", emoji: "🌐", color: "from-blue-700 to-slate-800" },
   { id: "comebacks", label: "Kontuzje i powroty", emoji: "🩹", color: "from-orange-500 to-pink-700" },
   { id: "gear", label: "Stroje i sprzęt", emoji: "👕", color: "from-sky-600 to-indigo-800" },
+  { id: "weather", label: "Sport i żywioły", emoji: "🌦️", color: "from-sky-500 to-slate-700" },
+  { id: "firsts", label: "Debiuty i pierwsze razy", emoji: "🌟", color: "from-teal-400 to-emerald-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -4956,6 +4958,152 @@ export const FACTS_DB: Fact[] = [
     text: "Zapaśnicy sumo przed każdą walką rzucają na ring garść soli. To rytuał oczyszczenia wywodzący się z religii shintō — jeden z wielu wielowiekowych ceremoniałów tej dyscypliny.",
     category: "traditional",
     emoji: "🧂",
+  },
+
+  // === SPORT I ŻYWIOŁY ===
+  {
+    id: "we1",
+    text: "„Ice Bowl” z 1967 roku — finał konferencji NFL rozegrano przy -26°C, a wiatr dawał odczuwalne -44°C. Metalowy gwizdek sędziego przymarzł mu do warg, więc reszty meczu odgwizdywał już... głosem.",
+    category: "weather",
+    year: 1967,
+    emoji: "🥶",
+  },
+  {
+    id: "we2",
+    text: "Badwater Ultramarathon to najgorętszy bieg świata — 217 km przez Dolinę Śmierci w temperaturze dochodzącej do 54°C. Asfalt bywa tak rozgrzany, że zawodnicy biegną białą linią, by nie stopić podeszew.",
+    category: "weather",
+    year: 1987,
+    emoji: "🔥",
+  },
+  {
+    id: "we3",
+    text: "Marathon des Sables to sześciodniowy bieg na ok. 250 km przez Saharę. Zawodnicy niosą na plecach cały swój prowiant i śpią w koczowniczych namiotach, walcząc z upałem i burzami piaskowymi.",
+    category: "weather",
+    year: 1986,
+    emoji: "🏜️",
+  },
+  {
+    id: "we4",
+    text: "Antarctic Ice Marathon rozgrywa się w pobliżu bieguna południowego, w temperaturze około -20°C, a odczuwalny mróz spotęgowany wiatrem bywa znacznie niższy. To najzimniejszy maraton na Ziemi.",
+    category: "weather",
+    year: 2006,
+    emoji: "🧊",
+  },
+  {
+    id: "we5",
+    text: "Tom Simpson zasłabł i zmarł z wycieńczenia w morderczym upale na zboczu Mont Ventoux podczas Tour de France 1967. Na jego cześć przy drodze stoi pomnik, przy którym kolarze zostawiają bidony i czapki.",
+    category: "weather",
+    year: 1967,
+    emoji: "⛰️",
+  },
+  {
+    id: "we6",
+    text: "By sprawiedliwie rozstrzygać przerwane deszczem mecze krykieta, wymyślono matematyczną metodę Duckwortha-Lewisa. Skomplikowany wzór przelicza, ile punktów powinna zdobyć drużyna w skróconym czasie gry.",
+    category: "weather",
+    year: 1997,
+    emoji: "🌧️",
+  },
+  {
+    id: "we7",
+    text: "Golfista Lee Trevino został w 1975 roku rażony piorunem podczas turnieju i przeżył. Później żartował, że w czasie burzy najlepiej trzymać nad głową kij zwany „driving iron” — „bo nawet Bóg go nie trafi”.",
+    category: "weather",
+    year: 1975,
+    emoji: "⚡",
+  },
+  {
+    id: "we8",
+    text: "Regaty Sydney–Hobart w 1998 roku przeszły w tragedię, gdy w jachty uderzył gwałtowny sztorm. Zginęło sześciu żeglarzy, kilka łodzi zatonęło, a marynarkę wojenną i lotnictwo rzucono do jednej z największych akcji ratunkowych w historii żeglarstwa.",
+    category: "weather",
+    year: 1998,
+    emoji: "🌊",
+  },
+
+  // === DEBIUTY I PIERWSZE RAZY ===
+  {
+    id: "fi1",
+    text: "Pierwszego gola w historii mistrzostw świata strzelił 13 lipca 1930 roku Francuz Lucien Laurent, w meczu z Meksykiem. Grał wtedy jako amator i na co dzień pracował w fabryce.",
+    category: "firsts",
+    year: 1930,
+    emoji: "⚽",
+  },
+  {
+    id: "fi2",
+    text: "Pierwszym mistrzem nowożytnych igrzysk został w 1896 roku Amerykanin James Connolly, wygrywając trójskok. Był pierwszym olimpijskim zwycięzcą od ponad 1500 lat — od czasu zakazu antycznych igrzysk.",
+    category: "firsts",
+    year: 1896,
+    emoji: "🥇",
+  },
+  {
+    id: "fi3",
+    text: "Za pierwsze międzynarodowe wydarzenie sportowe ery nowożytnej uchodzi mecz krykieta USA–Kanada z 1844 roku. Rozegrano go w Nowym Jorku, dekady przed pierwszym meczem piłkarskim czy igrzyskami.",
+    category: "firsts",
+    year: 1844,
+    emoji: "🏏",
+  },
+  {
+    id: "fi4",
+    text: "Pierwszą w historii Złotą Piłkę dla najlepszego piłkarza otrzymał w 1956 roku Anglik Stanley Matthews — w wieku 41 lat. Grał w najwyższej klasie rozgrywkowej aż do pięćdziesiątki.",
+    category: "firsts",
+    year: 1956,
+    emoji: "🏅",
+  },
+  {
+    id: "fi5",
+    text: "Stéphanie Frappart w 2022 roku jako pierwsza kobieta poprowadziła mecz mistrzostw świata mężczyzn — spotkanie Kostaryka–Niemcy. Stała też na czele całej trójki sędziowskiej złożonej z kobiet.",
+    category: "firsts",
+    year: 2022,
+    emoji: "🚺",
+  },
+  {
+    id: "fi6",
+    text: "Pierwszą bramkę w historii angielskiej Premier League strzelił w 1992 roku Brian Deane z Sheffield United. Nowa liga stała się później najbogatszą i najczęściej oglądaną na świecie.",
+    category: "firsts",
+    year: 1992,
+    emoji: "🎯",
+  },
+  {
+    id: "fi7",
+    text: "Pierwszy transfer piłkarza za tysiąc funtów — Alfa Commona w 1905 roku — wywołał w Anglii oburzenie. Komentowano, że to skandaliczne, by człowiek kosztował tak absurdalną fortunę.",
+    category: "firsts",
+    year: 1905,
+    emoji: "💷",
+  },
+  {
+    id: "fi8",
+    text: "Pierwszą afrykańską reprezentacją na mistrzostwach świata był Egipt w 1934 roku. Na kolejny występ drużyny z tego kontynentu trzeba było czekać aż do 1970 roku.",
+    category: "firsts",
+    year: 1934,
+    emoji: "🌍",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "w22",
+    text: "Kanadyjczyk Kurt Browning w 1988 roku jako pierwszy łyżwiarz w historii wykonał w zawodach poczwórny skok (quad). Dziś bez „poczwórnych” nie sposób marzyć o medalu w łyżwiarstwie figurowym mężczyzn.",
+    category: "winter",
+    year: 1988,
+    emoji: "🔄",
+  },
+  {
+    id: "f32",
+    text: "Najszybszą czerwoną kartkę w historii futbolu zobaczył Anglik Lee Todd w 2000 roku — po 2 sekundach. Zaklął głośno tuż przy sędzim, gdy ten odgwizdał rozpoczęcie meczu.",
+    category: "football",
+    year: 2000,
+    emoji: "🟥",
+  },
+  {
+    id: "a26",
+    text: "Rekord świata Pauli Radcliffe w maratonie kobiet (2:15:25 z 2003 roku) przetrwał aż 16 lat. Przez długi czas Brytyjka biegała szybciej niż jakakolwiek inna kobieta w historii o wiele minut.",
+    category: "athletics",
+    year: 2003,
+    emoji: "👑",
+  },
+  {
+    id: "b22",
+    text: "Najwyższymi koszykarzami w historii NBA byli Rumun Gheorghe Mureșan i Sudańczyk Manute Bol — obaj mierzyli po 231 cm. Bol potrafił blokować rzuty, prawie nie odrywając się od podłoża.",
+    category: "basketball",
+    year: 1993,
+    emoji: "📏",
   },
 ];
 
