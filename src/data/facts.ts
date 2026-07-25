@@ -59,6 +59,7 @@ export const CATEGORIES = [
   { id: "weather", label: "Sport i żywioły", emoji: "🌦️", color: "from-sky-500 to-slate-700" },
   { id: "firsts", label: "Debiuty i pierwsze razy", emoji: "🌟", color: "from-teal-400 to-emerald-700" },
   { id: "ages", label: "Najmłodsi i najstarsi", emoji: "⏳", color: "from-purple-500 to-violet-800" },
+  { id: "dynasties", label: "Dynastie i serie", emoji: "🏰", color: "from-amber-500 to-red-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5193,6 +5194,80 @@ export const FACTS_DB: Fact[] = [
     category: "combat",
     year: 1980,
     emoji: "🛑",
+  },
+
+  // === DYNASTIE I WIELKIE SERIE ===
+  {
+    id: "dy1",
+    text: "Pakistański squashista Jahangir Khan pozostawał niepokonany przez ponad pięć lat — według szacunków przez około 555 meczów z rzędu. To najdłuższa passa zwycięstw w historii sportu zawodowego.",
+    category: "dynasties",
+    year: 1986,
+    emoji: "🎾",
+  },
+  {
+    id: "dy2",
+    text: "Edwin Moses wygrał 122 biegi na 400 m przez płotki z rzędu — przez blisko dekadę (1977–1987) nikt na świecie go nie pokonał. Zdominował swoją konkurencję jak mało kto w historii lekkoatletyki.",
+    category: "dynasties",
+    year: 1987,
+    emoji: "🏃",
+  },
+  {
+    id: "dy3",
+    text: "Boston Celtics zdobyli 8 tytułów mistrza NBA z rzędu (1959–1966) — to najdłuższa seria mistrzowska w historii wielkich lig zawodowych Ameryki Północnej.",
+    category: "dynasties",
+    year: 1966,
+    emoji: "🍀",
+  },
+  {
+    id: "dy4",
+    text: "Bayern Monachium wygrywał mistrzostwo Niemiec 11 razy z rzędu (2013–2023). Taka dominacja jednej drużyny w wielkiej europejskiej lidze nie miała wcześniej precedensu.",
+    category: "dynasties",
+    year: 2023,
+    emoji: "🇩🇪",
+  },
+  {
+    id: "dy5",
+    text: "Węgierska „Złota Drużyna” lat 50. nie przegrała 32 meczów z rzędu. Passa urwała się w najgorszym możliwym momencie — w finale mistrzostw świata 1954, przegranym mimo prowadzenia 2:0.",
+    category: "dynasties",
+    year: 1954,
+    emoji: "🇭🇺",
+  },
+  {
+    id: "dy6",
+    text: "Holenderka Esther Vergeer, gwiazda tenisa na wózkach, nie przegrała ani jednego meczu przez dziesięć lat — jej seria zwycięstw sięgnęła około 470 spotkań, zanim zakończyła karierę.",
+    category: "dynasties",
+    year: 2012,
+    emoji: "♿",
+  },
+  {
+    id: "dy7",
+    text: "Rafael Nadal wygrał 81 meczów z rzędu na kortach ziemnych (2005–2007) — to rekord ery open. Na mączce był tak niepokonany, że rywale walczyli głównie o to, by urwać mu choć jednego seta.",
+    category: "dynasties",
+    year: 2007,
+    emoji: "🟠",
+  },
+  {
+    id: "dy8",
+    text: "Los Angeles Lakers wygrali w sezonie 1971/72 rekordowe 33 mecze NBA z rzędu. Ta passa trwała od listopada do stycznia i do dziś pozostaje niepobita.",
+    category: "dynasties",
+    year: 1972,
+    emoji: "🔥",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "hk10",
+    text: "Montreal Canadiens zdobyli 24 Puchary Stanleya — najwięcej w historii ligi NHL. Przez dekady byli synonimem hokejowej wielkości i dumą francuskojęzycznej Kanady.",
+    category: "hockey",
+    year: 1993,
+    emoji: "🏆",
+  },
+  {
+    id: "a27",
+    text: "Usain Bolt nigdy nie przegrał olimpijskiego finału na 100 m ani 200 m — wygrał je na trzech kolejnych igrzyskach (2008, 2012, 2016). W biegach indywidualnych na największej scenie był absolutnie niezawodny.",
+    category: "athletics",
+    year: 2016,
+    emoji: "⚡",
   },
 ];
 
