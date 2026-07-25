@@ -58,6 +58,7 @@ export const CATEGORIES = [
   { id: "gear", label: "Stroje i sprzęt", emoji: "👕", color: "from-sky-600 to-indigo-800" },
   { id: "weather", label: "Sport i żywioły", emoji: "🌦️", color: "from-sky-500 to-slate-700" },
   { id: "firsts", label: "Debiuty i pierwsze razy", emoji: "🌟", color: "from-teal-400 to-emerald-700" },
+  { id: "ages", label: "Najmłodsi i najstarsi", emoji: "⏳", color: "from-purple-500 to-violet-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5104,6 +5105,94 @@ export const FACTS_DB: Fact[] = [
     category: "basketball",
     year: 1993,
     emoji: "📏",
+  },
+
+  // === NAJMŁODSI I NAJSTARSI ===
+  {
+    id: "age1",
+    text: "Michael Chang wygrał Roland Garros 1989 w wieku 17 lat — do dziś jest najmłodszym triumfatorem turnieju wielkoszlemowego w historii męskiego tenisa. W ćwierćfinale grał z kurczami, serwując po prostu z dołu.",
+    category: "ages",
+    year: 1989,
+    emoji: "🎾",
+  },
+  {
+    id: "age2",
+    text: "Lottie Dod wygrała Wimbledon w 1887 roku, mając zaledwie 15 lat — pozostaje najmłodszą mistrzynią tego turnieju w singlu. Później zdobyła też medale olimpijskie w łucznictwie i mistrzostwo Anglii w golfie.",
+    category: "ages",
+    year: 1887,
+    emoji: "👧",
+  },
+  {
+    id: "age3",
+    text: "Max Verstappen zadebiutował w Formule 1 jako 17-latek, a pierwszy wyścig wygrał mając 18 lat — w obu przypadkach jako najmłodszy w historii. Przepisy wieku zaostrzono właśnie po jego debiucie.",
+    category: "ages",
+    year: 2016,
+    emoji: "🏎️",
+  },
+  {
+    id: "age4",
+    text: "Egipski bramkarz Essam El-Hadary wystąpił na mundialu 2018 w wieku 45 lat — jako najstarszy zawodnik w historii mistrzostw świata. W swoim jedynym meczu na turnieju obronił nawet rzut karny.",
+    category: "ages",
+    year: 2018,
+    emoji: "🧤",
+  },
+  {
+    id: "age5",
+    text: "Amerykanka Marjorie Gestring zdobyła złoto olimpijskie w skokach do wody w 1936 roku, mając 13 lat. Pozostaje najmłodszą indywidualną mistrzynią olimpijską w historii igrzysk.",
+    category: "ages",
+    year: 1936,
+    emoji: "🤿",
+  },
+  {
+    id: "age6",
+    text: "Japończyk Kazuyoshi Miura wciąż zawodowo grał w piłkę nożną po pięćdziesiątce — jako najstarszy zawodowy piłkarz świata. W młodości uciekł z domu do Brazylii, by uczyć się futbolu u jego źródeł.",
+    category: "ages",
+    year: 2023,
+    emoji: "⚽",
+  },
+  {
+    id: "age7",
+    text: "Bernard Hopkins jako 48-latek został najstarszym w historii bokserem, który zdobył mistrzostwo świata. Rok później, mając 49 lat, wciąż jednoczył pasy wagi półciężkiej.",
+    category: "ages",
+    year: 2013,
+    emoji: "🥊",
+  },
+  {
+    id: "age8",
+    text: "Japończyk Yūichirō Miura zdobył szczyt Mount Everestu w 2013 roku, mając 80 lat — jako najstarszy człowiek w historii. Wcześniej, w latach 70., zjechał z Everestu na nartach, hamując spadochronem.",
+    category: "ages",
+    year: 2013,
+    emoji: "🏔️",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "t24",
+    text: "Martina Hingis została liderką światowego rankingu tenisistek w wieku 16 lat — najmłodszą w historii. W tym samym sezonie wygrała trzy z czterech turniejów wielkoszlemowych.",
+    category: "tennis",
+    year: 1997,
+    emoji: "👑",
+  },
+  {
+    id: "gf10",
+    text: "Phil Mickelson wygrał PGA Championship w 2021 roku w wieku 50 lat — jako najstarszy zwycięzca turnieju wielkoszlemowego w historii golfa. Kibice tłumnie ruszyli wtedy za nim na pole, tworząc chaos przy ostatnim dołku.",
+    category: "golf",
+    year: 2021,
+    emoji: "🎂",
+  },
+  {
+    id: "s14",
+    text: "Amerykańska pływaczka Dara Torres zdobyła srebrne medale olimpijskie w 2008 roku, mając 41 lat — rywalizując z zawodniczkami o połowę młodszymi. Startowała w pięciu olimpiadach na przestrzeni 24 lat.",
+    category: "water",
+    year: 2008,
+    emoji: "🏊‍♀️",
+  },
+  {
+    id: "c22",
+    text: "W rewanżu z Sugar Rayem Leonardem w 1980 roku Roberto Durán nagle poddał walkę, mówiąc podobno „no más” („dość”). Ta scena przeszła do historii boksu jako jeden z najbardziej zagadkowych momentów.",
+    category: "combat",
+    year: 1980,
+    emoji: "🛑",
   },
 ];
 
