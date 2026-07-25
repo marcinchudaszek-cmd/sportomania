@@ -60,6 +60,7 @@ export const CATEGORIES = [
   { id: "firsts", label: "Debiuty i pierwsze razy", emoji: "🌟", color: "from-teal-400 to-emerald-700" },
   { id: "ages", label: "Najmłodsi i najstarsi", emoji: "⏳", color: "from-purple-500 to-violet-800" },
   { id: "dynasties", label: "Dynastie i serie", emoji: "🏰", color: "from-amber-500 to-red-700" },
+  { id: "nicknames", label: "Pseudonimy i przydomki", emoji: "🏷️", color: "from-fuchsia-600 to-pink-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5268,6 +5269,80 @@ export const FACTS_DB: Fact[] = [
     category: "athletics",
     year: 2016,
     emoji: "⚡",
+  },
+
+  // === PSEUDONIMY I PRZYDOMKI ===
+  {
+    id: "nk1",
+    text: "Brazylijczyka Manuela dos Santosa cały świat znał jako Garrinchę — „małego ptaszka”. Urodził się ze skrzywionym kręgosłupem i nogami wygiętymi w łuk, a mimo to stał się jednym z najlepszych dryblerów w historii, zwanym „radością ludu”.",
+    category: "nicknames",
+    year: 1962,
+    emoji: "🐦",
+  },
+  {
+    id: "nk2",
+    text: "Niemieckiego snajpera Gerda Müllera nazywano „Der Bomber” — bombardierem narodu. Przez dekady jego rekord goli w jednym sezonie Bundesligi uchodził za nie do pobicia, aż zrobił to Robert Lewandowski.",
+    category: "nicknames",
+    year: 1972,
+    emoji: "💣",
+  },
+  {
+    id: "nk3",
+    text: "Roberta Baggio, gwiazdę włoskiego futbolu lat 90., nazywano „Boskim Kucykiem” — od charakterystycznej fryzury i nieziemskiej techniki. Jego pudło w finale mundialu 1994 to jeden z najsłynniejszych obrazów w historii sportu.",
+    category: "nicknames",
+    year: 1994,
+    emoji: "💇",
+  },
+  {
+    id: "nk4",
+    text: "Australijski golfista Greg Norman zawdzięczał przydomek „Wielki Biały Rekin” swojej agresywnej grze i jasnej czuprynie. Przez łącznie ponad 300 tygodni był liderem światowego rankingu.",
+    category: "nicknames",
+    year: 1986,
+    emoji: "🦈",
+  },
+  {
+    id: "nk5",
+    text: "Franza Beckenbauera, eleganckiego niemieckiego libero, nazywano po prostu „Kaiserem” — cesarzem. Jako jeden z nielicznych zdobył mistrzostwo świata i jako piłkarz (1974), i jako selekcjoner (1990).",
+    category: "nicknames",
+    year: 1974,
+    emoji: "👑",
+  },
+  {
+    id: "nk6",
+    text: "Snookerzystę Ronniego O'Sullivana nazywają „Rakietą” za błyskawiczne tempo gry. Swój najsłynniejszy maksymalny brejk 147 punktów ułożył w około 5 minut — szybciej, niż niejeden gracz rozgrywa jednego bila.",
+    category: "nicknames",
+    year: 1997,
+    emoji: "🚀",
+  },
+  {
+    id: "nk7",
+    text: "Węgra Ferenca Puskása, jedną z największych gwiazd futbolu w historii, przezywano „Galopującym Majorem” — bo naprawdę służył w wojsku w stopniu majora. Dziś jego imię nosi coroczna nagroda FIFA za najpiękniejszego gola.",
+    category: "nicknames",
+    year: 1953,
+    emoji: "🎖️",
+  },
+  {
+    id: "nk8",
+    text: "Zinedine'a Zidane'a cały świat zna jako „Zizou”. Ten pieszczotliwy przydomek z dzieciństwa w Marsylii stał się jednym z najbardziej rozpoznawalnych pseudonimów w dziejach sportu.",
+    category: "nicknames",
+    year: 1998,
+    emoji: "🇫🇷",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "m18",
+    text: "Finlandia, mimo zaledwie ok. 5,5 miliona mieszkańców, wydała zdumiewająco wielu mistrzów Formuły 1 i rajdów. „Latający Finowie” słyną z zimnej krwi za kierownicą na śliskich, ośnieżonych trasach.",
+    category: "motorsport",
+    year: 2007,
+    emoji: "🇫🇮",
+  },
+  {
+    id: "b23",
+    text: "W sezonie 1961/62 Wilt Chamberlain zdobywał średnio 50,4 punktu na mecz — przez cały sezon. Żaden inny koszykarz w historii NBA nie zbliżył się do takiej średniej.",
+    category: "basketball",
+    year: 1962,
+    emoji: "5️⃣",
   },
 ];
 
