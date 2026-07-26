@@ -63,6 +63,7 @@ export const CATEGORIES = [
   { id: "nicknames", label: "Pseudonimy i przydomki", emoji: "🏷️", color: "from-fuchsia-600 to-pink-800" },
   { id: "rules", label: "Dziwne przepisy", emoji: "🚦", color: "from-slate-500 to-zinc-700" },
   { id: "mind", label: "Sport i umysł", emoji: "🧠", color: "from-indigo-500 to-purple-700" },
+  { id: "colors", label: "Kolory i symbole", emoji: "🎨", color: "from-red-500 to-yellow-600" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5491,6 +5492,80 @@ export const FACTS_DB: Fact[] = [
     category: "rugby",
     year: 2005,
     emoji: "😤",
+  },
+
+  // === KOLORY I SYMBOLE KLUBÓW ===
+  {
+    id: "cl1",
+    text: "Czarno-białe pasy Juventusu to zasługa Anglika. W 1903 roku klubowy działacz sprowadził komplet strojów z angielskiego Notts County — i barwy zostały do dziś.",
+    category: "colors",
+    year: 1903,
+    emoji: "⚫",
+  },
+  {
+    id: "cl2",
+    text: "Biały strój Realu Madryt wzorowano na angielskim amatorskim klubie Corinthian FC, uważanym na przełomie XIX i XX wieku za wzór dżentelmeńskiego futbolu.",
+    category: "colors",
+    year: 1902,
+    emoji: "⚪",
+  },
+  {
+    id: "cl3",
+    text: "Liverpool przez pierwsze lata grał w barwach niebiesko-białych. Czerwień — dziś nierozerwalnie związaną z klubem — przyjęto dopiero później, nawiązując do koloru miasta.",
+    category: "colors",
+    year: 1896,
+    emoji: "🔴",
+  },
+  {
+    id: "cl4",
+    text: "Herb Ajaxu Amsterdam to stylizowana twarz greckiego bohatera Ajaksa, narysowana z 11 linii — po jednej na każdego z jedenastu zawodników drużyny na boisku.",
+    category: "colors",
+    year: 1990,
+    emoji: "🛡️",
+  },
+  {
+    id: "cl5",
+    text: "Niebiesko-żółte barwy argentyńskiej Boca Juniors wybrano — jak głosi legenda — od flagi pierwszego statku, który wpłynął do portu. Był to statek szwedzki.",
+    category: "colors",
+    year: 1907,
+    emoji: "🚢",
+  },
+  {
+    id: "cl6",
+    text: "Słynny „koń” w logo Ferrari pochodzi z samolotu włoskiego asa myśliwskiego I wojny światowej, Francesca Baraki. Sama czerwień to „rosso corsa” — historyczna barwa włoskich aut wyścigowych.",
+    category: "colors",
+    year: 1923,
+    emoji: "🐎",
+  },
+  {
+    id: "cl7",
+    text: "Drużyna futbolu amerykańskiego Green Bay Packers wzięła nazwę od... zakładów mięsnych, które w 1919 roku sfinansowały jej pierwsze stroje. „Packers” znaczy dosłownie „pakowacze”.",
+    category: "colors",
+    year: 1919,
+    emoji: "🥩",
+  },
+  {
+    id: "cl8",
+    text: "Zielono-białe pasy szkockiego Celticu i cała otoczka klubu podkreślają jego irlandzkie, katolickie korzenie. Barwy i symbole klubów sportowych bywają nośnikiem tożsamości całych społeczności.",
+    category: "colors",
+    year: 1888,
+    emoji: "🍀",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "f35",
+    text: "Puchar Anglii (FA Cup), rozgrywany od sezonu 1871/72, to najstarsze piłkarskie rozgrywki na świecie. Wciąż potrafi dostarczać sensacji, gdy amatorskie kluby trafiają na gigantów Premier League.",
+    category: "football",
+    year: 1871,
+    emoji: "🏆",
+  },
+  {
+    id: "m19",
+    text: "Legenda głosi, że „Srebrne Strzały” Mercedesa narodziły się w 1934 roku, gdy bolid o kilogram przekroczył limit wagi. W nocy zeskrobano z niego biały lakier, odsłaniając srebrny metal — i tak powstała kultowa barwa.",
+    category: "motorsport",
+    year: 1934,
+    emoji: "🥈",
   },
 ];
 
