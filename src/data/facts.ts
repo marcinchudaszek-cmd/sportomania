@@ -62,6 +62,7 @@ export const CATEGORIES = [
   { id: "dynasties", label: "Dynastie i serie", emoji: "🏰", color: "from-amber-500 to-red-700" },
   { id: "nicknames", label: "Pseudonimy i przydomki", emoji: "🏷️", color: "from-fuchsia-600 to-pink-800" },
   { id: "rules", label: "Dziwne przepisy", emoji: "🚦", color: "from-slate-500 to-zinc-700" },
+  { id: "mind", label: "Sport i umysł", emoji: "🧠", color: "from-indigo-500 to-purple-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5416,6 +5417,80 @@ export const FACTS_DB: Fact[] = [
     category: "winter",
     year: 2010,
     emoji: "🎿",
+  },
+
+  // === SPORT I UMYSŁ ===
+  {
+    id: "mn1",
+    text: "Barierę 4 minut w biegu na milę uważano za fizycznie nieprzekraczalną. Gdy Roger Bannister przełamał ją w 1954 roku, rekord zaczął padać seryjnie — okazało się, że była to bariera w głowach, nie w nogach.",
+    category: "mind",
+    year: 1954,
+    emoji: "🧱",
+  },
+  {
+    id: "mn2",
+    text: "„Ściana” w maratonie pojawia się zwykle po ok. 30 km, gdy w mięśniach kończą się zapasy glikogenu. Nogi robią się jak z ołowiu, a ukończenie biegu staje się w równej mierze walką ciała, co psychiki.",
+    category: "mind",
+    year: 2000,
+    emoji: "🧱",
+  },
+  {
+    id: "mn3",
+    text: "„Yips” to tajemnicza, wywołana stresem utrata precyzji ruchów — nagle golfista nie potrafi trafić krótkiego putta, a darter rzucić lotki. To zjawisko zakończyło niejedną wielką karierę.",
+    category: "mind",
+    year: 2010,
+    emoji: "😰",
+  },
+  {
+    id: "mn4",
+    text: "Biathlonista dobiega na strzelnicę z tętnem sięgającym 180 uderzeń na minutę, a potem musi trafić tarczę wielkości monety. Najlepsi uczą się ściągać spust w krótkiej chwili między kolejnymi uderzeniami serca.",
+    category: "mind",
+    year: 2014,
+    emoji: "🎯",
+  },
+  {
+    id: "mn5",
+    text: "Rafael Nadal na korcie ma dziesiątki drobnych rytuałów — precyzyjnie ustawia bidony etykietami do przodu i nigdy nie nadeptuje na linie. To nie zabobon dla zabawy, lecz sposób na skupienie i opanowanie nerwów.",
+    category: "mind",
+    year: 2010,
+    emoji: "🧴",
+  },
+  {
+    id: "mn6",
+    text: "Gimnastycy potrafią stracić w powietrzu orientację, gdzie jest góra, a gdzie dół — nazywają to „twisties”. Ten groźny blok psychiczny sprawił, że Simone Biles wycofała się z kilku finałów igrzysk 2020.",
+    category: "mind",
+    year: 2021,
+    emoji: "🌀",
+  },
+  {
+    id: "mn7",
+    text: "Greg Norman przystąpił do ostatniej rundy Masters 1996 z przewagą sześciu uderzeń — i przegrał turniej. Jego załamanie pod presją to podręcznikowy przykład „udławienia się” w sporcie.",
+    category: "mind",
+    year: 1996,
+    emoji: "📉",
+  },
+  {
+    id: "mn8",
+    text: "Najlepsi sportowcy przed startem w wyobraźni przechodzą cały występ w najdrobniejszych szczegółach. Badania pokazują, że taka wizualizacja pobudza w mózgu podobne ścieżki co realny trening.",
+    category: "mind",
+    year: 2012,
+    emoji: "🧠",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "gf11",
+    text: "„Kondor” w golfie to zdobycie dołka na cztery uderzenia poniżej par — np. wbicie piłki do dołka jednym uderzeniem na par 5, „na skróty” przez zakręt. W historii odnotowano ledwie kilka takich przypadków.",
+    category: "golf",
+    year: 2007,
+    emoji: "🦅",
+  },
+  {
+    id: "rg12",
+    text: "Nowozelandczycy mają drugą, groźniejszą wersję haki — „Kapa o Pango” z 2005 roku — kończącą się gestem podcięcia gardła. Wywołała ona międzynarodową dyskusję o granicach przedmeczowego zastraszania.",
+    category: "rugby",
+    year: 2005,
+    emoji: "😤",
   },
 ];
 
