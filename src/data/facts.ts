@@ -61,6 +61,7 @@ export const CATEGORIES = [
   { id: "ages", label: "Najmłodsi i najstarsi", emoji: "⏳", color: "from-purple-500 to-violet-800" },
   { id: "dynasties", label: "Dynastie i serie", emoji: "🏰", color: "from-amber-500 to-red-700" },
   { id: "nicknames", label: "Pseudonimy i przydomki", emoji: "🏷️", color: "from-fuchsia-600 to-pink-800" },
+  { id: "rules", label: "Dziwne przepisy", emoji: "🚦", color: "from-slate-500 to-zinc-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5343,6 +5344,78 @@ export const FACTS_DB: Fact[] = [
     category: "basketball",
     year: 1962,
     emoji: "5️⃣",
+  },
+
+  // === DZIWNE PRZEPISY I ZASADY ===
+  {
+    id: "ru1",
+    text: "Zasadę zakazującą bramkarzowi łapania piłki podanej nogą przez kolegę z drużyny wprowadzono w 1992 roku. Powodem był potwornie nudny mundial 1990, na którym drużyny grały na czas, cofając piłkę do bramkarza.",
+    category: "rules",
+    year: 1992,
+    emoji: "🧤",
+  },
+  {
+    id: "ru2",
+    text: "Przez dekady o awansie w europejskich pucharach decydowała „zasada bramek na wyjeździe” — gol strzelony u rywala liczył się podwójnie przy remisie. UEFA zniosła ją dopiero w 2021 roku.",
+    category: "rules",
+    year: 2021,
+    emoji: "✈️",
+  },
+  {
+    id: "ru3",
+    text: "„Infield fly” to jeden z najbardziej zawiłych przepisów baseballu — sędzia może uznać pałkarza za wyeliminowanego, zanim piłka w ogóle spadnie, by uniemożliwić polowym celowe upuszczenie jej dla podwójnej eliminacji.",
+    category: "rules",
+    year: 1895,
+    emoji: "⚾",
+  },
+  {
+    id: "ru4",
+    text: "W skokach narciarskich obowiązują przepisy wiążące długość nart z wagą zawodnika. Wprowadzono je, bo skoczkowie głodzili się dla lekkości — zbyt szczupli muszą używać krótszych, mniej nośnych nart.",
+    category: "rules",
+    year: 2004,
+    emoji: "⚖️",
+  },
+  {
+    id: "ru5",
+    text: "W szachach obowiązuje zasada „dotknięte — ruszone”: jeśli dotkniesz swojej figury, musisz nią zagrać. Chcąc tylko poprawić jej ustawienie, trzeba wcześniej powiedzieć „poprawiam” (fr. „j'adoube”).",
+    category: "rules",
+    emoji: "♟️",
+  },
+  {
+    id: "ru6",
+    text: "Golfista może mieć w torbie najwyżej 14 kijów. Za każdy dodatkowy grożą kary — dlatego dobór zestawu kijów przed rundą to element strategii samej w sobie.",
+    category: "rules",
+    year: 1938,
+    emoji: "🏌️",
+  },
+  {
+    id: "ru7",
+    text: "Bramkarz w piłce nożnej może trzymać piłkę w rękach najwyżej 6 sekund. Przepis istnieje od lat, ale sędziowie egzekwują go tak rzadko, że wielu kibiców nawet o nim nie wie.",
+    category: "rules",
+    year: 2000,
+    emoji: "⏱️",
+  },
+  {
+    id: "ru8",
+    text: "W krykiecie pałkarza można wyeliminować na kuriozalne sposoby — m.in. za „przekroczenie czasu” na wejście do gry, „utrudnianie” polowym czy dwukrotne uderzenie piłki. Część z tych przepisów zastosowano w historii ledwie kilka razy.",
+    category: "rules",
+    emoji: "🏏",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "t25",
+    text: "Na Wimbledonie obowiązuje rygorystyczny biały strój — zawodnicy bywali proszeni o zmianę ubrania za zbyt kolorowe elementy. Dopiero niedawno złagodzono przepis, dopuszczając ciemną bieliznę u tenisistek.",
+    category: "tennis",
+    year: 2023,
+    emoji: "👚",
+  },
+  {
+    id: "w23",
+    text: "W skokach narciarskich za styl przyznaje się punkty m.in. za lądowanie „telemarkiem” — z jedną nogą wysuniętą przed drugą i ugiętymi kolanami. Brak telemarku oznacza niższe noty od sędziów.",
+    category: "winter",
+    year: 2010,
+    emoji: "🎿",
   },
 ];
 
