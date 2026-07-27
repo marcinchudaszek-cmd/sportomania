@@ -67,6 +67,7 @@ export const CATEGORIES = [
   { id: "unusual", label: "Nietypowe dyscypliny", emoji: "🎪", color: "from-lime-500 to-teal-700" },
   { id: "fans", label: "Kibice i atmosfera", emoji: "🎺", color: "from-orange-400 to-pink-600" },
   { id: "media", label: "Sport w mediach", emoji: "📺", color: "from-zinc-600 to-blue-800" },
+  { id: "body", label: "Sport i ciało", emoji: "🩺", color: "from-red-400 to-rose-600" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5791,6 +5792,80 @@ export const FACTS_DB: Fact[] = [
     category: "athletics",
     year: 2016,
     emoji: "📸",
+  },
+
+  // === SPORT I CIAŁO ===
+  {
+    id: "bd1",
+    text: "O tym, czy ktoś jest urodzonym sprinterem, czy maratończykiem, w dużej mierze decyduje genetyka. Włókna szybkokurczliwe dają eksplozywną moc, a wolnokurczliwe — wytrzymałość na długim dystansie.",
+    category: "body",
+    year: 2000,
+    emoji: "💪",
+  },
+  {
+    id: "bd2",
+    text: "Wysoki wzrost uchodził za wadę sprintera, ale Usain Bolt obrócił go w atut. Na 100 m potrzebował około 41 kroków, podczas gdy niżsi rywale musieli wykonać ich kilka więcej.",
+    category: "body",
+    year: 2009,
+    emoji: "👣",
+  },
+  {
+    id: "bd3",
+    text: "„Euforia biegacza” to nie mit — przy długim wysiłku mózg zalewają endorfiny i substancje podobne do tych z konopi. Stąd uczucie lekkości i szczęścia, które potrafi uzależnić od biegania.",
+    category: "body",
+    year: 2008,
+    emoji: "😌",
+  },
+  {
+    id: "bd4",
+    text: "Trening na dużej wysokości zmusza organizm do produkcji większej liczby czerwonych krwinek. Po powrocie na niziny sportowiec przenosi więcej tlenu — dlatego wielu trenuje w górach przed startami.",
+    category: "body",
+    year: 1968,
+    emoji: "⛰️",
+  },
+  {
+    id: "bd5",
+    text: "Podczas maratonu zawodnik może stracić z potem kilka litrów płynów i sporą część masy ciała. Utrzymanie równowagi wodnej i soli bywa równie ważne jak sama forma biegowa.",
+    category: "body",
+    year: 2010,
+    emoji: "💧",
+  },
+  {
+    id: "bd6",
+    text: "Powtarzane ciosy w głowę mogą prowadzić u bokserów do „dementia pugilistica” — zespołu otępiennego zwanego „byciem groggy”. To jeden z głównych powodów badań lekarskich i troski o bezpieczeństwo w tym sporcie.",
+    category: "body",
+    year: 1928,
+    emoji: "🥊",
+  },
+  {
+    id: "bd7",
+    text: "Nurkom na bezdechu pomaga „odruch nurkowania ssaków” — serce zwalnia, a śledziona kurczy się, wyrzucając do krwi dodatkowe czerwone krwinki. Dzięki temu człowiek potrafi wytrzymać pod wodą zaskakująco długo.",
+    category: "body",
+    year: 2007,
+    emoji: "🫁",
+  },
+  {
+    id: "bd8",
+    text: "Najlepsi pałkarze i uderzający słyną z wyjątkowego wzroku. Baseballowa legenda Ted Williams miał podobno wzrok 20/10 — widział szczegóły dwa razy ostrzej niż przeciętny człowiek.",
+    category: "body",
+    year: 1941,
+    emoji: "👁️",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "w24",
+    text: "Biathlon łączy dwie skrajności: morderczy bieg narciarski i wymagające lodowatego spokoju strzelanie. Każdy nietrafiony strzał oznacza karną pętlę, więc losy zawodów potrafią odwrócić się na strzelnicy.",
+    category: "winter",
+    year: 2014,
+    emoji: "🎯",
+  },
+  {
+    id: "c23",
+    text: "Zapasy to jeden z niewielu sportów obecnych na wszystkich nowożytnych igrzyskach od 1896 roku. W 2013 roku MKOl chciał je usunąć z programu, ale po fali protestów z całego świata szybko przywrócono je na igrzyska.",
+    category: "combat",
+    year: 2013,
+    emoji: "🤼",
   },
 ];
 
