@@ -66,6 +66,7 @@ export const CATEGORIES = [
   { id: "colors", label: "Kolory i symbole", emoji: "🎨", color: "from-red-500 to-yellow-600" },
   { id: "unusual", label: "Nietypowe dyscypliny", emoji: "🎪", color: "from-lime-500 to-teal-700" },
   { id: "fans", label: "Kibice i atmosfera", emoji: "🎺", color: "from-orange-400 to-pink-600" },
+  { id: "media", label: "Sport w mediach", emoji: "📺", color: "from-zinc-600 to-blue-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5716,6 +5717,80 @@ export const FACTS_DB: Fact[] = [
     category: "olympics",
     year: 2014,
     emoji: "🚀",
+  },
+
+  // === SPORT W MEDIACH I TECHNOLOGII ===
+  {
+    id: "md1",
+    text: "Pierwszą transmisję meczu piłki nożnej pokazała telewizja BBC w 1937 roku — było to specjalnie zaaranżowane spotkanie treningowe Arsenalu. Widownia telewizyjna liczyła wtedy zaledwie kilka tysięcy osób.",
+    category: "media",
+    year: 1937,
+    emoji: "📡",
+  },
+  {
+    id: "md2",
+    text: "Powtórkę wideo pokazano w telewizji po raz pierwszy w 1963 roku, podczas meczu futbolu amerykańskiego. Widzowie byli tak zdezorientowani, że komentator musiał krzyczeć: „To nie jest nowa akcja!”.",
+    category: "media",
+    year: 1963,
+    emoji: "⏪",
+  },
+  {
+    id: "md3",
+    text: "Walka bokserska Dempsey–Carpentier z 1921 roku była jedną z pierwszych transmisji sportowych w radiu, których słuchały masy. Ludzie gromadzili się wokół odbiorników, by „usłyszeć” pojedynek na żywo.",
+    category: "media",
+    year: 1921,
+    emoji: "📻",
+  },
+  {
+    id: "md4",
+    text: "Jedną z pierwszych gier wideo w historii było „Tennis for Two” z 1958 roku — symulacja tenisa na ekranie oscyloskopu. Dopiero „Pong” z 1972 roku uczynił sportowe gry masową rozrywką.",
+    category: "media",
+    year: 1958,
+    emoji: "🎮",
+  },
+  {
+    id: "md5",
+    text: "Stację ESPN — pierwszy całodobowy kanał sportowy — uruchomiono w 1979 roku. Wielu wróżyło jej klęskę, pytając, kto miałby oglądać sport przez całą dobę. Dziś to potęga medialna.",
+    category: "media",
+    year: 1979,
+    emoji: "📺",
+  },
+  {
+    id: "md6",
+    text: "Brytyjski „Match of the Day” — program ze skrótami meczów piłkarskich — nadawany jest od 1964 roku. To jeden z najdłużej emitowanych programów sportowych w historii telewizji.",
+    category: "media",
+    year: 1964,
+    emoji: "⚽",
+  },
+  {
+    id: "md7",
+    text: "Spidercam to kamera latająca nad boiskiem na linkach rozpiętych między trybunami. Daje widzom spektakularne ujęcia z góry, jakby unosili się tuż nad grającymi zawodnikami.",
+    category: "media",
+    year: 2010,
+    emoji: "🕷️",
+  },
+  {
+    id: "md8",
+    text: "W krykiecie od 1992 roku decyzje wspiera „trzeci sędzia” z dostępem do powtórek, a technologie jak Hot Spot czy Snickometer wykrywają nawet muśnięcie piłki o krawędź kija.",
+    category: "media",
+    year: 1992,
+    emoji: "🔍",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "t26",
+    text: "Wimbledon po niemal 150 latach pożegnał sędziów liniowych — od 2025 roku o tym, czy piłka była w korcie, decyduje wyłącznie automatyczny, elektroniczny system. Zniknął tym samym jeden z symboli turnieju.",
+    category: "tennis",
+    year: 2025,
+    emoji: "🤖",
+  },
+  {
+    id: "a28",
+    text: "Na mecie biegów sprinterskich pracują kamery do fotofiniszu rejestrujące nawet tysiące klatek na sekundę. Dzięki nim można rozdzielić zawodników, których dzieli tysięczna część sekundy.",
+    category: "athletics",
+    year: 2016,
+    emoji: "📸",
   },
 ];
 
