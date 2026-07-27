@@ -68,6 +68,7 @@ export const CATEGORIES = [
   { id: "fans", label: "Kibice i atmosfera", emoji: "🎺", color: "from-orange-400 to-pink-600" },
   { id: "media", label: "Sport w mediach", emoji: "📺", color: "from-zinc-600 to-blue-800" },
   { id: "body", label: "Sport i ciało", emoji: "🩺", color: "from-red-400 to-rose-600" },
+  { id: "ceremonies", label: "Symbole i ceremonie", emoji: "🏵️", color: "from-rose-400 to-amber-600" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5866,6 +5867,87 @@ export const FACTS_DB: Fact[] = [
     category: "combat",
     year: 2013,
     emoji: "🤼",
+  },
+
+  // === SYMBOLE I CEREMONIE ===
+  {
+    id: "ce1",
+    text: "Ogień olimpijski zapala się w greckiej Olimpii wyłącznie od promieni słońca, skupionych zwierciadłem parabolicznym. Na wypadek zgaśnięcia płomienia przechowuje się zapasowy ogień z tego samego źródła.",
+    category: "ceremonies",
+    year: 1936,
+    emoji: "🔥",
+  },
+  {
+    id: "ce2",
+    text: "Podczas parady narodów na otwarciu igrzysk Grecja zawsze idzie pierwsza — jako kolebka olimpiady — a gospodarze na samym końcu. Reszta reprezentacji maszeruje pośrodku, zwykle w kolejności alfabetycznej.",
+    category: "ceremonies",
+    year: 1928,
+    emoji: "🇬🇷",
+  },
+  {
+    id: "ce3",
+    text: "Na zamknięciu igrzysk burmistrz miasta-gospodarza przekazuje flagę olimpijską burmistrzowi następnego gospodarza. Ten symboliczny gest oficjalnie „przekazuje pałeczkę” kolejnym igrzyskom.",
+    category: "ceremonies",
+    year: 1920,
+    emoji: "🏳️",
+  },
+  {
+    id: "ce4",
+    text: "Męskie trofeum Wimbledonu wieńczy maleńki złoty... ananas. Nikt nie wie na pewno dlaczego — być może to nawiązanie do czasów, gdy ananas był luksusowym symbolem bogactwa i gościnności.",
+    category: "ceremonies",
+    year: 1887,
+    emoji: "🍍",
+  },
+  {
+    id: "ce5",
+    text: "Koszulki Tour de France to cała symbolika: żółta dla lidera, zielona dla najlepszego w sprintach, grochata dla króla gór i biała dla najlepszego młodzieżowca. Każda ma własną historię i prestiż.",
+    category: "ceremonies",
+    year: 1975,
+    emoji: "👕",
+  },
+  {
+    id: "ce6",
+    text: "W baseballu wielkie mecze otwiera „ceremonialny pierwszy rzut” wykonywany przez znane osobistości. Tradycję zapoczątkował w 1910 roku prezydent USA William Taft.",
+    category: "ceremonies",
+    year: 1910,
+    emoji: "⚾",
+  },
+  {
+    id: "ce7",
+    text: "Zwycięzcę wyścigu Kentucky Derby okrywa się kapą z róż — stąd nazwa „Bieg po Róże”. W tym czasie tłumy śpiewają rzewną pieśń „My Old Kentucky Home”.",
+    category: "ceremonies",
+    year: 1896,
+    emoji: "🌹",
+  },
+  {
+    id: "ce8",
+    text: "Finał Pucharu Anglii od lat 20. XX wieku poprzedza wspólne odśpiewanie hymnu „Abide with Me”. To rzadki moment, gdy przed meczem cały stadion śpiewa jednym głosem.",
+    category: "ceremonies",
+    year: 1927,
+    emoji: "🎶",
+  },
+  {
+    id: "ce9",
+    text: "Medaliści na zdjęciach często „gryzą” swoje medale. To pomysł fotografów — nawiązanie do dawnego sprawdzania, czy złoto jest prawdziwe (miękkie ustępowało pod zębami). Dziś to już tylko efektowna poza.",
+    category: "ceremonies",
+    year: 2012,
+    emoji: "🦷",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "k15",
+    text: "Ostatni zawodnik Tour de France ma swój przydomek — „lanterne rouge”, czyli „czerwona latarnia”, od światła na końcu pociągu. Bywa, że kolarze walczą o to miejsce, bo przynosi zaskakująco dużo rozgłosu.",
+    category: "cycling",
+    year: 1980,
+    emoji: "🔴",
+  },
+  {
+    id: "o43",
+    text: "Symbol igrzysk paraolimpijskich to trzy „agito” — łukowate elementy w ruchu. Nazwa pochodzi od łacińskiego „agito”, czyli „poruszam się”, a hasło ruchu brzmi „Spirit in Motion” — „duch w ruchu”.",
+    category: "olympics",
+    year: 2003,
+    emoji: "♾️",
   },
 ];
 
