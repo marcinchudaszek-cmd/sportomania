@@ -69,6 +69,7 @@ export const CATEGORIES = [
   { id: "media", label: "Sport w mediach", emoji: "📺", color: "from-zinc-600 to-blue-800" },
   { id: "body", label: "Sport i ciało", emoji: "🩺", color: "from-red-400 to-rose-600" },
   { id: "ceremonies", label: "Symbole i ceremonie", emoji: "🏵️", color: "from-rose-400 to-amber-600" },
+  { id: "upsets", label: "Wielkie sensacje", emoji: "😱", color: "from-red-500 to-purple-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5948,6 +5949,80 @@ export const FACTS_DB: Fact[] = [
     category: "olympics",
     year: 2003,
     emoji: "♾️",
+  },
+
+  // === WIELKIE SENSACJE ===
+  {
+    id: "up1",
+    text: "W 1990 roku niepokonany Mike Tyson przegrał przez nokaut z Busterem Douglasem — mało znanym pretendentem, na którego bukmacherzy stawiali 42 do 1. To jedna z największych sensacji w historii boksu.",
+    category: "upsets",
+    year: 1990,
+    emoji: "🥊",
+  },
+  {
+    id: "up2",
+    text: "Rosyjski zapaśnik Aleksandr Karielin nie przegrał przez 13 lat i przez dekadę nie stracił nawet punktu. W finale igrzysk 2000 pokonał go jednak Amerykanin Rulon Gardner — sensacja, w którą nikt nie wierzył.",
+    category: "upsets",
+    year: 2000,
+    emoji: "🤼",
+  },
+  {
+    id: "up3",
+    text: "Boris Becker wygrał Wimbledon w 1985 roku jako nierozstawiony 17-latek — najmłodszy mistrz w historii turnieju. Do tej pory nikt bez rozstawienia nie sięgnął po ten tytuł.",
+    category: "upsets",
+    year: 1985,
+    emoji: "🎾",
+  },
+  {
+    id: "up4",
+    text: "Goran Ivanišević wygrał Wimbledon 2001 z „dziką kartą”, będąc poza pierwszą setką rankingu. Trzykrotny finalista wreszcie dopiął swego — jako jeden z najniżej notowanych triumfatorów wielkoszlemowych.",
+    category: "upsets",
+    year: 2001,
+    emoji: "🃏",
+  },
+  {
+    id: "up5",
+    text: "„Cud w Stambule” 2005: Liverpool przegrywał w finale Ligi Mistrzów z AC Milanem 0:3 do przerwy. W drugiej połowie w 6 minut doprowadził do remisu i wygrał po rzutach karnych.",
+    category: "upsets",
+    year: 2005,
+    emoji: "🔄",
+  },
+  {
+    id: "up6",
+    text: "Na mistrzostwach świata w rugby 2015 Japonia pokonała potężną RPA w ostatniej akcji meczu. „Cud w Brighton” uchodzi za jedną z największych sensacji w historii sportu drużynowego.",
+    category: "upsets",
+    year: 2015,
+    emoji: "🌸",
+  },
+  {
+    id: "up7",
+    text: "W półfinale US Open 2015 Roberta Vinci, notowana jako outsider z szansami 300 do 1, zatrzymała Serenę Williams tuż przed kompletem wielkoszlemowym. Rozczarowana faworytka odmówiła nawet rozmowy z mediami.",
+    category: "upsets",
+    year: 2015,
+    emoji: "🛑",
+  },
+  {
+    id: "up8",
+    text: "W 1982 roku maleńka uczelnia Chaminade pokonała w koszykówce prowadzącą w rankingu drużynę Virginii z gwiazdorem Ralphem Sampsonem. To wciąż największa sensacja w historii amerykańskiej koszykówki akademickiej.",
+    category: "upsets",
+    year: 1982,
+    emoji: "🏀",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "m21",
+    text: "Uliczny tor w Monako jest tak wąski i kręty, że wyprzedzanie graniczy z cudem. Nelson Piquet porównał jazdę po nim do „jeżdżenia rowerem po własnym salonie”.",
+    category: "motorsport",
+    year: 1985,
+    emoji: "🚲",
+  },
+  {
+    id: "t27",
+    text: "Kolejka po bilety na Wimbledon („The Queue”) to instytucja sama w sobie — kibice koczują w namiotach nawet całą noc, a obowiązuje ich oficjalny kodeks zachowania. To jedna z najbardziej brytyjskich tradycji w sporcie.",
+    category: "tennis",
+    year: 2010,
+    emoji: "⛺",
   },
 ];
 
