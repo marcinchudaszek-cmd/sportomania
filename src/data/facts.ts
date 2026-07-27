@@ -64,6 +64,7 @@ export const CATEGORIES = [
   { id: "rules", label: "Dziwne przepisy", emoji: "🚦", color: "from-slate-500 to-zinc-700" },
   { id: "mind", label: "Sport i umysł", emoji: "🧠", color: "from-indigo-500 to-purple-700" },
   { id: "colors", label: "Kolory i symbole", emoji: "🎨", color: "from-red-500 to-yellow-600" },
+  { id: "unusual", label: "Nietypowe dyscypliny", emoji: "🎪", color: "from-lime-500 to-teal-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5566,6 +5567,80 @@ export const FACTS_DB: Fact[] = [
     category: "motorsport",
     year: 1934,
     emoji: "🥈",
+  },
+
+  // === NIETYPOWE DYSCYPLINY ===
+  {
+    id: "un1",
+    text: "W angielskim Gloucestershire co roku odbywa się wyścig za toczącym się w dół stromego wzgórza kręgiem sera. Ser rozpędza się do ok. 100 km/h, a zwycięzca — kto pierwszy na dole — zabiera go do domu.",
+    category: "unusual",
+    year: 1826,
+    emoji: "🧀",
+  },
+  {
+    id: "un2",
+    text: "W Finlandii rozgrywa się mistrzostwa świata w noszeniu żony (eukonkanto). Mężczyzna pokonuje tor przeszkód z partnerką na plecach, a główną nagrodą jest... waga żony w piwie.",
+    category: "unusual",
+    year: 1992,
+    emoji: "💑",
+  },
+  {
+    id: "un3",
+    text: "W walijskim miasteczku Llanwrtyd Wells rozgrywa się mistrzostwa świata w nurkowaniu w bagnie. Zawodnicy w płetwach i masce muszą przepłynąć rów wypełniony torfowym błotem, nie używając klasycznych ruchów pływackich.",
+    category: "unusual",
+    year: 1985,
+    emoji: "🤿",
+  },
+  {
+    id: "un4",
+    text: "Chessboxing łączy szachy i boks w naprzemiennych rundach. Wygrać można matem przy szachownicy albo nokautem w ringu — potrzeba więc i tężyzny fizycznej, i zimnej głowy.",
+    category: "unusual",
+    year: 2003,
+    emoji: "♟️",
+  },
+  {
+    id: "un5",
+    text: "Szwajcarski hornussen to wiejski sport zespołowy, w którym krążek („hornuss”) wystrzeliwuje się elastycznym prętem, a przeciwnicy próbują strącić go w locie wielkimi drewnianymi tablicami.",
+    category: "unusual",
+    year: 1900,
+    emoji: "🥏",
+  },
+  {
+    id: "un6",
+    text: "W japońskim yukigassen bitwa na śnieżki jest sportem z prawdziwego zdarzenia — dwie drużyny walczą według ścisłych zasad, trochę jak w zdobywaniu flagi. Dziś rozgrywa się go już na kilku kontynentach.",
+    category: "unusual",
+    year: 1989,
+    emoji: "⛄",
+  },
+  {
+    id: "un7",
+    text: "Bawarski fingerhakeln to zapasy... na palce. Dwóch mężczyzn zahacza o skórzaną pętlę po jednym palcu i próbuje przeciągnąć rywala przez stół. Konkurencja bywa tak zacięta, że palce potrafią ulec kontuzji.",
+    category: "unusual",
+    year: 1950,
+    emoji: "🤙",
+  },
+  {
+    id: "un8",
+    text: "W Turcji, w regionie egejskim, od stuleci organizuje się festiwale zapasów wielbłądów. Samce mocują się ze sobą w sezonie godowym, a wydarzenie przyciąga tłumy widzów i całe rodziny na pikniki.",
+    category: "unusual",
+    year: 2010,
+    emoji: "🐫",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "hb11",
+    text: "Piłka ręczna to jeden z najszybszych i najbardziej bramkostrzelnych sportów zespołowych — w jednym meczu pada zwykle 50–60 goli łącznie, czyli mniej więcej gol co pół minuty.",
+    category: "handball",
+    year: 2012,
+    emoji: "⚡",
+  },
+  {
+    id: "s15",
+    text: "W pływaniu artystycznym zawodniczki nie mogą dotykać dna basenu, a pod wodą wstrzymują oddech nawet na blisko minutę, wykonując przy tym precyzyjne figury do muzyki. Na nosie noszą specjalny zacisk.",
+    category: "water",
+    year: 2016,
+    emoji: "🤽‍♀️",
   },
 ];
 
