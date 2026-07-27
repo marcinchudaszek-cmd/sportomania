@@ -65,6 +65,7 @@ export const CATEGORIES = [
   { id: "mind", label: "Sport i umysł", emoji: "🧠", color: "from-indigo-500 to-purple-700" },
   { id: "colors", label: "Kolory i symbole", emoji: "🎨", color: "from-red-500 to-yellow-600" },
   { id: "unusual", label: "Nietypowe dyscypliny", emoji: "🎪", color: "from-lime-500 to-teal-700" },
+  { id: "fans", label: "Kibice i atmosfera", emoji: "🎺", color: "from-orange-400 to-pink-600" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -5641,6 +5642,80 @@ export const FACTS_DB: Fact[] = [
     category: "water",
     year: 2016,
     emoji: "🤽‍♀️",
+  },
+
+  // === KIBICE I ATMOSFERA ===
+  {
+    id: "fn1",
+    text: "Hymn kibiców Liverpoolu „You'll Never Walk Alone” pochodzi z musicalu z 1945 roku. Śpiewany na trybunie The Kop od lat 60., stał się jedną z najbardziej rozpoznawalnych pieśni sportowych świata.",
+    category: "fans",
+    year: 1963,
+    emoji: "🎶",
+  },
+  {
+    id: "fn2",
+    text: "„Poznań” to celebracja wymyślona przez kibiców Lecha Poznań — odwracają się tyłem do boiska i skacząc, trzymają się za ramiona. Gest podpatrzyli i przejęli fani Manchesteru City.",
+    category: "fans",
+    year: 2010,
+    emoji: "🔄",
+  },
+  {
+    id: "fn3",
+    text: "Kibice Seattle Seahawks są tak głośni, że klub zastrzegł dla nich koszulkę z numerem 12 („12. zawodnik”), a ich doping ustanowił oficjalny rekord Guinnessa hałasu na stadionie.",
+    category: "fans",
+    year: 2013,
+    emoji: "📣",
+  },
+  {
+    id: "fn4",
+    text: "Tifo to gigantyczna, precyzyjnie zaplanowana oprawa na trybunach — potrafi zakryć cały sektor obrazem czy napisem. Przygotowanie największych zajmuje kibicom całe tygodnie pracy w ukryciu.",
+    category: "fans",
+    year: 2000,
+    emoji: "🎨",
+  },
+  {
+    id: "fn5",
+    text: "„Lambeau Leap” to rytuał zawodników Green Bay Packers, którzy po zdobyciu przyłożenia wskakują w objęcia kibiców na trybunach. Tradycja trwa nieprzerwanie od lat 90.",
+    category: "fans",
+    year: 1993,
+    emoji: "🤸",
+  },
+  {
+    id: "fn6",
+    text: "W Anglii Boxing Day (26 grudnia) to od ponad stu lat wielkie święto futbolu — rozgrywa się wtedy komplet meczów, a stadiony pękają w szwach mimo świątecznego okresu.",
+    category: "fans",
+    year: 1900,
+    emoji: "🎄",
+  },
+  {
+    id: "fn7",
+    text: "Stambulska Galatasaray zasłynęła transparentami „Welcome to Hell” witającymi rywali. Atmosfera na jej stadionie uchodzi za jedną z najbardziej onieśmielających w europejskim futbolu.",
+    category: "fans",
+    year: 1993,
+    emoji: "🔥",
+  },
+  {
+    id: "fn8",
+    text: "FC Barcelona i Real Madryt należą do swoich kibiców — tzw. socios. To członkowie klubu wybierają prezydenta w wyborach, mając realny wpływ na losy drużyny.",
+    category: "fans",
+    year: 2003,
+    emoji: "🗳️",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "m20",
+    text: "Tradycja spryskiwania podium szampanem narodziła się przypadkiem — w 1967 roku Amerykanin Dan Gurney po zwycięstwie w Le Mans potrząsnął butelką i oblał wszystkich dookoła. Zwyczaj przyjął się na całym świecie.",
+    category: "motorsport",
+    year: 1967,
+    emoji: "🍾",
+  },
+  {
+    id: "o42",
+    text: "Znicz olimpijski w drodze na igrzyska bywał niesiony w najbardziej niezwykłych miejscach — nurkowano z nim pod wodą przy Wielkiej Rafie Koralowej, a przed igrzyskami w Soczi zabrano go nawet w kosmos, na spacer kosmiczny.",
+    category: "olympics",
+    year: 2014,
+    emoji: "🚀",
   },
 ];
 
