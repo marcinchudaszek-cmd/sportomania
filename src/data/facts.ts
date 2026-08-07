@@ -70,6 +70,7 @@ export const CATEGORIES = [
   { id: "body", label: "Sport i ciało", emoji: "🩺", color: "from-red-400 to-rose-600" },
   { id: "ceremonies", label: "Symbole i ceremonie", emoji: "🏵️", color: "from-rose-400 to-amber-600" },
   { id: "upsets", label: "Wielkie sensacje", emoji: "😱", color: "from-red-500 to-purple-700" },
+  { id: "geography", label: "Sport i geografia", emoji: "🗺️", color: "from-emerald-600 to-cyan-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6023,6 +6024,80 @@ export const FACTS_DB: Fact[] = [
     category: "tennis",
     year: 2010,
     emoji: "⛺",
+  },
+
+  // === SPORT I GEOGRAFIA ===
+  {
+    id: "ge1",
+    text: "Boliwijski stadion w La Paz leży na wysokości ok. 3600 m n.p.m. Rywale reprezentacji Boliwii łapią tam zadyszkę już po kilkunastu minutach — FIFA przez pewien czas zakazywała nawet gry na takich wysokościach.",
+    category: "geography",
+    year: 2007,
+    emoji: "⛰️",
+  },
+  {
+    id: "ge2",
+    text: "Na Svalbardzie, niedaleko bieguna północnego, rozgrywa się maratony w pełnym słońcu o północy. Latem słońce nie zachodzi tam przez wiele tygodni, a organizatorzy patrolują trasę, wypatrując niedźwiedzi polarnych.",
+    category: "geography",
+    year: 2015,
+    emoji: "🐻‍❄️",
+  },
+  {
+    id: "ge3",
+    text: "Everesting to wyzwanie kolarskie polegające na pokonaniu w jeden dzień takiej liczby podjazdów na dowolne wzgórze, by suma przewyższeń dorównała wysokości Mount Everestu — 8848 metrów.",
+    category: "geography",
+    year: 2014,
+    emoji: "🚵",
+  },
+  {
+    id: "ge4",
+    text: "Sto lat temu Nordowie zdominowali biegi narciarskie, a Kenijczycy maratony — nie przypadkiem. Wysokość, klimat i codzienne przemieszczanie się kształtowały pokolenia zawodników na długo przed erą profesjonalnych treningów.",
+    category: "geography",
+    year: 1968,
+    emoji: "🌍",
+  },
+  {
+    id: "ge5",
+    text: "W Zjednoczonych Emiratach Arabskich powstały hale narciarskie z prawdziwym śniegiem — można tam zjeżdżać na nartach, gdy na zewnątrz temperatura przekracza 40°C.",
+    category: "geography",
+    year: 2005,
+    emoji: "🎿",
+  },
+  {
+    id: "ge6",
+    text: "Rajd Dakar prowadził niegdyś przez Saharę z Europy do Senegalu, potem przeniósł się do Ameryki Południowej, a dziś odbywa się na pustyniach Arabii Saudyjskiej. Nazwa została, choć trasa dawno nie dociera do Dakaru.",
+    category: "geography",
+    year: 2020,
+    emoji: "🏜️",
+  },
+  {
+    id: "ge7",
+    text: "Igrzyska w Meksyku 1968 rozgrywano na wysokości 2240 m n.p.m. Rzadsze powietrze pomogło w skokach i sprintach — padły tam legendarne rekordy — ale zaszkodziło biegaczom długodystansowym.",
+    category: "geography",
+    year: 1968,
+    emoji: "📈",
+  },
+  {
+    id: "ge8",
+    text: "Zakopane, „zimowa stolica Polski”, gościło mistrzostwa świata w narciarstwie klasycznym już w 1929 i 1962 roku. Wielka Krokiew od dekad jest sercem polskich skoków narciarskich.",
+    category: "geography",
+    year: 1929,
+    emoji: "🇵🇱",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "p31",
+    text: "Kryta pływalnia i hale sportowe długo były w Polsce rzadkością, a mimo to Polacy zdobywali medale olimpijskie w kajakarstwie i wioślarstwie — dyscyplinach trenowanych na jeziorach i rzekach niemal przez cały rok.",
+    category: "poland",
+    year: 1980,
+    emoji: "🛶",
+  },
+  {
+    id: "we9",
+    text: "Mecz piłkarski w Boliwii czy Ekwadorze potrafi zamienić się w test wytrzymałości — przyjezdne drużyny przylatują tam kilka dni wcześniej, by organizm zdążył przystosować się do rzadkiego powietrza.",
+    category: "weather",
+    year: 2010,
+    emoji: "🫁",
   },
 ];
 
