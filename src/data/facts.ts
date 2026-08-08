@@ -71,6 +71,7 @@ export const CATEGORIES = [
   { id: "ceremonies", label: "Symbole i ceremonie", emoji: "🏵️", color: "from-rose-400 to-amber-600" },
   { id: "upsets", label: "Wielkie sensacje", emoji: "😱", color: "from-red-500 to-purple-700" },
   { id: "geography", label: "Sport i geografia", emoji: "🗺️", color: "from-emerald-600 to-cyan-800" },
+  { id: "families", label: "Rodziny w sporcie", emoji: "👨‍👦", color: "from-violet-400 to-indigo-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6098,6 +6099,80 @@ export const FACTS_DB: Fact[] = [
     category: "weather",
     year: 2010,
     emoji: "🫁",
+  },
+
+  // === RODZINY W SPORCIE ===
+  {
+    id: "fa1",
+    text: "Ojciec Richard Williams ułożył plan kariery dla Venus i Sereny, zanim jeszcze przyszły na świat. Obie siostry zostały liderkami światowego rankingu i wielokrotnymi mistrzyniami wielkoszlemowymi.",
+    category: "families",
+    year: 2002,
+    emoji: "👭",
+  },
+  {
+    id: "fa2",
+    text: "Bracia Klitschko — Witalij i Władimir — przez lata dzierżyli razem pasy mistrzowskie wagi ciężkiej. Obiecali matce, że nigdy ze sobą nie zawalczą, i dotrzymali słowa do końca karier.",
+    category: "families",
+    year: 2011,
+    emoji: "🥊",
+  },
+  {
+    id: "fa3",
+    text: "Manningowie to dynastia futbolu amerykańskiego: ojciec Archie grał w NFL, a synowie Peyton i Eli zdobyli łącznie cztery pierścienie Super Bowl. Każdy z braci wygrał po dwa.",
+    category: "families",
+    year: 2012,
+    emoji: "🏈",
+  },
+  {
+    id: "fa4",
+    text: "Bracia Bryan — Bob i Mike, bliźniacy jednojajowi — to najbardziej utytułowany debel w historii tenisa. Razem wygrali ponad sto turniejów i wszystkie cztery turnieje wielkoszlemowe.",
+    category: "families",
+    year: 2014,
+    emoji: "👯‍♂️",
+  },
+  {
+    id: "fa5",
+    text: "Trzy pokolenia Hillów w Formule 1: Graham Hill zdobył dwa tytuły mistrza świata, a jego syn Damon jeden. To jedyny przypadek w historii F1, gdy mistrzami zostali ojciec i syn.",
+    category: "families",
+    year: 1996,
+    emoji: "🏎️",
+  },
+  {
+    id: "fa6",
+    text: "Bracia Schleck, Andy i Fränk, wielokrotnie jechali w tej samej drużynie Tour de France. W 2011 roku obaj stanęli na podium najsłynniejszego wyścigu świata — rzadki rodzinny wyczyn.",
+    category: "families",
+    year: 2011,
+    emoji: "🚴",
+  },
+  {
+    id: "fa7",
+    text: "Bracia Gollobowie — Tomasz, Jacek i Krzysztof — przez lata jeździli na żużlu, a Tomasz został indywidualnym mistrzem świata. Rodzina z Bydgoszczy uchodzi za jedną z najbardziej żużlowych w Polsce.",
+    category: "families",
+    year: 2010,
+    emoji: "🇵🇱",
+  },
+  {
+    id: "fa8",
+    text: "Siostry Radwańskie — Agnieszka i Urszula — grały razem w deblu, w tym w reprezentacji Polski. Agnieszka doszła do finału Wimbledonu, a Urszula wygrywała juniorski Wimbledon w singlu.",
+    category: "families",
+    year: 2007,
+    emoji: "🎾",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "v16",
+    text: "Wysokość siatki w siatkówce mężczyzn to 2,43 m, a kobiet 2,24 m. Najlepsi atakujący sięgają w wyskoku ponad 3,5 metra — czyli wyżej niż standardowy sufit w mieszkaniu.",
+    category: "volleyball",
+    year: 2015,
+    emoji: "📏",
+  },
+  {
+    id: "hk11",
+    text: "Krążek hokejowy w najmocniejszych strzałach osiąga ponad 170 km/h. Bramkarze reagują na niego w ułamku sekundy, często nie widząc go wcale zza zasłony zawodników.",
+    category: "hockey",
+    year: 2012,
+    emoji: "⚡",
   },
 ];
 
