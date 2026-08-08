@@ -72,6 +72,7 @@ export const CATEGORIES = [
   { id: "upsets", label: "Wielkie sensacje", emoji: "😱", color: "from-red-500 to-purple-700" },
   { id: "geography", label: "Sport i geografia", emoji: "🗺️", color: "from-emerald-600 to-cyan-800" },
   { id: "families", label: "Rodziny w sporcie", emoji: "👨‍👦", color: "from-violet-400 to-indigo-700" },
+  { id: "war", label: "Sport i wojna", emoji: "🎖️", color: "from-stone-600 to-red-900" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6173,6 +6174,80 @@ export const FACTS_DB: Fact[] = [
     category: "hockey",
     year: 2012,
     emoji: "⚡",
+  },
+
+  // === SPORT I WOJNA ===
+  {
+    id: "wr1",
+    text: "W 1944 roku polscy jeńcy w Oflagu II C Woldenberg zorganizowali własne igrzyska olimpijskie. Flagę olimpijską uszyli potajemnie z podszewek koszul — dziś jest jednym z cenniejszych eksponatów polskiego sportu.",
+    category: "war",
+    year: 1944,
+    emoji: "🏳️",
+  },
+  {
+    id: "wr2",
+    text: "„Mecz śmierci” w okupowanym Kijowie (1942): drużyna Start złożona z piłkarzy Dynama pokonała zespół niemieckich lotników. Legenda mówi o rozstrzelaniu za zwycięstwo — historycy ustalili, że represje przyszły później i miały złożone tło.",
+    category: "war",
+    year: 1942,
+    emoji: "⚽",
+  },
+  {
+    id: "wr3",
+    text: "W październiku 1940 roku niemiecka bomba spadła na kort centralny Wimbledonu, niszcząc ponad tysiąc miejsc na trybunach. Turniej wrócił do gry dopiero w 1946 roku.",
+    category: "war",
+    year: 1940,
+    emoji: "💥",
+  },
+  {
+    id: "wr4",
+    text: "W okupowanej Warszawie działały konspiracyjne mistrzostwa piłkarskie. Grano mimo zakazu okupanta i groźby aresztowania — mecze rozgrywano na peryferyjnych boiskach, z czujkami ostrzegającymi przed patrolami.",
+    category: "war",
+    year: 1942,
+    emoji: "🇵🇱",
+  },
+  {
+    id: "wr5",
+    text: "Baseballowa legenda Ted Williams stracił blisko pięć sezonów kariery, służąc jako pilot myśliwca w II wojnie światowej i w Korei. Mimo to zakończył karierę wśród najlepszych pałkarzy w historii.",
+    category: "war",
+    year: 1953,
+    emoji: "✈️",
+  },
+  {
+    id: "wr6",
+    text: "W czasie I wojny światowej Brytyjczycy utworzyli „Batalion Piłkarzy” — 17. batalion Middlesex Regiment, do którego wstępowali zawodowi footballiści. Wielu z nich nigdy nie wróciło na boiska.",
+    category: "war",
+    year: 1914,
+    emoji: "🎖️",
+  },
+  {
+    id: "wr7",
+    text: "Joe Louis, mistrz świata wagi ciężkiej, zaciągnął się do armii USA i stoczył blisko sto walk pokazowych dla żołnierzy. Widziało go na żywo około dwóch milionów wojskowych.",
+    category: "war",
+    year: 1942,
+    emoji: "🥊",
+  },
+  {
+    id: "wr8",
+    text: "Turniej Pięciu Narodów w rugby zawieszono na czas obu wojen światowych. Z frontu I wojny nie wróciły dziesiątki reprezentantów — całe pokolenie zawodników zniknęło z boisk.",
+    category: "war",
+    year: 1915,
+    emoji: "🏉",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "f36",
+    text: "Pierwszy finał Pucharu Anglii na Wembley (1923) przeszedł do historii jako „finał z białym koniem”. Na stadion wdarło się kilkakrotnie więcej ludzi, niż mógł pomieścić, a boisko oczyszczał policjant na białym koniu Billym.",
+    category: "football",
+    year: 1923,
+    emoji: "🐴",
+  },
+  {
+    id: "sd11",
+    text: "Mistrzostwa świata w snookerze rozgrywa się w teatrze Crucible w Sheffield, który mieści zaledwie około 980 widzów. Pierwszy rząd siedzi tak blisko, że zawodnicy słyszą oddech kibiców.",
+    category: "stadiums",
+    year: 1977,
+    emoji: "🎭",
   },
 ];
 
