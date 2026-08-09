@@ -73,6 +73,7 @@ export const CATEGORIES = [
   { id: "geography", label: "Sport i geografia", emoji: "🗺️", color: "from-emerald-600 to-cyan-800" },
   { id: "families", label: "Rodziny w sporcie", emoji: "👨‍👦", color: "from-violet-400 to-indigo-700" },
   { id: "war", label: "Sport i wojna", emoji: "🎖️", color: "from-stone-600 to-red-900" },
+  { id: "diet", label: "Dieta i odżywianie", emoji: "🍽️", color: "from-lime-600 to-amber-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6248,6 +6249,80 @@ export const FACTS_DB: Fact[] = [
     category: "stadiums",
     year: 1977,
     emoji: "🎭",
+  },
+
+  // === DIETA I ODŻYWIANIE ===
+  {
+    id: "di1",
+    text: "Napój Gatorade powstał w 1965 roku na Uniwersytecie Florydy — naukowcy stworzyli go dla drużyny futbolowej Gators, która słabła w upale. Stąd nazwa i cała późniejsza branża napojów izotonicznych.",
+    category: "diet",
+    year: 1965,
+    emoji: "🥤",
+  },
+  {
+    id: "di2",
+    text: "Przed maratonem biegacze stosują „ładowanie węglowodanów” — na kilka dni przed startem jedzą wielkie porcje makaronu i ryżu, by maksymalnie napełnić mięśnie glikogenem.",
+    category: "diet",
+    year: 1967,
+    emoji: "🍝",
+  },
+  {
+    id: "di3",
+    text: "Zapaśnicy sumo budują masę na gęstym gulaszu chanko-nabe. Jedzą zwykle dwa ogromne posiłki dziennie i kładą się po nich spać — to sprawdzony przez wieki sposób na przybieranie na wadze.",
+    category: "diet",
+    year: 1900,
+    emoji: "🍲",
+  },
+  {
+    id: "di4",
+    text: "Kolarze Tour de France odbierają jedzenie w biegu — w strefie żywieniowej łapią płócienne torby „musette” z batonami i kanapkami, zakładając je przez ramię przy prędkości kilkudziesięciu km/h.",
+    category: "diet",
+    year: 1950,
+    emoji: "🎒",
+  },
+  {
+    id: "di5",
+    text: "Banan to nieformalny symbol przerw w tenisie — dostarcza cukrów i potasu, które pomagają zapobiegać skurczom podczas wielogodzinnych meczów w upale.",
+    category: "diet",
+    year: 2000,
+    emoji: "🍌",
+  },
+  {
+    id: "di6",
+    text: "Kofeina figurowała na liście substancji zakazanych aż do 2004 roku — po przekroczeniu limitu w moczu groziła dyskwalifikacja. Dziś jest jedynie monitorowana, a espresso przed startem to norma.",
+    category: "diet",
+    year: 2004,
+    emoji: "☕",
+  },
+  {
+    id: "di7",
+    text: "Usain Bolt wspominał, że podczas igrzysk w Pekinie 2008 żywił się głównie nuggetsami z kurczaka — zjadł ich w ciągu kilku dni około tysiąca kawałków, nie ufając nieznanej kuchni.",
+    category: "diet",
+    year: 2008,
+    emoji: "🍗",
+  },
+  {
+    id: "di8",
+    text: "W sportach walki popularne jest „zbijanie wagi” — zawodnicy odwadniają organizm przed ważeniem, by zmieścić się w kategorii, a potem w kilkanaście godzin nawadniają się z powrotem. To jedna z najbardziej ryzykownych praktyk w sporcie.",
+    category: "diet",
+    year: 2015,
+    emoji: "⚖️",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "sci10",
+    text: "W akademiach sportowych działa „efekt wieku względnego” — dzieci urodzone tuż po granicznej dacie rocznika są starsze i silniejsze od rówieśników, więc częściej trafiają do kadr. Wśród zawodowców widać nadreprezentację urodzonych na początku roku.",
+    category: "science",
+    year: 1985,
+    emoji: "📅",
+  },
+  {
+    id: "bd9",
+    text: "Badania nad koszykarzami wykazały, że wydłużenie snu do około 10 godzin na dobę wyraźnie poprawiło ich szybkość i skuteczność rzutów. Sen bywa dziś traktowany jako element treningu na równi z siłownią.",
+    category: "body",
+    year: 2011,
+    emoji: "😴",
   },
 ];
 
