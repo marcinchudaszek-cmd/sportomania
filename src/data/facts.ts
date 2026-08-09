@@ -75,6 +75,7 @@ export const CATEGORIES = [
   { id: "war", label: "Sport i wojna", emoji: "🎖️", color: "from-stone-600 to-red-900" },
   { id: "diet", label: "Dieta i odżywianie", emoji: "🍽️", color: "from-lime-600 to-amber-700" },
   { id: "referees", label: "Sędziowie i arbitrzy", emoji: "🧑‍⚖️", color: "from-neutral-500 to-slate-800" },
+  { id: "tragedies", label: "Tragedie i pamięć", emoji: "🕯️", color: "from-slate-600 to-zinc-900" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6398,6 +6399,80 @@ export const FACTS_DB: Fact[] = [
     category: "ceremonies",
     year: 1972,
     emoji: "🤞",
+  },
+
+  // === TRAGEDIE I PAMIĘĆ ===
+  {
+    id: "tg1",
+    text: "W 1949 roku samolot wiozący Grande Torino — mistrzów Włoch i trzon reprezentacji — rozbił się o wzgórze Superga pod Turynem. Klub stracił całą drużynę, a włoski futbol na lata swoją czołówkę.",
+    category: "tragedies",
+    year: 1949,
+    emoji: "✈️",
+  },
+  {
+    id: "tg2",
+    text: "Katastrofa monachijska 1958: samolot z młodą drużyną Manchesteru United rozbił się przy starcie. Zginęło 23 osoby, w tym ośmiu piłkarzy. Matt Busby przeżył i dziesięć lat później poprowadził odbudowany zespół po Puchar Europy.",
+    category: "tragedies",
+    year: 1958,
+    emoji: "🕯️",
+  },
+  {
+    id: "tg3",
+    text: "Wypadek podczas 24h Le Mans w 1955 roku pochłonął ponad 80 ofiar wśród widzów — to najtragiczniejsze zdarzenie w historii sportów motorowych. Mercedes wycofał się z wyścigów na dekady, a Szwajcaria zakazała wyścigów kołowych na ponad pół wieku.",
+    category: "tragedies",
+    year: 1955,
+    emoji: "🏁",
+  },
+  {
+    id: "tg4",
+    text: "Tragedia na Heysel w 1985 roku, przed finałem Pucharu Europy, kosztowała życie 39 osób. Angielskie kluby zostały wykluczone z europejskich pucharów na pięć lat.",
+    category: "tragedies",
+    year: 1985,
+    emoji: "🖤",
+  },
+  {
+    id: "tg5",
+    text: "Po katastrofie na Hillsborough (1989) raport Taylora zmienił brytyjski futbol — stadiony najwyższych lig przebudowano wyłącznie na miejsca siedzące, a bezpieczeństwo kibiców stało się priorytetem.",
+    category: "tragedies",
+    year: 1989,
+    emoji: "📋",
+  },
+  {
+    id: "tg6",
+    text: "W 2016 roku samolot z piłkarzami Chapecoense rozbił się w Kolumbii w drodze na finał Copa Sudamericana. Rywale z Atlético Nacional poprosili federację, by tytuł przyznano brazylijskiemu klubowi.",
+    category: "tragedies",
+    year: 2016,
+    emoji: "🤍",
+  },
+  {
+    id: "tg7",
+    text: "W 2011 roku w katastrofie lotniczej pod Jarosławiem zginęła niemal cała drużyna hokejowa Łokomotiwu. Kluby z całego świata oddawały jej hołd, a liga KHL wstrzymała rozgrywki.",
+    category: "tragedies",
+    year: 2011,
+    emoji: "🏒",
+  },
+  {
+    id: "tg8",
+    text: "W 1993 roku w katastrofie lotniczej zginęła prawie cała reprezentacja Zambii. Kraj odbudował drużynę od podstaw i w 2012 roku sięgnął po mistrzostwo Afryki — w finale rozegranym niedaleko miejsca katastrofy.",
+    category: "tragedies",
+    year: 2012,
+    emoji: "🇿🇲",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "sd12",
+    text: "Przebudowany Santiago Bernabéu ma murawę dzieloną na segmenty, które chowa się pod stadionem. Boisko „znika” w kilka godzin, robiąc miejsce koncertom i innym imprezom.",
+    category: "stadiums",
+    year: 2023,
+    emoji: "🌱",
+  },
+  {
+    id: "ce11",
+    text: "Minutę ciszy coraz częściej zastępuje minuta oklasków. Powód jest praktyczny: gorące brawa trudniej zakłócić pojedynczym okrzykiem z trybun, a hołd pozostaje równie wymowny.",
+    category: "ceremonies",
+    year: 2000,
+    emoji: "👏",
   },
 ];
 
