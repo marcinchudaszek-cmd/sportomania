@@ -74,6 +74,7 @@ export const CATEGORIES = [
   { id: "families", label: "Rodziny w sporcie", emoji: "👨‍👦", color: "from-violet-400 to-indigo-700" },
   { id: "war", label: "Sport i wojna", emoji: "🎖️", color: "from-stone-600 to-red-900" },
   { id: "diet", label: "Dieta i odżywianie", emoji: "🍽️", color: "from-lime-600 to-amber-700" },
+  { id: "referees", label: "Sędziowie i arbitrzy", emoji: "🧑‍⚖️", color: "from-neutral-500 to-slate-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6323,6 +6324,80 @@ export const FACTS_DB: Fact[] = [
     category: "body",
     year: 2011,
     emoji: "😴",
+  },
+
+  // === SĘDZIOWIE I ARBITRZY ===
+  {
+    id: "ar1",
+    text: "Przez pierwsze dekady futbolu na boisku nie było sędziego — spory rozstrzygali między sobą kapitanowie, a dwaj arbitrzy stali poza liniami. Sędzia wszedł na murawę z gwizdkiem dopiero pod koniec XIX wieku.",
+    category: "referees",
+    year: 1891,
+    emoji: "🧍",
+  },
+  {
+    id: "ar2",
+    text: "Zanim upowszechnił się gwizdek, sędziowie przerywali grę, machając białą chusteczką albo po prostu krzycząc. Pierwsze gwizdki pojawiły się na angielskich boiskach w latach 70. XIX wieku.",
+    category: "referees",
+    year: 1878,
+    emoji: "📢",
+  },
+  {
+    id: "ar3",
+    text: "Pierluigi Collina, sześciokrotnie wybierany najlepszym sędzią świata, stracił włosy w wieku dwudziestu kilku lat z powodu łysienia plackowatego. Charakterystyczny wygląd i spojrzenie uczyniły go najbardziej rozpoznawalnym arbitrem w historii.",
+    category: "referees",
+    year: 2002,
+    emoji: "👀",
+  },
+  {
+    id: "ar4",
+    text: "Sędzia piłkarski przebiega w meczu zwykle 10–12 km — czasem więcej niż niejeden zawodnik. Arbitrzy najwyższych lig muszą regularnie zdawać testy sprawnościowe, by w ogóle dostać wyznaczenie na mecz.",
+    category: "referees",
+    year: 2015,
+    emoji: "🏃",
+  },
+  {
+    id: "ar5",
+    text: "Mecz futbolu amerykańskiego obsługuje siedmioosobowa ekipa sędziowska, w której każdy ma osobną funkcję i nazwę — od głównego arbitra po sędziów pilnujących linii i tyłów pola gry.",
+    category: "referees",
+    year: 2010,
+    emoji: "🏈",
+  },
+  {
+    id: "ar6",
+    text: "Angielscy sędziowie piłkarscy zostali zawodowcami dopiero w 2001 roku. Wcześniej prowadzili mecze Premier League po godzinach — na co dzień pracując jako nauczyciele, strażacy czy urzędnicy.",
+    category: "referees",
+    year: 2001,
+    emoji: "💼",
+  },
+  {
+    id: "ar7",
+    text: "Siatkówka to jedyny popularny sport, w którym sędzia główny stoi na podwyższeniu ponad siatką, patrząc na grę z góry. Drugi arbiter pracuje po przeciwnej stronie, tuż przy słupku.",
+    category: "referees",
+    year: 1960,
+    emoji: "🪜",
+  },
+  {
+    id: "ar8",
+    text: "Sędziowie krykieta porozumiewają się z widzami i zawodnikami całym słownikiem gestów — uniesione ręce oznaczają sześć punktów, a wyciągnięty palec wskazujący wyeliminowanie pałkarza. Na boisku spędzają nawet kilka dni jednego meczu.",
+    category: "referees",
+    year: 1900,
+    emoji: "☝️",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "f37",
+    text: "Rzut karny wprowadzono do futbolu w 1891 roku i początkowo nazywano go „karą śmierci”. Część zawodników uznała pomysł za obraźliwy — twierdzili, że dżentelmen nigdy nie faulowałby celowo.",
+    category: "football",
+    year: 1891,
+    emoji: "⚰️",
+  },
+  {
+    id: "ce10",
+    text: "Podczas ceremonii otwarcia igrzysk przysięgę olimpijską składają nie tylko sportowcy — od 1972 roku dołączyli do nich sędziowie, a później także trenerzy. Każdy ślubuje przestrzegać zasad fair play.",
+    category: "ceremonies",
+    year: 1972,
+    emoji: "🤞",
   },
 ];
 
