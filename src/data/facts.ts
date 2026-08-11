@@ -76,6 +76,7 @@ export const CATEGORIES = [
   { id: "diet", label: "Dieta i odżywianie", emoji: "🍽️", color: "from-lime-600 to-amber-700" },
   { id: "referees", label: "Sędziowie i arbitrzy", emoji: "🧑‍⚖️", color: "from-neutral-500 to-slate-800" },
   { id: "tragedies", label: "Tragedie i pamięć", emoji: "🕯️", color: "from-slate-600 to-zinc-900" },
+  { id: "fairplay", label: "Fair play i gesty", emoji: "🤝", color: "from-sky-400 to-emerald-600" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6473,6 +6474,80 @@ export const FACTS_DB: Fact[] = [
     category: "ceremonies",
     year: 2000,
     emoji: "👏",
+  },
+
+  // === FAIR PLAY I WIELKIE GESTY ===
+  {
+    id: "fp1",
+    text: "Medal Pierre'a de Coubertina to najwyższe olimpijskie wyróżnienie za postawę fair play. Przyznawany jest tak rzadko, że w całej historii otrzymało go mniej osób, niż zdobywa złoto na jednych igrzyskach.",
+    category: "fairplay",
+    year: 1964,
+    emoji: "🎖️",
+  },
+  {
+    id: "fp2",
+    text: "Włoch Eugenio Monti na igrzyskach 1964 pożyczył rywalom brakującą śrubę do bobsleja. Brytyjczycy pojechali jego częścią po złoto, a on sam skończył z brązem — i jako pierwszy w historii otrzymał medal Coubertina.",
+    category: "fairplay",
+    year: 1964,
+    emoji: "🔩",
+  },
+  {
+    id: "fp3",
+    text: "Kanadyjski żeglarz Lawrence Lemieux prowadził w wyścigu na igrzyskach 1988, gdy zauważył wywróconą łódź rywali. Porzucił rywalizację, by ich uratować — MKOl uhonorował go medalem za fair play.",
+    category: "fairplay",
+    year: 1988,
+    emoji: "⛵",
+  },
+  {
+    id: "fp4",
+    text: "Paolo Di Canio miał przed sobą pustą bramkę, ale bramkarz rywali leżał kontuzjowany. Zamiast strzelać, złapał piłkę w ręce i przerwał akcję — za ten gest dostał nagrodę fair play FIFA.",
+    category: "fairplay",
+    year: 2000,
+    emoji: "🙌",
+  },
+  {
+    id: "fp5",
+    text: "Na igrzyskach 2016 Abbey D'Agostino i Nikki Hamblin zderzyły się w biegu na 5000 m. Zamiast walczyć o awans, pomogły sobie wstać i wspólnie dobiegły do mety — obie uhonorowano nagrodą fair play.",
+    category: "fairplay",
+    year: 2016,
+    emoji: "🫂",
+  },
+  {
+    id: "fp6",
+    text: "Hiszpan Iván Fernández Anaya mógł łatwo wyprzedzić Kenijczyka, który zatrzymał się przed metą, myśląc, że bieg już skończył. Zamiast tego zwolnił i gestami wskazał rywalowi właściwą linię mety.",
+    category: "fairplay",
+    year: 2012,
+    emoji: "👉",
+  },
+  {
+    id: "fp7",
+    text: "Golf to sport, w którym zawodnik sam zgłasza własne przewinienia. Bobby Jones przyznał w 1925 roku, że nieumyślnie poruszył piłkę — kara kosztowała go zwycięstwo w US Open. Skomentował: „Równie dobrze można chwalić kogoś za to, że nie okradł banku”.",
+    category: "fairplay",
+    year: 1925,
+    emoji: "⛳",
+  },
+  {
+    id: "fp8",
+    text: "Dick Hoyt przebiegł z synem Rickiem, poruszającym się na wózku, ponad tysiąc zawodów — maratonów i triathlonów Ironman. Ojciec biegł, pchając wózek, płynął, holując ponton, i jechał na rowerze z synem z przodu.",
+    category: "fairplay",
+    year: 1989,
+    emoji: "❤️",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "rg13",
+    text: "W rugby z sędzią może rozmawiać wyłącznie kapitan, a zawodnicy zwracają się do arbitra „sir”. Kwestionowanie decyzji karze się natychmiastowym przesunięciem rzutu o 10 metrów.",
+    category: "rugby",
+    year: 1990,
+    emoji: "🎩",
+  },
+  {
+    id: "t28",
+    text: "Tenisowa etykieta nakazuje unieść rękę i przeprosić rywala za punkt zdobyty po szczęśliwym odbiciu piłki od taśmy. Nikt tego nie wymaga przepisami — to zwyczaj przekazywany z pokolenia na pokolenie.",
+    category: "tennis",
+    year: 1980,
+    emoji: "🙏",
   },
 ];
 
