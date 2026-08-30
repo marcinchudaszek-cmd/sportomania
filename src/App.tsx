@@ -53,6 +53,7 @@ export default function App() {
   const touchStartX = useRef<number | null>(null);
   const seenRef = useRef<string[]>(loadSeenIds());
   const currentFactRef = useRef<Fact | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
 
   // Persisted state
   const [likedIds, setLikedIds] = useLocalStorage<string[]>("sm_liked", []);
@@ -159,6 +160,15 @@ export default function App() {
     if (mode === "browse") {
       setBrowseList(getFactsByCategory(selectedCategory, allFacts));
     }
+    // Na telefonie nagłówek zajmuje cały ekran, więc po przełączeniu zakładki
+    // treść zaczyna się poniżej krawędzi — przewijamy do niej automatycznie.
+    // Powtarzamy kilka razy, bo część widoków (np. „W tym dniu") dociąga dane
+    // asynchronicznie i dopiero wtedy strona jest dość długa, by było dokąd przewijać.
+    [60, 500, 1500].forEach((delay) =>
+      setTimeout(() => {
+        contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, delay)
+    );
   };
 
   const handleToggleLike = (id: string) => {
@@ -304,6 +314,9 @@ export default function App() {
             <CategoryFilter selected={selectedCategory} onChange={handleCategoryChange} />
           </div>
         )}
+
+        {/* punkt, do którego przewijamy po przełączeniu zakładki */}
+        <div ref={contentRef} className="scroll-mt-3" />
 
         {/* === SEARCH RESULTS === */}
         {viewMode === "search" && (

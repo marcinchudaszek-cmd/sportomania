@@ -118,9 +118,23 @@ async function fetchOtd(): Promise<OtdItem[]> {
   return [...events.sort(byYearDesc), ...born, ...died];
 }
 
+// Wersja formatu cache. Podbicie tej liczby unieważnia dane zapisane przez
+// starsze wydania aplikacji — inaczej po aktualizacji użytkownik przez wiele
+// godzin oglądałby wyniki wygenerowane przez poprzednią wersję parsera.
+const CACHE_VERSION = "v2";
+
 function todayKey(): string {
   const d = new Date();
   return `${d.getMonth() + 1}-${d.getDate()}`;
+}
+
+/** Usuwa wpisy cache zapisane przez starsze wersje aplikacji. */
+function purgeOldCache() {
+  try {
+    Object.keys(localStorage)
+      .filter((k) => k.startsWith("sm_otd_") && !k.startsWith(`sm_otd_${CACHE_VERSION}_`))
+      .forEach((k) => localStorage.removeItem(k));
+  } catch {}
 }
 
 const KIND_META: Record<Kind, { label: string; emoji: string; bar: string; chip: string }> = {
@@ -140,7 +154,8 @@ export default function OnThisDay() {
   const load = async (force = false) => {
     setLoading(true);
     setError(false);
-    const cacheKey = `sm_otd_${todayKey()}`;
+    purgeOldCache();
+    const cacheKey = `sm_otd_${CACHE_VERSION}_${todayKey()}`;
     try {
       if (!force) {
         const cached = localStorage.getItem(cacheKey);
