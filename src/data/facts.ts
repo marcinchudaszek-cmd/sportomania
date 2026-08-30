@@ -77,6 +77,7 @@ export const CATEGORIES = [
   { id: "referees", label: "Sędziowie i arbitrzy", emoji: "🧑‍⚖️", color: "from-neutral-500 to-slate-800" },
   { id: "tragedies", label: "Tragedie i pamięć", emoji: "🕯️", color: "from-slate-600 to-zinc-900" },
   { id: "fairplay", label: "Fair play i gesty", emoji: "🤝", color: "from-sky-400 to-emerald-600" },
+  { id: "college", label: "Sport akademicki", emoji: "🎓", color: "from-blue-500 to-violet-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6548,6 +6549,80 @@ export const FACTS_DB: Fact[] = [
     category: "tennis",
     year: 1980,
     emoji: "🙏",
+  },
+
+  // === SPORT AKADEMICKI ===
+  {
+    id: "cg1",
+    text: "„March Madness” — akademicki turniej koszykówki w USA — to narodowa obsesja typowania. Szansa na bezbłędne wytypowanie całej drabinki jest astronomicznie mała, a mimo to wypełniają ją dziesiątki milionów ludzi.",
+    category: "college",
+    year: 1939,
+    emoji: "📋",
+  },
+  {
+    id: "cg2",
+    text: "Przez dekady amerykańscy zawodnicy akademiccy nie mogli zarobić ani centa na własnym nazwisku. Dopiero od 2021 roku wolno im czerpać dochody z wizerunku — niektórzy zarabiają dziś więcej niż zawodowcy.",
+    category: "college",
+    year: 2021,
+    emoji: "💵",
+  },
+  {
+    id: "cg3",
+    text: "Rose Bowl, rozgrywany od 1902 roku, to najstarszy mecz pucharowy akademickiego futbolu w USA. Nazywany jest „dziadkiem wszystkich bowli”.",
+    category: "college",
+    year: 1902,
+    emoji: "🌹",
+  },
+  {
+    id: "cg4",
+    text: "Michigan Stadium, zwany „The Big House”, mieści ponad 107 tysięcy widzów — więcej niż niejeden stadion zawodowy. To zwykły uniwersytecki obiekt, na którym grają studenci.",
+    category: "college",
+    year: 1927,
+    emoji: "🏟️",
+  },
+  {
+    id: "cg5",
+    text: "Stypendia sportowe to w USA realna droga na studia — uczelnie przyznają ich rokrocznie dziesiątki tysięcy, często pokrywając całe czesne w zamian za grę w barwach szkoły.",
+    category: "college",
+    year: 1950,
+    emoji: "🎓",
+  },
+  {
+    id: "cg6",
+    text: "Uniwersjada, czyli igrzyska studenckie, to jedna z największych multidyscyplinarnych imprez świata — startuje w niej często więcej sportowców niż na zimowych igrzyskach olimpijskich.",
+    category: "college",
+    year: 1959,
+    emoji: "🌍",
+  },
+  {
+    id: "cg7",
+    text: "Akademicki Związek Sportowy powstał w Krakowie w 1909 roku i jest jedną z najstarszych działających organizacji studenckich w Polsce. Z jego klubów wyszło wielu polskich olimpijczyków.",
+    category: "college",
+    year: 1909,
+    emoji: "🇵🇱",
+  },
+  {
+    id: "cg8",
+    text: "Japońska sztafeta akademicka Hakone Ekiden — dwudniowy bieg na ponad 200 km — przyciąga przed telewizory miliony Japończyków. Dla wielu studentów udział w niej to szczyt sportowych marzeń.",
+    category: "college",
+    year: 1920,
+    emoji: "🎌",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "mo9",
+    text: "Prawa telewizyjne do akademickiego turnieju koszykówki w USA warte są miliardy dolarów — mimo że przez większość historii występujący w nim zawodnicy nie dostawali za grę wynagrodzenia.",
+    category: "money",
+    year: 2010,
+    emoji: "📺",
+  },
+  {
+    id: "p30",
+    text: "Zakopane dwukrotnie gościło zimową Uniwersjadę — w 1993 i 2001 roku. Dla polskich sportów zimowych były to jedne z największych imprez międzynarodowych organizowanych w kraju.",
+    category: "poland",
+    year: 2001,
+    emoji: "🏔️",
   },
 ];
 
