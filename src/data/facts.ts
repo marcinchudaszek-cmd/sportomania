@@ -81,6 +81,7 @@ export const CATEGORIES = [
   { id: "secondlife", label: "Druga kariera", emoji: "🎭", color: "from-purple-600 to-rose-700" },
   { id: "matches", label: "Legendarne mecze", emoji: "⏱️", color: "from-emerald-500 to-blue-700" },
   { id: "derbies", label: "Wielkie derby", emoji: "🔥", color: "from-red-600 to-orange-700" },
+  { id: "numbers", label: "Numery i koszulki", emoji: "🔢", color: "from-teal-600 to-sky-800" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6848,6 +6849,80 @@ export const FACTS_DB: Fact[] = [
     category: "fans",
     year: 1947,
     emoji: "🎆",
+  },
+
+  // === NUMERY I KOSZULKI ===
+  {
+    id: "nu1",
+    text: "Kultowa „dziesiątka” zawdzięcza status przypadkowi: przed mundialem 1958 Brazylia nie zgłosiła numerów na czas, więc FIFA rozdała je losowo. Numer 10 trafił do młodziutkiego Pelégo — i stał się symbolem gwiazdy zespołu.",
+    category: "numbers",
+    year: 1958,
+    emoji: "🔟",
+  },
+  {
+    id: "nu2",
+    text: "Michael Jordan wybrał numer 23, bo była to mniej więcej połowa z 45 — numeru noszonego przez jego starszego brata, którego chciał dorównać. Dziś „23” to jeden z najbardziej rozpoznawalnych numerów w sporcie.",
+    category: "numbers",
+    year: 1984,
+    emoji: "🐐",
+  },
+  {
+    id: "nu3",
+    text: "W amerykańskiej koszykówce akademickiej przez dekady nie wolno było używać cyfr od 6 do 9. Powód był praktyczny: sędziowie zgłaszają numer zawodnika, pokazując go na palcach jednej ręki.",
+    category: "numbers",
+    year: 1957,
+    emoji: "✋",
+  },
+  {
+    id: "nu4",
+    text: "W rugby numer nie jest kwestią gustu — od 1 do 15 ściśle odpowiada pozycji na boisku. Patrząc na plecy zawodnika, od razu wiadomo, czy jest młynarzem, łącznikiem czy skrzydłowym.",
+    category: "numbers",
+    year: 1950,
+    emoji: "🏉",
+  },
+  {
+    id: "nu5",
+    text: "Numer 13 bywa omijany przez zabobonnych sportowców, ale niektórzy zrobili z niego znak firmowy — nosili go m.in. wielki niemiecki snajper Gerd Müller i włoski obrońca Alessandro Nesta.",
+    category: "numbers",
+    year: 1970,
+    emoji: "1️⃣",
+  },
+  {
+    id: "nu6",
+    text: "Kolarze uważają numer startowy 13 za pechowy, więc tradycyjnie przypinają go do koszulki... do góry nogami. To jeden z najbardziej widocznych zabobonów w peletonie.",
+    category: "numbers",
+    year: 1930,
+    emoji: "🔄",
+  },
+  {
+    id: "nu7",
+    text: "Numer 42 Jackiego Robinsona, który przełamał barierę rasową w baseballu, jest zastrzeżony we wszystkich klubach ligi MLB. Raz w roku, w Dniu Robinsona, wszyscy zawodnicy grają właśnie z „42”.",
+    category: "numbers",
+    year: 1997,
+    emoji: "🕊️",
+  },
+  {
+    id: "nu8",
+    text: "Bramkarz niemal zawsze nosi „jedynkę”, bo dawne numery przypisywano według pozycji — zaczynając od tyłu. Zwyczaj przetrwał, choć numeracja pozycyjna dawno odeszła do lamusa.",
+    category: "numbers",
+    year: 1939,
+    emoji: "🧤",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "f39",
+    text: "Kluby potrafią zastrzegać numery na cześć legend: Napoli wycofało „dziesiątkę” Maradony, a Milan „szóstkę” Baresiego i „trójkę” Maldiniego — ta ostatnia czeka na ewentualny powrót kogoś z rodziny.",
+    category: "football",
+    year: 2000,
+    emoji: "🚫",
+  },
+  {
+    id: "r23",
+    text: "Edwin van der Sar zachował czyste konto przez 1311 minut ligowych z rzędu — ponad czternaście meczów bez straty gola. To wciąż rekord angielskiej Premier League.",
+    category: "records",
+    year: 2009,
+    emoji: "🧱",
   },
 ];
 
