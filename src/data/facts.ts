@@ -79,6 +79,7 @@ export const CATEGORIES = [
   { id: "fairplay", label: "Fair play i gesty", emoji: "🤝", color: "from-sky-400 to-emerald-600" },
   { id: "college", label: "Sport akademicki", emoji: "🎓", color: "from-blue-500 to-violet-700" },
   { id: "secondlife", label: "Druga kariera", emoji: "🎭", color: "from-purple-600 to-rose-700" },
+  { id: "matches", label: "Legendarne mecze", emoji: "⏱️", color: "from-emerald-500 to-blue-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6698,6 +6699,80 @@ export const FACTS_DB: Fact[] = [
     category: "records",
     year: 2006,
     emoji: "🔀",
+  },
+
+  // === LEGENDARNE MECZE ===
+  {
+    id: "ma1",
+    text: "Półfinał mundialu 1970 Włochy–RFN (4:3) nazwano „meczem stulecia” — w samej dogrywce padło pięć goli. Na Estadio Azteca do dziś wisi tablica upamiętniająca to spotkanie.",
+    category: "matches",
+    year: 1970,
+    emoji: "🇮🇹",
+  },
+  {
+    id: "ma2",
+    text: "Finał Wimbledonu 1980: w tie-breaku czwartego seta John McEnroe obronił kilka piłek meczowych i wygrał go 18:16. Björn Borg i tak sięgnął po tytuł w piątej partii — to wciąż jeden z najsłynniejszych meczów w historii tenisa.",
+    category: "matches",
+    year: 1980,
+    emoji: "🎾",
+  },
+  {
+    id: "ma3",
+    text: "Summit Series 1972 — hokejowy pojedynek Kanady z ZSRR w szczycie zimnej wojny. O losach rywalizacji zdecydował gol Paula Hendersona w ostatniej minucie ostatniego meczu.",
+    category: "matches",
+    year: 1972,
+    emoji: "🏒",
+  },
+  {
+    id: "ma4",
+    text: "Szósty mecz baseballowej World Series 1975: Carlton Fisk po uderzeniu machał rękami, „prosząc” lecącą piłkę, by nie wyszła na aut. Ujęcie jego gestów zmieniło sposób, w jaki telewizja pokazuje sport.",
+    category: "matches",
+    year: 1975,
+    emoji: "⚾",
+  },
+  {
+    id: "ma5",
+    text: "Finał Ligi Mistrzów 1999: Manchester United przegrywał z Bayernem do 90. minuty, po czym strzelił dwa gole w doliczonym czasie. Zdobył potrójną koronę w trzy dramatyczne minuty.",
+    category: "matches",
+    year: 1999,
+    emoji: "⏰",
+  },
+  {
+    id: "ma6",
+    text: "„La Remontada” 2017: Barcelona przegrywała z PSG 0:4 z pierwszego meczu, a w rewanżu wygrała 6:1, strzelając trzy gole w ostatnich minutach. To jedyny taki powrót w historii Ligi Mistrzów.",
+    category: "matches",
+    year: 2017,
+    emoji: "🔥",
+  },
+  {
+    id: "ma7",
+    text: "Podczas meczu o mistrzostwo świata w szachach 1972 Boris Spasski po przegranej szóstej partii wstał i bił brawo Bobby'emu Fischerowi. Ten gest przeszedł do historii jako symbol sportowego szacunku.",
+    category: "matches",
+    year: 1972,
+    emoji: "👏",
+  },
+  {
+    id: "ma8",
+    text: "„Flu Game” 1997: chory i ledwo trzymający się na nogach Michael Jordan zdobył 38 punktów w finałach NBA, a po ostatniej akcji osunął się w ramiona kolegi z drużyny.",
+    category: "matches",
+    year: 1997,
+    emoji: "🤒",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "f38",
+    text: "Steaua Bukareszt przeszła 104 ligowe mecze z rzędu bez porażki (1986–1989) — to jedna z najdłuższych takich serii w historii europejskiego futbolu.",
+    category: "football",
+    year: 1989,
+    emoji: "🇷🇴",
+  },
+  {
+    id: "b24",
+    text: "Golden State Warriors wygrali w sezonie 2015/16 rekordowe 73 mecze — więcej niż słynne Chicago Bulls Jordana. Mimo to przegrali finał NBA, tracąc prowadzenie 3:1 w serii.",
+    category: "basketball",
+    year: 2016,
+    emoji: "📉",
   },
 ];
 
