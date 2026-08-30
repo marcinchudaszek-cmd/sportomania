@@ -78,6 +78,7 @@ export const CATEGORIES = [
   { id: "tragedies", label: "Tragedie i pamięć", emoji: "🕯️", color: "from-slate-600 to-zinc-900" },
   { id: "fairplay", label: "Fair play i gesty", emoji: "🤝", color: "from-sky-400 to-emerald-600" },
   { id: "college", label: "Sport akademicki", emoji: "🎓", color: "from-blue-500 to-violet-700" },
+  { id: "secondlife", label: "Druga kariera", emoji: "🎭", color: "from-purple-600 to-rose-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6623,6 +6624,80 @@ export const FACTS_DB: Fact[] = [
     category: "poland",
     year: 2001,
     emoji: "🏔️",
+  },
+
+  // === DRUGA KARIERA ===
+  {
+    id: "sl1",
+    text: "George Weah, jedyny afrykański zdobywca Złotej Piłki, po zakończeniu kariery wszedł do polityki i został prezydentem Liberii. Wcześniej finansował z własnej kieszeni występy reprezentacji swojego kraju.",
+    category: "secondlife",
+    year: 2018,
+    emoji: "🇱🇷",
+  },
+  {
+    id: "sl2",
+    text: "Imran Khan poprowadził Pakistan do mistrzostwa świata w krykiecie w 1992 roku, a ćwierć wieku później został premierem tego kraju. Po drodze zbudował szpital onkologiczny imienia swojej matki.",
+    category: "secondlife",
+    year: 2018,
+    emoji: "🏏",
+  },
+  {
+    id: "sl3",
+    text: "Arnold Schwarzenegger siedmiokrotnie wygrał najważniejszy konkurs kulturystyczny świata, potem został gwiazdą Hollywood, a na koniec — gubernatorem Kalifornii. Trzy kariery, każda na szczycie.",
+    category: "secondlife",
+    year: 2003,
+    emoji: "💪",
+  },
+  {
+    id: "sl4",
+    text: "Witalij Kliczko, mistrz świata wagi ciężkiej z doktoratem z nauk o sporcie, po karierze bokserskiej został merem Kijowa. W ringu nazywano go „Dr Żelazna Pięść”.",
+    category: "secondlife",
+    year: 2014,
+    emoji: "🏛️",
+  },
+  {
+    id: "sl5",
+    text: "Sebastian Coe, dwukrotny mistrz olimpijski w biegu na 1500 m, pokierował organizacją igrzysk w Londynie 2012, a później stanął na czele światowej federacji lekkoatletycznej.",
+    category: "secondlife",
+    year: 2012,
+    emoji: "🎽",
+  },
+  {
+    id: "sl6",
+    text: "Shaquille O'Neal po karierze w NBA obronił doktorat z edukacji, pracował jako zastępca szeryfa i występował jako DJ. Sam mówił, że nie chce być pamiętany wyłącznie jako koszykarz.",
+    category: "secondlife",
+    year: 2012,
+    emoji: "🎧",
+  },
+  {
+    id: "sl7",
+    text: "Jerzy Kulej, jedyny polski bokser z dwoma złotymi medalami olimpijskimi, po zakończeniu kariery został posłem na Sejm. Do końca życia pozostał też barwnym komentatorem sportowym.",
+    category: "secondlife",
+    year: 2001,
+    emoji: "🇵🇱",
+  },
+  {
+    id: "sl8",
+    text: "Eric Cantona, gwiazda Manchesteru United, po zakończeniu kariery zajął się aktorstwem — grał w filmach uznanych reżyserów i występował na scenie teatralnej.",
+    category: "secondlife",
+    year: 2009,
+    emoji: "🎬",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "o44",
+    text: "Amerykanin Eddie Eagan to jedyny człowiek w historii ze złotem letnich i zimowych igrzysk w dwóch różnych dyscyplinach — wygrał boks w 1920 roku i bobsleje w 1932.",
+    category: "olympics",
+    year: 1932,
+    emoji: "🥇",
+  },
+  {
+    id: "r22",
+    text: "Kanadyjka Clara Hughes zdobywała medale olimpijskie zarówno w kolarstwie na letnich igrzyskach, jak i w łyżwiarstwie szybkim na zimowych. To wyczyn, którego dokonała garstka sportowców w historii.",
+    category: "records",
+    year: 2006,
+    emoji: "🔀",
   },
 ];
 
