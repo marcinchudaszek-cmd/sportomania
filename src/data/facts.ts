@@ -80,6 +80,7 @@ export const CATEGORIES = [
   { id: "college", label: "Sport akademicki", emoji: "🎓", color: "from-blue-500 to-violet-700" },
   { id: "secondlife", label: "Druga kariera", emoji: "🎭", color: "from-purple-600 to-rose-700" },
   { id: "matches", label: "Legendarne mecze", emoji: "⏱️", color: "from-emerald-500 to-blue-700" },
+  { id: "derbies", label: "Wielkie derby", emoji: "🔥", color: "from-red-600 to-orange-700" },
 ];
 
 export const FACTS_DB: Fact[] = [
@@ -6773,6 +6774,80 @@ export const FACTS_DB: Fact[] = [
     category: "basketball",
     year: 2016,
     emoji: "📉",
+  },
+
+  // === WIELKIE DERBY ===
+  {
+    id: "der1",
+    text: "Słowo „derby” przywędrowało do sportu z Anglii — od słynnej gonitwy konnej The Derby, nazwanej z kolei na cześć lorda Derby. Dziś oznacza mecz odwiecznych rywali z jednego miasta lub regionu.",
+    category: "derbies",
+    year: 1780,
+    emoji: "🐎",
+  },
+  {
+    id: "der2",
+    text: "Superclásico Boca Juniors–River Plate uchodzi za najgorętszy mecz klubowy świata. W dniu spotkania życie w Buenos Aires praktycznie zamiera, a atmosfera na trybunach bywa opisywana jako ogłuszająca.",
+    category: "derbies",
+    year: 1913,
+    emoji: "🇦🇷",
+  },
+  {
+    id: "der3",
+    text: "Old Firm — derby Celticu i Rangers — rozgrywane są od końca XIX wieku i od zawsze mają podtekst religijny: katolickie korzenie Celticu kontra protestanckie Rangers. To jedne z najstarszych derbów świata.",
+    category: "derbies",
+    year: 1888,
+    emoji: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  },
+  {
+    id: "der4",
+    text: "El Clásico Realu z Barceloną to najczęściej oglądany mecz klubowy na świecie — transmisje śledzą setki milionów widzów na wszystkich kontynentach.",
+    category: "derbies",
+    year: 1902,
+    emoji: "📺",
+  },
+  {
+    id: "der5",
+    text: "Inter powstał w 1908 roku z rozłamu w Milanie — założyciele chcieli klubu otwartego na obcokrajowców, stąd nazwa „Internazionale”. Od tamtej pory oba kluby dzielą jeden stadion i wieczną rywalizację.",
+    category: "derbies",
+    year: 1908,
+    emoji: "🔵",
+  },
+  {
+    id: "der6",
+    text: "Derby Rzymu dzielą miasto na pół: Roma tradycyjnie kojarzona jest z centrum i klasą robotniczą, Lazio z przedmieściami i regionem. Mecz bywa nazywany „derby stolicy” i paraliżuje miasto.",
+    category: "derbies",
+    year: 1929,
+    emoji: "🐺",
+  },
+  {
+    id: "der7",
+    text: "Derby Stambułu Galatasaray–Fenerbahçe to jedyne wielkie derby rozgrywane między dwoma kontynentami — jeden klub ma siedzibę po europejskiej, drugi po azjatyckiej stronie Bosforu.",
+    category: "derbies",
+    year: 1909,
+    emoji: "🌉",
+  },
+  {
+    id: "der8",
+    text: "Wielkie Derby Śląska — Górnik Zabrze kontra Ruch Chorzów — to spotkanie dwóch najbardziej utytułowanych klubów PRL-u. Oba zdobyły po kilkanaście mistrzostw Polski i przez dekady dzieliły region.",
+    category: "derbies",
+    year: 1960,
+    emoji: "🇵🇱",
+  },
+
+  // === ROZBUDOWA KATEGORII ===
+  {
+    id: "hk12",
+    text: "Przez ćwierć wieku (1942–1967) liga NHL składała się z zaledwie sześciu drużyn, zwanych dziś „Original Six”. Dostać się do niej było niemal niemożliwe — miejsc w składach było w całej lidze około stu.",
+    category: "hockey",
+    year: 1942,
+    emoji: "6️⃣",
+  },
+  {
+    id: "fn9",
+    text: "„Wieczne derby” Crvenej zvezdy z Partizanem w Belgradzie słyną z gigantycznych opraw — race, transparenty na całą trybunę i dymne kurtyny sprawiają, że mecz bywa przerywany z powodu ograniczonej widoczności.",
+    category: "fans",
+    year: 1947,
+    emoji: "🎆",
   },
 ];
 
