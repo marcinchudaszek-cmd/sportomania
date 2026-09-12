@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">SportoMania</string>
     <string name="title_activity_main">SportoMania</string>
-    <string name="package_name">com.sportomania.app</string>
-    <string name="custom_url_scheme">com.sportomania.app</string>
+    <string name="package_name">com.beagleappsstudio.sportomania</string>
+    <string name="custom_url_scheme">com.beagleappsstudio.sportomania</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.sportomania.app;
+package com.beagleappsstudio.sportomania;
 
 import com.getcapacitor.BridgeActivity;
 

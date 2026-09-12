@@ -1,3 +1,8 @@
 node_modules
 dist
 dist-cap
+
+# Klucze podpisujące — istnieją tylko lokalnie, nigdy w repo
+*.jks
+*.keystore
+keystore.properties
