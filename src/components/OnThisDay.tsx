@@ -20,14 +20,34 @@ const MONTHS_PL = [
 
 // Wydarzenia sportowe — szeroki, ale ostrożny zestaw (bez łapania "burmistrz" itp.)
 const EVENT_RE =
-  /(sport|olimpij|igrzysk|paraolimp|piłkarz|piłkarsk|piłki nożnej|piłkę nożną|futbol|mistrzostw|wicemistrz|mistrzem świata|mistrzem olimpij|medal olimpij|olimpiad|rozegrano|rozegrał|mecz |turniej|puchar|ligi mistrzów|liga mistrzów|ekstraklas|rekord świata|rekordzist|pobił rekord|ustanowił rekord|lekkoatlet|maraton|tenis|siatków|siatkar|koszyków|koszykar|hokej|bokser|boksu|pięściar|kolarz|kolarsk|kolarstw|żużl|narciar|skoczni|skoczek narciar|łyżwiar|pływak|pływacki|wioślar|żeglar|szachow|arcymistrz|formuł|grand prix|wyścig|rajd|fifa|uefa|\bmkol\b|\bnba\b|\bnhl\b|\bmma\b|\bufc\b|\bpzpn\b|stadion|hala sportow|bramk|reprezentacj|kadr[ay] narodow|drużyn|klub sportow|zdobył złot|zdobyła złot|zdobyli złot|zdobył mistrzostwo|zdobyła mistrzostwo|zdobył tytuł mistrz|zdobyła tytuł mistrz|zwyciężył w|triumfowa|wygrał finał|wygrała finał|olimpijczyk|olimpijk|zawody|zawodach|federacj[ai] sportow|wspinaczk|himalai|szczyt|triathlon|krykiet|rugby|golf|baseball)/i;
+  /(\bsport|olimpij|igrzysk|paraolimp|piłkarz|piłkarsk|piłki nożnej|piłkę nożną|futbol|mistrzostw|wicemistrz|mistrzem świata|mistrzem olimpij|medal olimpij|olimpiad|rozegrano|rozegrał|mecz |turniej|puchar|ligi mistrzów|liga mistrzów|ekstraklas|rekord świata|rekordzist|pobił rekord|ustanowił rekord|lekkoatlet|maraton|tenis|siatków|siatkar|koszyków|koszykar|hokej|bokser|boksu|pięściar|kolarz|kolarsk|kolarstw|żużl|narciar|skoczni|skoczek narciar|łyżwiar|pływak|pływacki|wioślar|żeglar|szachow|arcymistrz|formuł|grand prix|wyścig|rajd|fifa|uefa|\bmkol\b|\bnba\b|\bnhl\b|\bmma\b|\bufc\b|\bpzpn\b|stadion|hala sportow|bramk|reprezentacj|kadr[ay] narodow|drużyn|klub sportow|zdobył złot|zdobyła złot|zdobyli złot|zdobył mistrzostwo|zdobyła mistrzostwo|zdobył tytuł mistrz|zdobyła tytuł mistrz|zwyciężył w|triumfowa|wygrał finał|wygrała finał|olimpijczyk|olimpijk|zawody|zawodach|federacj[ai] sportow|wspinaczk|himalai|triathlon|krykiet|rugby|golf|baseball)/i;
+
+// Konteksty jawnie niesportowe. Sprawdzane PRZED EVENT_RE, bo pojedyncze słowo
+// potrafi trafić fałszywie: "samolot sportowy rozbił się" łapie się na "sport",
+// a katastrofa balonu w zawodach o Puchar Gordona Bennetta — na "puchar".
+const NON_SPORT_RE =
+  /(samolot|lotnisk|zestrzel|katastrof|rozbił się|runął|zginęło|partyzan|egzekucj|rozstrzela|aresztowa|bombardowa|nalot|okupacj|obóz koncentracyjn|getto|zamach|zamordowa|wybuch wojny|traktat|wybory parlamentarn|encyklik|trzęsienie ziemi|huragan|erupcj|pożar)/i;
 
 // Osoby związane ze sportem (do sekcji "Urodzili się" / "Zmarli")
 const PERSON_RE =
   /(piłkarz|piłkarka|piłkarsk|lekkoatlet|tenisist|tenisow|siatkarz|siatkarka|koszykarz|koszykarka|bokser|pięściar|kolarz|kolarka|kolarsk|żużlowiec|żużlow|narciar|skoczek|skoczkini|łyżwiar|pływak|pływaczk|wioślar|żeglar|szachist|szachow|kierowca wyścigow|kierowca rajdow|rajdowiec|motocyklist|kajakarz|kajakarka|kanadyjkarz|sztangist|ciężarowiec|strongman|biathlonist|panczenist|hokeist|hokej|rugbyst|rugbist|gimnastyk|gimnastyczk|akrobat|zapaśnik|zapaśnicz|judok|judo|karatek|taekwondzist|szermierz|florecist|szpadzist|szablist|strzelec sportow|łucznik|łuczniczk|snowboardzist|bobsleist|saneczkar|skeletonist|curler|surfer|windsurfer|kitesurfer|wspinacz|himalaist|alpinist|taternik|maratończyk|biegacz|biegaczk|chodziarz|oszczepnik|oszczepniczk|kulomiot|młociarz|młociark|tyczkarz|tyczkark|dyskobol|płotkarz|płotkark|sprinter|sprinterk|skoczek w dal|trójskoczek|wieloboist|triathlonist|jeździec|dżokej|ujeżdżeni|golfist|snookerzyst|bilardzist|darter|kręglarz|badmintonist|squashist|tenisist stołow|piłkarz ręczn|szczypiornist|baseballist|krykiecist|futbolist amerykańsk|olimpijczyk|olimpijk|paraolimpij|medalist|mistrz olimpijsk|mistrz świata|sportowiec|sportsmen|sportsmenk|zawodnik|zawodniczk|trener|szkoleniowiec|selekcjoner|sędzia sportow|sędzia piłkarsk|działacz sportow|komentator sportow|dziennikarz sportow)/i;
 
-function stripWikitext(s: string): string {
+/** Dekoduje encje HTML, które Wikipedia zapisuje wprost w wikitekście (&nbsp; itp.). */
+function decodeEntities(s: string): string {
   return s
+    .replace(/&nbsp;/g, " ")
+    .replace(/&ndash;/g, "–")
+    .replace(/&mdash;/g, "—")
+    .replace(/&quot;/g, '"')
+    .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(parseInt(d, 10)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCharCode(parseInt(h, 16)))
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&");
+}
+
+function stripWikitext(s: string): string {
+  return decodeEntities(s)
     .replace(/\[\[(?:[^\]|]*\|)?([^\]]+)\]\]/g, "$1")
     .replace(/'{2,}/g, "")
     .replace(/<ref[^>]*\/>/g, "")
@@ -60,8 +80,14 @@ function parseSection(section: string, kind: Kind, filter: (t: string) => boolea
     let year: number | null = null;
     let rest: string | null = null;
 
-    const m = content.match(/^(\d{3,4})\s*[–—:\-]\s*(.*)$/);
-    if (m) {
+    // Daty p.n.e. muszą mieć własną gałąź, inaczej wpis "490 p.n.e. – bitwa..."
+    // nie zostanie rozpoznany jako data i odziedziczy rok poprzedniego punktu.
+    const bc = content.match(/^(\d{1,4})\s*(?:p\.n\.e\.|przed naszą erą)\s*[–—:\-]?\s*(.*)$/);
+    const m = bc ? null : content.match(/^(\d{3,4})\s*[–—:\-]\s*(.*)$/);
+    if (bc) {
+      year = -parseInt(bc[1], 10);
+      rest = bc[2].trim();
+    } else if (m) {
       year = parseInt(m[1], 10);
       rest = m[2].trim();
     } else if (/^\d{3,4}$/.test(content)) {
@@ -105,7 +131,11 @@ async function fetchOtd(): Promise<OtdItem[]> {
 
   const byYearDesc = (a: OtdItem, b: OtdItem) => b.year - a.year;
 
-  const events = parseSection(extractSections(wikitext, "Wydarzenia"), "event", (t) => EVENT_RE.test(t));
+  const events = parseSection(
+    extractSections(wikitext, "Wydarzenia"),
+    "event",
+    (t) => !NON_SPORT_RE.test(t) && EVENT_RE.test(t)
+  );
   // WAŻNE: najpierw sortujemy (najnowsi pierwsi), dopiero potem przycinamy —
   // inaczej obcięcie zostawiałoby wyłącznie najstarsze wpisy z XIX/XX wieku.
   const born = parseSection(extractSections(wikitext, "Urodzili się"), "born", (t) => PERSON_RE.test(t))
@@ -121,7 +151,12 @@ async function fetchOtd(): Promise<OtdItem[]> {
 // Wersja formatu cache. Podbicie tej liczby unieważnia dane zapisane przez
 // starsze wydania aplikacji — inaczej po aktualizacji użytkownik przez wiele
 // godzin oglądałby wyniki wygenerowane przez poprzednią wersję parsera.
-const CACHE_VERSION = "v2";
+const CACHE_VERSION = "v3";
+
+/** Lata przed naszą erą trzymamy jako liczby ujemne, żeby sortowanie było poprawne. */
+function formatYear(y: number): string {
+  return y < 0 ? `${-y} p.n.e.` : String(y);
+}
 
 function todayKey(): string {
   const d = new Date();
@@ -280,7 +315,7 @@ export default function OnThisDay() {
                 <div className="p-5 sm:p-6">
                   <div className="flex items-start gap-4">
                     <span className={`flex-shrink-0 inline-flex items-center px-3 py-1.5 rounded-full text-sm font-black text-white bg-gradient-to-r ${meta.bar} shadow-md`}>
-                      {e.year}
+                      {formatYear(e.year)}
                     </span>
                     <div className="flex-1">
                       <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold mb-1 ${meta.chip}`}>
