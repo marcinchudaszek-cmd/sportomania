@@ -136,12 +136,16 @@ Treści edukacyjne, bez przemocy, hazardu i zakupów. Spodziewana kategoria: 3+.
 ## Lista kontrolna przed wysyłką
 
 - [x] applicationId: com.beagleappsstudio.sportomania
-- [x] AAB przechodzi `jarsigner -verify` (jar verified, cert do 2054-01-28)
+- [x] AAB podpisany kluczem przesyłania, którego oczekuje Play:
+      SHA1 F0:BB:CC:B4:22:B3:91:F9:CE:75:48:D9:22:E2:57:1C:AF:EF:B2:FB
+      (alias `key0`, ten sam co CiekawostkoMania; lokalnie `android/beagleapps-upload.jks`)
 - [x] versionCode 1 — pierwsze wydanie
-- [x] wszystkie 7 zrzutów w proporcji dokładnie 1:2 (1220×2440)
+- [x] wszystkie 7 zrzutów 1080×1920, proporcja dokładnie 9:16 (Play przyjmuje od 9:16 do 16:9 — 1:2 odrzuca)
 - [x] ikona 512×512 bez kanału alfa, grafika promocyjna 1024×500
 - [x] adres kontaktowy to beagleappsstudio@gmail.com
 - [x] uprawnienia w manifeście = uprawnienia opisane w formularzu
 - [x] polityka prywatności opublikowana pod publicznym adresem
-- [ ] kopia zapasowa `android/release.keystore` i `android/keystore.properties`
-      poza tym dyskiem (bez nich nie da się wydać żadnej aktualizacji)
+- [ ] kopia zapasowa `android/beagleapps-upload.jks` i `android/keystore.properties`
+      poza tym dyskiem (bez nich nie da się wydać żadnej aktualizacji).
+      Nieużywany `android/release.keystore` można zostawić albo usunąć — Play
+      go nie zna, bo pierwszy wysłany pakiet był podpisany kluczem `key0`.

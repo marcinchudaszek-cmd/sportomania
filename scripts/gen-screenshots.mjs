@@ -1,5 +1,7 @@
-// Zrzuty do Google Play z dev servera. Viewport 610x1220 CSS px przy skali 2
-// daje pliki 1220x2440 — dokładnie proporcja 1:2, czyli w granicach wymagań Play.
+// Zrzuty do Google Play z dev servera. Viewport 540x960 CSS px przy skali 2 daje
+// pliki 1080x1920 — proporcja dokładnie 9:16. Play przyjmuje zrzuty telefonu
+// tylko w przedziale od 9:16 do 16:9, więc wcześniejsze 1220x2440 (1:2) odrzucał.
+// Szerokość 540 CSS px trzyma layout poniżej breakpointu sm, czyli w wersji mobilnej.
 import { chromium } from "playwright";
 import path from "path";
 import fs from "fs";
@@ -23,7 +25,7 @@ const SHOTS = [
 
 const browser = await chromium.launch();
 const page = await browser.newPage({
-  viewport: { width: 610, height: 1220 },
+  viewport: { width: 540, height: 960 },
   deviceScaleFactor: 2,
   locale: "pl-PL",
 });
