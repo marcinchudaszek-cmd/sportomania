@@ -91,9 +91,14 @@ beagleappsstudio@gmail.com
 
 ## Polityka prywatności
 
-Plik gotowy w `play-assets/privacy/index.html`.
-Docelowy adres po publikacji na GitHub Pages:
-`https://marcinchudaszek-cmd.github.io/sportomania-privacy/`
+Opublikowana i sprawdzona (HTTP 200):
+
+```
+https://marcinchudaszek-cmd.github.io/sportomania-privacy/
+```
+
+Źródło: repo `marcinchudaszek-cmd/sportomania-privacy`, kopia w
+`play-assets/privacy/index.html`.
 
 ---
 
@@ -137,6 +142,6 @@ Treści edukacyjne, bez przemocy, hazardu i zakupów. Spodziewana kategoria: 3+.
 - [x] ikona 512×512 bez kanału alfa, grafika promocyjna 1024×500
 - [x] adres kontaktowy to beagleappsstudio@gmail.com
 - [x] uprawnienia w manifeście = uprawnienia opisane w formularzu
-- [ ] polityka prywatności opublikowana pod publicznym adresem
+- [x] polityka prywatności opublikowana pod publicznym adresem
 - [ ] kopia zapasowa `android/release.keystore` i `android/keystore.properties`
       poza tym dyskiem (bez nich nie da się wydać żadnej aktualizacji)
