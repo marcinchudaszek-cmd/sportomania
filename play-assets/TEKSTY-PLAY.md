@@ -15,13 +15,13 @@ SportoMania
 ## Krótki opis (max 80 znaków)
 
 ```
-1560 ciekawostek o historii sportu, sportowe rocznice dnia, quiz i oś czasu.
+1700 ciekawostek o historii sportu, sportowe rocznice dnia, quiz i oś czasu.
 ```
 
 ## Pełny opis (max 4000 znaków)
 
 ```
-SportoMania to kieszonkowa encyklopedia historii sportu — 1560 starannie
+SportoMania to kieszonkowa encyklopedia historii sportu — 1700 starannie
 napisanych ciekawostek z 111 dyscyplin, od igrzysk w starożytnej Olimpii
 do rekordów sprzed kilku miesięcy.
 
