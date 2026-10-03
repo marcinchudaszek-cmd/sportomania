@@ -57,7 +57,7 @@ async function feature1024x500() {
        <text x="432" y="275" font-family="Segoe UI, Arial, sans-serif" font-size="34"
              fill="#d7f5e6">Historia sportu w Twojej kieszeni</text>
        <text x="432" y="340" font-family="Segoe UI, Arial, sans-serif" font-size="30"
-             fill="#a9e6c8">1700 ciekawostek &#183; 111 dyscyplin</text>
+             fill="#a9e6c8">1850 ciekawostek &#183; 111 dyscyplin</text>
        <text x="432" y="384" font-family="Segoe UI, Arial, sans-serif" font-size="30"
              fill="#a9e6c8">sportowe rocznice na bieżąco</text>
      </svg>`

@@ -1,6 +1,6 @@
 # SportoMania — Historia sportu
 
-**1700 ciekawostek** ze **111 dyscyplin**, od piłki nożnej i olimpiad po Formułę 1.
+**1850 ciekawostek** ze **111 dyscyplin**, od piłki nożnej i olimpiad po Formułę 1.
 Wersja webowa: **https://beagleapps.pl/apps/sportomania/**
 APK: **https://beagleapps.pl/apk/sportomania.apk**
 
