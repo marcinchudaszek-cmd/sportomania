@@ -1,8 +1,18 @@
 # SportoMania — materiały do Play Console
 
 Pakiet: **com.beagleappsstudio.sportomania**
-versionCode 1 · versionName 1.0
+versionCode 2 · versionName 1.1
 Plik do wysłania: `android/app/build/outputs/bundle/release/app-release.aab`
+
+---
+
+## Informacje o wersji 1.1 (max 500 znaków)
+
+```
+<pl-PL>
+Baza urosła do 1850 ciekawostek! Dodaliśmy prawie 300 nowych faktów — każda z 111 kategorii ma teraz co najmniej 15 wpisów. Nowości m.in. w kategoriach: Sport i żywioły, E-sport, Szachy, Golf, Krykiet, Polskie pierwszyzny, Bramkarze i Wielkie derby.
+</pl-PL>
+```
 
 ---
 
@@ -140,6 +150,7 @@ Treści edukacyjne, bez przemocy, hazardu i zakupów. Spodziewana kategoria: 3+.
       SHA1 F0:BB:CC:B4:22:B3:91:F9:CE:75:48:D9:22:E2:57:1C:AF:EF:B2:FB
       (alias `key0`, ten sam co CiekawostkoMania; lokalnie `android/beagleapps-upload.jks`)
 - [x] versionCode 1 — pierwsze wydanie
+- [x] versionCode 2 (1.1) — rozbudowa bazy do 1852 faktów, podpis key0 sprawdzony (SHA1 jak wyżej)
 - [x] wszystkie 7 zrzutów 1080×1920, proporcja dokładnie 9:16 (Play przyjmuje od 9:16 do 16:9 — 1:2 odrzuca)
 - [x] ikona 512×512 bez kanału alfa, grafika promocyjna 1024×500
 - [x] adres kontaktowy to beagleappsstudio@gmail.com
