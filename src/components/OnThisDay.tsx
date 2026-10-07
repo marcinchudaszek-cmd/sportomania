@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type Kind = "event" | "born" | "died";
 
@@ -59,10 +59,14 @@ function stripWikitext(s: string): string {
 }
 
 /** Wytnij treść sekcji o danym nagłówku (może być kilka, np. "Wydarzenia w Polsce/na świecie"). */
-function extractSections(wikitext: string, heading: string): string {
+function extractSections(wikitext: string, heading: string): string[] {
   const re = new RegExp(`==\\s*${heading}[^=]*==([\\s\\S]*?)(?=\\n==[^=]|$)`, "g");
-  const matches = [...wikitext.matchAll(re)];
-  return matches.map((m) => m[1]).join("\n");
+  return [...wikitext.matchAll(re)].map((m) => m[1]);
+}
+
+/** Każdą sekcję parsujemy osobno, żeby rok z końca jednej nie przeszedł na początek następnej. */
+function parseSections(sections: string[], kind: Kind, filter: (t: string) => boolean): OtdItem[] {
+  return sections.flatMap((s) => parseSection(s, kind, filter));
 }
 
 /** Parsuje sekcję listy, śledząc rok z nadrzędnego punktu (obsługa zagnieżdżeń **). */
@@ -82,7 +86,8 @@ function parseSection(section: string, kind: Kind, filter: (t: string) => boolea
 
     // Daty p.n.e. muszą mieć własną gałąź, inaczej wpis "490 p.n.e. – bitwa..."
     // nie zostanie rozpoznany jako data i odziedziczy rok poprzedniego punktu.
-    const bc = content.match(/^(\d{1,4})\s*(?:p\.n\.e\.|przed naszą erą)\s*[–—:\-]?\s*(.*)$/);
+    // Wikipedia bywa niekonsekwentna: zdarza się "4713 p.n.e" bez końcowej kropki.
+    const bc = content.match(/^(\d{1,4})\s*(?:p\.n\.e\.?|przed naszą erą)\s*[–—:\-]?\s*(.*)$/);
     const m = bc ? null : content.match(/^(\d{3,4})\s*[–—:\-]\s*(.*)$/);
     if (bc) {
       year = -parseInt(bc[1], 10);
@@ -117,8 +122,7 @@ function parseSection(section: string, kind: Kind, filter: (t: string) => boolea
   return items;
 }
 
-async function fetchOtd(): Promise<OtdItem[]> {
-  const d = new Date();
+async function fetchOtd(d: Date): Promise<OtdItem[]> {
   const pageTitle = `${d.getDate()} ${MONTHS_PL[d.getMonth()]}`;
   const url =
     "https://pl.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&formatversion=2&origin=*&page=" +
@@ -131,17 +135,17 @@ async function fetchOtd(): Promise<OtdItem[]> {
 
   const byYearDesc = (a: OtdItem, b: OtdItem) => b.year - a.year;
 
-  const events = parseSection(
+  const events = parseSections(
     extractSections(wikitext, "Wydarzenia"),
     "event",
     (t) => !NON_SPORT_RE.test(t) && EVENT_RE.test(t)
   );
   // WAŻNE: najpierw sortujemy (najnowsi pierwsi), dopiero potem przycinamy —
   // inaczej obcięcie zostawiałoby wyłącznie najstarsze wpisy z XIX/XX wieku.
-  const born = parseSection(extractSections(wikitext, "Urodzili się"), "born", (t) => PERSON_RE.test(t))
+  const born = parseSections(extractSections(wikitext, "Urodzili się"), "born", (t) => PERSON_RE.test(t))
     .sort(byYearDesc)
     .slice(0, 75);
-  const died = parseSection(extractSections(wikitext, "Zmarli"), "died", (t) => PERSON_RE.test(t))
+  const died = parseSections(extractSections(wikitext, "Zmarli"), "died", (t) => PERSON_RE.test(t))
     .sort(byYearDesc)
     .slice(0, 75);
 
@@ -151,15 +155,14 @@ async function fetchOtd(): Promise<OtdItem[]> {
 // Wersja formatu cache. Podbicie tej liczby unieważnia dane zapisane przez
 // starsze wydania aplikacji — inaczej po aktualizacji użytkownik przez wiele
 // godzin oglądałby wyniki wygenerowane przez poprzednią wersję parsera.
-const CACHE_VERSION = "v3";
+const CACHE_VERSION = "v4";
 
 /** Lata przed naszą erą trzymamy jako liczby ujemne, żeby sortowanie było poprawne. */
 function formatYear(y: number): string {
   return y < 0 ? `${-y} p.n.e.` : String(y);
 }
 
-function todayKey(): string {
-  const d = new Date();
+function dayKey(d: Date): string {
   return `${d.getMonth() + 1}-${d.getDate()}`;
 }
 
@@ -185,12 +188,19 @@ export default function OnThisDay() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<FilterKey>("all");
+  // Dzień, którego dotyczą wyświetlane dane. Nagłówek bierze datę stąd, a nie z zegara —
+  // inaczej po północy nagłówek pokazywałby nowy dzień nad wczorajszą listą.
+  const [shownDay, setShownDay] = useState(() => new Date());
+  const shownKeyRef = useRef(dayKey(shownDay));
 
   const load = async (force = false) => {
+    const day = new Date();
+    shownKeyRef.current = dayKey(day);
+    setShownDay(day);
     setLoading(true);
     setError(false);
     purgeOldCache();
-    const cacheKey = `sm_otd_${CACHE_VERSION}_${todayKey()}`;
+    const cacheKey = `sm_otd_${CACHE_VERSION}_${dayKey(day)}`;
     try {
       if (!force) {
         const cached = localStorage.getItem(cacheKey);
@@ -203,20 +213,36 @@ export default function OnThisDay() {
           }
         }
       }
-      const fresh = await fetchOtd();
-      setItems(fresh);
+      const fresh = await fetchOtd(day);
       try {
         localStorage.setItem(cacheKey, JSON.stringify({ fetchedAt: Date.now(), items: fresh } satisfies CachedDay));
       } catch {}
+      // Jeśli w międzyczasie zaczęło się ładowanie nowego dnia, ta odpowiedź jest już nieaktualna.
+      if (shownKeyRef.current !== dayKey(day)) return;
+      setItems(fresh);
+      setLoading(false);
     } catch {
+      if (shownKeyRef.current !== dayKey(day)) return;
       setError(true);
-    } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
     load();
+    // Android trzyma aplikację w pamięci całymi dniami. Po powrocie do niej
+    // (i na wszelki wypadek co minutę) sprawdzamy, czy nie zmienił się dzień.
+    const checkDay = () => {
+      if (document.visibilityState === "visible" && dayKey(new Date()) !== shownKeyRef.current) load();
+    };
+    document.addEventListener("visibilitychange", checkDay);
+    window.addEventListener("focus", checkDay);
+    const timer = window.setInterval(checkDay, 60_000);
+    return () => {
+      document.removeEventListener("visibilitychange", checkDay);
+      window.removeEventListener("focus", checkDay);
+      window.clearInterval(timer);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -231,8 +257,7 @@ export default function OnThisDay() {
     [items, filter]
   );
 
-  const now = new Date();
-  const dateLabel = `${now.getDate()} ${MONTHS_PL[now.getMonth()]}`;
+  const dateLabel = `${shownDay.getDate()} ${MONTHS_PL[shownDay.getMonth()]}`;
   const pageUrl = `https://pl.wikipedia.org/wiki/${encodeURIComponent(dateLabel.replace(/ /g, "_"))}`;
 
   const chips: Array<{ key: FilterKey; label: string; emoji: string; n: number }> = [

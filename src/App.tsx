@@ -74,7 +74,9 @@ export default function App() {
   // Rejestruj dzień odwiedzin (do osiągnięć)
   useEffect(() => {
     try {
-      const today = new Date().toISOString().slice(0, 10);
+      // Data lokalna, nie UTC — toISOString() między północą a 2:00 dawał w Polsce wczorajszy dzień.
+      const d = new Date();
+      const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
       const days: string[] = JSON.parse(localStorage.getItem("sm_days") ?? "[]");
       if (!days.includes(today)) {
         localStorage.setItem("sm_days", JSON.stringify([...days, today]));
