@@ -1,16 +1,18 @@
 # SportoMania — materiały do Play Console
 
 Pakiet: **com.beagleappsstudio.sportomania**
-versionCode 2 · versionName 1.1
+versionCode 3 · versionName 1.2
 Plik do wysłania: `android/app/build/outputs/bundle/release/app-release.aab`
 
 ---
 
-## Informacje o wersji 1.1 (max 500 znaków)
+## Informacje o wersji 1.2 (max 500 znaków)
+
+Tekst zbiorczy — pasuje także wtedy, gdy wersja 1.1 nie trafiła do sklepu.
 
 ```
 <pl-PL>
-Baza urosła do 1850 ciekawostek! Dodaliśmy prawie 300 nowych faktów — każda z 111 kategorii ma teraz co najmniej 15 wpisów. Nowości m.in. w kategoriach: Sport i żywioły, E-sport, Szachy, Golf, Krykiet, Polskie pierwszyzny, Bramkarze i Wielkie derby.
+Ponad 2000 ciekawostek! Dodaliśmy blisko 500 nowych faktów — każda ze 111 kategorii ma teraz co najmniej 17 wpisów. Poprawka: zakładka „W tym dniu” po powrocie do aplikacji następnego dnia sama pobiera aktualne rocznice, a data w nagłówku zawsze zgadza się z listą.
 </pl-PL>
 ```
 
@@ -25,13 +27,13 @@ SportoMania
 ## Krótki opis (max 80 znaków)
 
 ```
-1850 ciekawostek o historii sportu, sportowe rocznice dnia, quiz i oś czasu.
+2000 ciekawostek o historii sportu, sportowe rocznice dnia, quiz i oś czasu.
 ```
 
 ## Pełny opis (max 4000 znaków)
 
 ```
-SportoMania to kieszonkowa encyklopedia historii sportu — 1850 starannie
+SportoMania to kieszonkowa encyklopedia historii sportu — ponad 2000 starannie
 napisanych ciekawostek z 111 dyscyplin, od igrzysk w starożytnej Olimpii
 do rekordów sprzed kilku miesięcy.
 
@@ -151,6 +153,7 @@ Treści edukacyjne, bez przemocy, hazardu i zakupów. Spodziewana kategoria: 3+.
       (alias `key0`, ten sam co CiekawostkoMania; lokalnie `android/beagleapps-upload.jks`)
 - [x] versionCode 1 — pierwsze wydanie
 - [x] versionCode 2 (1.1) — rozbudowa bazy do 1852 faktów, podpis key0 sprawdzony (SHA1 jak wyżej)
+- [x] versionCode 3 (1.2) — baza 2026 faktów + poprawka „W tym dniu”
 - [x] wszystkie 7 zrzutów 1080×1920, proporcja dokładnie 9:16 (Play przyjmuje od 9:16 do 16:9 — 1:2 odrzuca)
 - [x] ikona 512×512 bez kanału alfa, grafika promocyjna 1024×500
 - [x] adres kontaktowy to beagleappsstudio@gmail.com
