@@ -10,6 +10,7 @@ APK: **https://beagleapps.pl/apk/sportomania.apk**
 |---|---|
 | **Losowa** | ciekawostka na chybił trafił |
 | **W tym dniu** | sportowe rocznice dzisiejszej daty |
+| **Historia** | rozdziały o rozwoju dyscyplin: epoki, przełomowe momenty, legendy (na start 8 polskich) |
 | **Oś czasu** | fakty ułożone chronologicznie |
 | **Przeglądaj** | filtrowanie po dyscyplinie |
 | **Quiz** | tryb pytań ze wszystkich kategorii |
@@ -17,7 +18,7 @@ APK: **https://beagleapps.pl/apk/sportomania.apk**
 | **Ulubione** | własna lista zapisanych faktów |
 | **Osiągnięcia** | odznaki za korzystanie z aplikacji |
 
-Dane siedzą w `src/data/facts.ts` (ok. 420 KB) i `src/data/legends.ts` — bez backendu,
+Dane siedzą w `src/data/facts.ts` (ok. 580 KB), `src/data/history.ts` i `src/data/legends.ts` — bez backendu,
 wszystko działa offline.
 
 ## Uruchomienie

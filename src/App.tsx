@@ -14,11 +14,12 @@ import SearchBar from "./components/SearchBar";
 import QuizMode from "./components/QuizMode";
 import FactEditor from "./components/FactEditor";
 import OnThisDay from "./components/OnThisDay";
+import History from "./components/History";
 import Timeline from "./components/Timeline";
 import Legends from "./components/Legends";
 import Achievements from "./components/Achievements";
 
-type ViewMode = "random" | "search" | "browse" | "quiz" | "favorites" | "today" | "timeline" | "legends";
+type ViewMode = "random" | "search" | "browse" | "quiz" | "favorites" | "today" | "timeline" | "legends" | "history";
 
 // === Anty-powtórkowe losowanie ("worek losujący") ===
 // Zapamiętujemy już pokazane ciekawostki i losujemy tylko spośród
@@ -136,6 +137,13 @@ export default function App() {
     if (viewMode === "random") {
       pickRandomFact(cat);
     }
+  };
+
+  // Z rozdziału historii prosto do ciekawostek z wybranej kategorii.
+  const openCategory = (cat: string) => {
+    setSelectedCategory(cat);
+    switchView("browse");
+    setBrowseList(getFactsByCategory(cat, allFacts)); // po switchView, bo ono bierze jeszcze starą kategorię
   };
 
   const handleSearch = (query: string) => {
@@ -292,6 +300,7 @@ export default function App() {
         <div className="flex items-center justify-center gap-2 mb-6 flex-wrap">
           <TabButton active={viewMode === "random"} onClick={() => switchView("random")} emoji="🎲" label="Losowa" />
           <TabButton active={viewMode === "today"} onClick={() => switchView("today")} emoji="📅" label="W tym dniu" />
+          <TabButton active={viewMode === "history"} onClick={() => switchView("history")} emoji="📜" label="Historia" />
           <TabButton active={viewMode === "timeline"} onClick={() => switchView("timeline")} emoji="🕰️" label="Oś czasu" />
           <TabButton active={viewMode === "browse"} onClick={() => switchView("browse")} emoji="📋" label="Przeglądaj" />
           <TabButton active={viewMode === "quiz"} onClick={() => switchView("quiz")} emoji="🎯" label="Quiz" />
@@ -343,6 +352,13 @@ export default function App() {
         {viewMode === "today" && (
           <section>
             <OnThisDay />
+          </section>
+        )}
+
+        {/* === HISTORY === */}
+        {viewMode === "history" && (
+          <section>
+            <History onOpenCategory={openCategory} />
           </section>
         )}
 
