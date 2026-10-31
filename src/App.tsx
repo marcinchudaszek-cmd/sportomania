@@ -15,6 +15,7 @@ import QuizMode from "./components/QuizMode";
 import FactEditor from "./components/FactEditor";
 import OnThisDay from "./components/OnThisDay";
 import History from "./components/History";
+import { searchHistories, SportHistory } from "./data/history";
 import Timeline from "./components/Timeline";
 import Legends from "./components/Legends";
 import Achievements from "./components/Achievements";
@@ -54,6 +55,8 @@ export default function App() {
   // Cel przejścia z rozdziału historii: sylwetka w „Legendach” albo rok na „Osi czasu”.
   const [legendFocus, setLegendFocus] = useState<string | null>(null);
   const [yearFocus, setYearFocus] = useState<number | null>(null);
+  const [historyFocus, setHistoryFocus] = useState<string | null>(null);
+  const [historyResults, setHistoryResults] = useState<SportHistory[]>([]);
   const touchStartX = useRef<number | null>(null);
   const seenRef = useRef<string[]>(loadSeenIds());
   const currentFactRef = useRef<Fact | null>(null);
@@ -154,6 +157,11 @@ export default function App() {
     setLegendFocus(name); // po switchView, które czyści cele przejść
   };
 
+  const openHistoryChapter = (id: string) => {
+    switchView("history");
+    setHistoryFocus(id);
+  };
+
   const openYear = (year: number) => {
     switchView("timeline", false);
     setYearFocus(year);
@@ -164,6 +172,7 @@ export default function App() {
     if (query.trim()) {
       setViewMode("search");
       setSearchResults(searchFacts(query, allFacts));
+      setHistoryResults(searchHistories(query));
     } else {
       setViewMode("random");
       setSearchResults([]);
@@ -182,6 +191,7 @@ export default function App() {
     setViewMode(mode);
     setLegendFocus(null);
     setYearFocus(null);
+    setHistoryFocus(null);
     setSearchQuery("");
     setSearchResults([]);
     if (mode === "browse") {
@@ -350,8 +360,25 @@ export default function App() {
         {/* === SEARCH RESULTS === */}
         {viewMode === "search" && (
           <section className="space-y-4">
-            <ResultHeader count={searchResults.length} query={searchQuery} />
+            <ResultHeader count={searchResults.length + historyResults.length} query={searchQuery} />
+            {historyResults.length > 0 && (
+              <div className="bg-white/5 rounded-3xl border border-white/10 p-4">
+                <p className="text-white/70 text-sm font-semibold mb-3">📜 W rozdziałach historii</p>
+                <div className="flex flex-wrap gap-2">
+                  {historyResults.map((h) => (
+                    <button
+                      key={h.id}
+                      onClick={() => openHistoryChapter(h.id)}
+                      className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-bold text-white bg-gradient-to-r ${h.color} shadow-md hover:opacity-90 transition-opacity`}
+                    >
+                      <span>{h.emoji}</span> {h.title}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
             {searchResults.length === 0 ? (
+              historyResults.length === 0 &&
               <EmptyState message={`Brak wyników dla "${searchQuery}". Spróbuj innych słów.`} />
             ) : (
               searchResults.map((fact) => (
@@ -376,7 +403,13 @@ export default function App() {
         {/* === HISTORY === */}
         {viewMode === "history" && (
           <section>
-            <History onOpenCategory={openCategory} onOpenLegend={openLegend} onOpenYear={openYear} />
+            <History
+              key={historyFocus ?? "lista"}
+              focusId={historyFocus}
+              onOpenCategory={openCategory}
+              onOpenLegend={openLegend}
+              onOpenYear={openYear}
+            />
           </section>
         )}
 

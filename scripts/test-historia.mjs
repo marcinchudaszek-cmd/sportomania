@@ -96,5 +96,19 @@ const feedback = await page.getByText(/Dobrze!|Prawidłowa odpowiedź/).count();
 console.log("Quiz — odpowiedź oceniona:", feedback > 0);
 if (!feedback) errors.push("quiz z historii nie ocenia odpowiedzi");
 
+// Wyszukiwarka znajduje też rozdziały historii i otwiera je jednym kliknięciem.
+await page.getByRole("textbox").first().fill("Kukuczka");
+await page.waitForTimeout(400);
+const chapterHit = page.getByRole("button", { name: /Polski himalaizm/ });
+console.log("Wyszukiwanie „Kukuczka” — rozdział w wynikach:", await chapterHit.count());
+if (!(await chapterHit.count())) errors.push("wyszukiwarka nie pokazuje rozdziałów historii");
+else {
+  await chapterHit.first().click();
+  await page.waitForTimeout(500);
+  const h2 = await page.locator("h2").first().innerText();
+  console.log("Po kliknięciu otwarty rozdział:", h2);
+  if (!h2.includes("Polski himalaizm")) errors.push("wynik wyszukiwania nie otwiera rozdziału");
+}
+
 console.log("Błędy:", errors.length ? errors : "brak");
 await browser.close();

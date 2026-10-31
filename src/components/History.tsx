@@ -23,11 +23,15 @@ interface Props {
   onOpenLegend: (name: string) => void;
   /** Przejście do „Osi czasu” na dekadę danego roku. */
   onOpenYear: (year: number) => void;
+  /** Rozdział do otwarcia od razu (np. z wyników wyszukiwania). */
+  focusId?: string | null;
 }
 
-export default function History({ onOpenCategory, onOpenLegend, onOpenYear }: Props) {
-  const [openId, setOpenId] = useState<string | null>(null);
-  const [region, setRegion] = useState<string>("pl");
+export default function History({ onOpenCategory, onOpenLegend, onOpenYear, focusId }: Props) {
+  const [openId, setOpenId] = useState<string | null>(focusId ?? null);
+  const [region, setRegion] = useState<string>(
+    () => SPORT_HISTORIES.find((x) => x.id === focusId)?.region ?? "pl"
+  );
   const topRef = useRef<HTMLDivElement | null>(null);
 
   // Pokazujemy tylko regiony, dla których są już rozdziały — „Świat” pojawi się sam, gdy dojdą dane.

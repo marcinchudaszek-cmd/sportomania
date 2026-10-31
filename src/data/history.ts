@@ -1226,3 +1226,18 @@ export const SPORT_HISTORIES: SportHistory[] = [
     legends: ["Jacob Tullin Thams", "Sepp Bradl", "Matti Nykänen", "Jan Boklöv", "Janne Ahonen", "Adam Małysz", "Kamil Stoch", "Stefan Kraft"],
   },
 ];
+
+/** Rozdziały, w których występuje szukana fraza (tytuł, wstęp, epoki, momenty, legendy). */
+export function searchHistories(query: string): SportHistory[] {
+  const q = query.trim().toLowerCase();
+  if (q.length < 2) return [];
+  return SPORT_HISTORIES.filter((h) =>
+    [
+      h.title,
+      h.lead,
+      ...h.eras.flatMap((e) => [e.title, e.text]),
+      ...h.milestones.flatMap((m) => [String(m.year), m.title, m.text]),
+      ...h.legends,
+    ].some((t) => t.toLowerCase().includes(q))
+  );
+}
