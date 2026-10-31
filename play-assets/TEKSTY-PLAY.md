@@ -1,18 +1,18 @@
 # SportoMania — materiały do Play Console
 
 Pakiet: **com.beagleappsstudio.sportomania**
-versionCode 3 · versionName 1.2
+versionCode 4 · versionName 1.3
 Plik do wysłania: `android/app/build/outputs/bundle/release/app-release.aab`
 
 ---
 
-## Informacje o wersji 1.2 (max 500 znaków)
+## Informacje o wersji 1.3 (max 500 znaków)
 
-Tekst zbiorczy — pasuje także wtedy, gdy wersja 1.1 nie trafiła do sklepu.
+Tekst zbiorczy — pasuje także wtedy, gdy wersje 1.1 i 1.2 nie trafiły do sklepu.
 
 ```
 <pl-PL>
-Ponad 2000 ciekawostek! Dodaliśmy blisko 500 nowych faktów — każda ze 111 kategorii ma teraz co najmniej 17 wpisów. Poprawka: zakładka „W tym dniu” po powrocie do aplikacji następnego dnia sama pobiera aktualne rocznice, a data w nagłówku zawsze zgadza się z listą.
+Nowa zakładka Historia: 29 rozdziałów o dziejach polskiego i światowego sportu — od siatkówki i himalaizmu po igrzyska i mundiale. Quiz z historii, 69 sylwetek legend i ponad 2000 ciekawostek. Udostępniaj ciekawostki jako obrazek, a codzienne powiadomienie przypomni o ciekawostce dnia. Poprawki: aktualne rocznice w „W tym dniu” i działające linki przy udostępnianiu.
 </pl-PL>
 ```
 
@@ -169,6 +169,7 @@ Treści edukacyjne, bez przemocy, hazardu i zakupów. Spodziewana kategoria: 3+.
 - [x] versionCode 1 — pierwsze wydanie
 - [x] versionCode 2 (1.1) — rozbudowa bazy do 1852 faktów, podpis key0 sprawdzony (SHA1 jak wyżej)
 - [x] versionCode 3 (1.2) — baza 2026 faktów + poprawka „W tym dniu”
+- [x] versionCode 4 (1.3) — zakładka Historia, quiz z historii, 69 legend, udostępnianie obrazkiem, powiadomienia (bez SCHEDULE_EXACT_ALARM)
 - [x] wszystkie 7 zrzutów 1080×1920, proporcja dokładnie 9:16 (Play przyjmuje od 9:16 do 16:9 — 1:2 odrzuca)
 - [x] ikona 512×512 bez kanału alfa, grafika promocyjna 1024×500
 - [x] adres kontaktowy to beagleappsstudio@gmail.com
