@@ -19,6 +19,7 @@ import { searchHistories, SportHistory } from "./data/history";
 import Timeline from "./components/Timeline";
 import Legends from "./components/Legends";
 import Achievements from "./components/Achievements";
+import { dailySupported, loadDaily, onDailyTap, pickDailyFact, refreshDaily, setDaily } from "./utils/dailyFact";
 
 type ViewMode = "random" | "search" | "browse" | "quiz" | "favorites" | "today" | "timeline" | "legends" | "history";
 
@@ -61,6 +62,8 @@ export default function App() {
   const seenRef = useRef<string[]>(loadSeenIds());
   const currentFactRef = useRef<Fact | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
+  // zaplanowane przewinięcia z ostatniego przełączenia zakładki (patrz switchView)
+  const scrollTimers = useRef<number[]>([]);
 
   // Persisted state
   const [likedIds, setLikedIds] = useLocalStorage<string[]>("sm_liked", []);
@@ -77,6 +80,18 @@ export default function App() {
     currentFactRef.current = currentFact;
     markSeen(seenRef, currentFact.id);
   }, [currentFact]);
+
+  // „Ciekawostka dnia”: przesuń 30-dniowe okno powiadomień, a dotknięcie powiadomienia otwiera ciekawostkę
+  useEffect(() => {
+    refreshDaily(FACTS_DB);
+    onDailyTap((id) => {
+      const fact = FACTS_DB.find((f) => f.id === id);
+      if (!fact) return;
+      setViewMode("random");
+      setCurrentFact(fact);
+      setFactKey((k) => k + 1);
+    });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Rejestruj dzień odwiedzin (do osiągnięć)
   useEffect(() => {
@@ -201,9 +216,13 @@ export default function App() {
     // treść zaczyna się poniżej krawędzi — przewijamy do niej automatycznie.
     // Powtarzamy kilka razy, bo część widoków (np. „W tym dniu") dociąga dane
     // asynchronicznie i dopiero wtedy strona jest dość długa, by było dokąd przewijać.
+    // Zaległe przewinięcia z poprzedniego przełączenia anulujemy — inaczej szybkie przejście dalej
+    // (np. rozdział historii → rok na osi czasu) kończyło się wyrzuceniem z powrotem na górę.
+    scrollTimers.current.forEach(clearTimeout);
+    scrollTimers.current = [];
     if (!autoScroll) return;
-    [60, 500, 1500].forEach((delay) =>
-      setTimeout(() => {
+    scrollTimers.current = [60, 500, 1500].map((delay) =>
+      window.setTimeout(() => {
         contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
       }, delay)
     );
@@ -241,7 +260,8 @@ export default function App() {
       ? allFacts.length
       : getFactsByCategory(selectedCategory, allFacts).length;
 
-  const todayFact = allFacts[new Date().getDate() % allFacts.length];
+  // ta sama ciekawostka co w powiadomieniu „Ciekawostka dnia” (losowanie po dacie z całej bazy)
+  const todayFact = pickDailyFact(new Date(), FACTS_DB);
 
   return (
     <div
@@ -520,6 +540,7 @@ export default function App() {
               liked={likedIds.includes(todayFact.id)}
               onToggleLike={() => handleToggleLike(todayFact.id)}
             />
+            {dailySupported() && <DailyNotifyToggle />}
 
             <div className="text-center my-8">
               <button
@@ -842,6 +863,59 @@ function QuickFacts({
       >
         <span>🔄</span> Inne sugestie
       </button>
+    </div>
+  );
+}
+
+/** Włączanie codziennego powiadomienia z ciekawostką (tylko w aplikacji na Androidzie). */
+function DailyNotifyToggle() {
+  const [settings, setSettings] = useState(loadDaily);
+  const [busy, setBusy] = useState(false);
+  const [denied, setDenied] = useState(false);
+
+  const apply = async (next: { enabled: boolean; hour: number }) => {
+    setBusy(true);
+    const result = await setDaily(next, FACTS_DB).catch(() => ({ ...next, enabled: false }));
+    setDenied(next.enabled && !result.enabled);
+    setSettings(result);
+    setBusy(false);
+  };
+
+  return (
+    <div className="mt-3 flex items-center justify-center gap-3 flex-wrap text-sm">
+      <button
+        onClick={() => apply({ ...settings, enabled: !settings.enabled })}
+        disabled={busy}
+        className={`px-4 py-2 rounded-xl font-semibold border transition-all ${
+          settings.enabled
+            ? "bg-white text-emerald-700 border-transparent shadow-md"
+            : "bg-white/10 text-white/80 border-white/15 hover:bg-white/20"
+        }`}
+      >
+        {settings.enabled ? "🔔 Codzienne powiadomienie włączone" : "🔕 Przypominaj o ciekawostce dnia"}
+      </button>
+      {settings.enabled && (
+        <label className="text-white/70 flex items-center gap-2">
+          o godzinie
+          <select
+            value={settings.hour}
+            disabled={busy}
+            onChange={(e) => apply({ ...settings, hour: Number(e.target.value) })}
+            className="bg-white/10 text-white rounded-lg px-2 py-1 border border-white/15"
+          >
+            {Array.from({ length: 16 }, (_, i) => i + 7).map((h) => (
+              <option key={h} value={h} className="text-gray-900">
+                {h}:00
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
+      {denied && (
+        <p className="w-full text-center text-amber-200 text-xs">
+          Brak zgody na powiadomienia — możesz ją włączyć w ustawieniach telefonu.
+        </p>
+      )}
     </div>
   );
 }

@@ -136,8 +136,17 @@ identyfikatorów użytkownika.
 
 ## Uprawnienia w manifeście
 
-Jedno: `android.permission.INTERNET` — potrzebne do zakładki „W tym dniu".
-Brak uprawnień wrażliwych (mikrofon, lokalizacja, pliki, kontakty).
+- `android.permission.INTERNET` — zakładka „W tym dniu” (Wikipedia).
+- `android.permission.POST_NOTIFICATIONS` — opcjonalna „Ciekawostka dnia”; zgoda pytana dopiero,
+  gdy użytkownik sam włączy przypomnienie.
+- `android.permission.RECEIVE_BOOT_COMPLETED` i `WAKE_LOCK` — dodaje wtyczka powiadomień, by po
+  restarcie telefonu przywrócić zaplanowane powiadomienia.
+
+Celowo **bez** `SCHEDULE_EXACT_ALARM` (usunięte w manifeście przez `tools:node="remove"`):
+powiadomienie przychodzi „około” wybranej godziny, więc deklaracja dokładnych alarmów w Play
+Console nie jest potrzebna. Brak uprawnień wrażliwych (mikrofon, lokalizacja, pliki, kontakty).
+Powiadomienia są lokalne — nic nie jest wysyłane na serwer, formularz bezpieczeństwa danych
+pozostaje bez zmian.
 
 ## Dostęp do aplikacji (dla recenzenta)
 
