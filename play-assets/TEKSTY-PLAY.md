@@ -52,10 +52,11 @@ Sześć osobnych kategorii poświęconych naszemu sportowi: Polski sport, Polska
 igrzyskach, Polska na mundialach, Polska na Euro, Polskie kluby i areny, Polskie
 pierwszyzny, a do tego sport w PRL i 18 polskich legend.
 
-Historia polskiego sportu
-15 rozdziałów o tym, jak rozwijał się polski sport — od siatkówki, piłki nożnej
-i skoków narciarskich po szermierkę, wioślarstwo, koszykówkę i pływanie:
-epoki, przełomowe momenty i ludzie, którzy pisali tę historię.
+Historia sportu w rozdziałach
+18 rozdziałów o tym, jak rozwijał się polski sport — od siatkówki, piłki nożnej
+i skoków narciarskich po szermierkę, himalaizm i żeglarstwo — oraz historia
+igrzysk, mundiali, Tour de France i Formuły 1: epoki, przełomowe momenty
+i ludzie, którzy pisali tę historię.
 
 Oś czasu
 Historia sportu ułożona chronologicznie — od antyku do dziś, dekada po dekadzie.

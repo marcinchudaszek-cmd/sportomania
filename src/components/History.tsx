@@ -10,6 +10,11 @@ function plural(n: number, one: string, few: string, many: string): string {
   return d >= 2 && d <= 4 && (t < 12 || t > 14) ? few : many;
 }
 
+/** Lata przed naszą erą zapisujemy w danych jako liczby ujemne. */
+function formatYear(y: number): string {
+  return y < 0 ? `${-y} p.n.e.` : String(y);
+}
+
 interface Props {
   /** Przejście do ciekawostek z danej kategorii (zakładka „Przeglądaj”). */
   onOpenCategory: (categoryId: string) => void;
@@ -148,7 +153,7 @@ function HistoryChapter({
               <li key={`${m.year}-${m.title}`} className="ml-5">
                 <span className={`absolute -left-[9px] mt-1.5 w-4 h-4 rounded-full bg-gradient-to-r ${h.color} ring-4 ring-white`} />
                 <div className="flex items-baseline gap-2 flex-wrap">
-                  <span className="font-black text-gray-900">{m.year}</span>
+                  <span className="font-black text-gray-900">{formatYear(m.year)}</span>
                   <span className="font-bold text-gray-800">{m.title}</span>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed mt-0.5">{m.text}</p>
