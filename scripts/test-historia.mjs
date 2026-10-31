@@ -41,5 +41,16 @@ await page.getByRole("button", { name: /Wszystkie dyscypliny/ }).click();
 await page.waitForTimeout(500);
 console.log("Powrót do listy — kart:", await page.locator("h3").count());
 
+// Każdy rozdział po kolei: liczba epok, momentów na osi i przycisków do ciekawostek.
+for (const title of await page.locator("h3").allInnerTexts()) {
+  await page.getByRole("button", { name: title }).click();
+  const eras = await page.locator("article").count();
+  const moments = await page.locator("ol li").count();
+  const links = await page.locator("section button").count();
+  console.log(`  ${title}: epok ${eras}, momentów ${moments}, przycisków ${links}`);
+  if (!eras || !moments || !links) errors.push(`pusty element w rozdziale „${title}”`);
+  await page.getByRole("button", { name: /Wszystkie dyscypliny/ }).click();
+}
+
 console.log("Błędy:", errors.length ? errors : "brak");
 await browser.close();
