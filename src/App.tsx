@@ -51,6 +51,9 @@ export default function App() {
   const [factKey, setFactKey] = useState(0);
   const [showEditor, setShowEditor] = useState(false);
   const [showAchievements, setShowAchievements] = useState(false);
+  // Cel przejścia z rozdziału historii: sylwetka w „Legendach” albo rok na „Osi czasu”.
+  const [legendFocus, setLegendFocus] = useState<string | null>(null);
+  const [yearFocus, setYearFocus] = useState<number | null>(null);
   const touchStartX = useRef<number | null>(null);
   const seenRef = useRef<string[]>(loadSeenIds());
   const currentFactRef = useRef<Fact | null>(null);
@@ -146,6 +149,16 @@ export default function App() {
     setBrowseList(getFactsByCategory(cat, allFacts)); // po switchView, bo ono bierze jeszcze starą kategorię
   };
 
+  const openLegend = (name: string) => {
+    switchView("legends", false);
+    setLegendFocus(name); // po switchView, które czyści cele przejść
+  };
+
+  const openYear = (year: number) => {
+    switchView("timeline", false);
+    setYearFocus(year);
+  };
+
   const handleSearch = (query: string) => {
     setSearchQuery(query);
     if (query.trim()) {
@@ -163,8 +176,12 @@ export default function App() {
     setViewMode("random");
   };
 
-  const switchView = (mode: ViewMode) => {
+  // autoScroll=false, gdy widok sam przewija się do konkretnego miejsca (legenda, dekada)
+  // — inaczej opóźnione przewinięcia poniżej nadpisałyby jego przewinięcie.
+  const switchView = (mode: ViewMode, autoScroll = true) => {
     setViewMode(mode);
+    setLegendFocus(null);
+    setYearFocus(null);
     setSearchQuery("");
     setSearchResults([]);
     if (mode === "browse") {
@@ -174,6 +191,7 @@ export default function App() {
     // treść zaczyna się poniżej krawędzi — przewijamy do niej automatycznie.
     // Powtarzamy kilka razy, bo część widoków (np. „W tym dniu") dociąga dane
     // asynchronicznie i dopiero wtedy strona jest dość długa, by było dokąd przewijać.
+    if (!autoScroll) return;
     [60, 500, 1500].forEach((delay) =>
       setTimeout(() => {
         contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -358,21 +376,21 @@ export default function App() {
         {/* === HISTORY === */}
         {viewMode === "history" && (
           <section>
-            <History onOpenCategory={openCategory} />
+            <History onOpenCategory={openCategory} onOpenLegend={openLegend} onOpenYear={openYear} />
           </section>
         )}
 
         {/* === TIMELINE === */}
         {viewMode === "timeline" && (
           <section>
-            <Timeline allFacts={allFacts} likedIds={likedIds} onToggleLike={handleToggleLike} />
+            <Timeline allFacts={allFacts} likedIds={likedIds} onToggleLike={handleToggleLike} focusYear={yearFocus} />
           </section>
         )}
 
         {/* === LEGENDS === */}
         {viewMode === "legends" && (
           <section>
-            <Legends />
+            <Legends focusName={legendFocus} />
           </section>
         )}
 

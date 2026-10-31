@@ -62,5 +62,39 @@ for (const region of regionNames) {
 }
 await page.screenshot({ path: path.join(OUT, "historia-swiat.png") });
 
+// Przejścia z rozdziału: legenda → „Legendy”, rok → „Oś czasu”.
+const inViewport = (loc) =>
+  loc.evaluate((el) => {
+    const r = el.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0;
+  });
+await page.getByRole("button", { name: /🇵🇱/ }).first().click().catch(() => {});
+await page.getByRole("button", { name: /Polskie skoki narciarskie/ }).click();
+await page.getByRole("button", { name: "⭐ Adam Małysz" }).click();
+await page.waitForTimeout(1200);
+const legendCard = page.locator('[id^="legend-"]', { hasText: "Adam Małysz" });
+const legendOpen = /najważniejsze osiągnięcia/i.test(await legendCard.innerText()); // nagłówek ma CSS uppercase
+console.log("Legenda Małysza: rozwinięta", legendOpen, "| widoczna", await inViewport(legendCard));
+if (!legendOpen || !(await inViewport(legendCard))) errors.push("przejście do legendy nie działa");
+await page.screenshot({ path: path.join(OUT, "historia-legenda.png") });
+
+await page.getByRole("button", { name: /Historia/ }).first().click();
+await page.getByRole("button", { name: /Polskie skoki narciarskie/ }).click();
+await page.getByRole("button", { name: "1972" }).click();
+await page.waitForTimeout(1200);
+const decade = page.locator("#decade-1970");
+console.log("Oś czasu: dekada 1970 widoczna", await inViewport(decade));
+if (!(await inViewport(decade))) errors.push("przejście do dekady nie działa");
+
+// Quiz z historii: pytanie z zamaskowanym rokiem i poprawna reakcja na odpowiedź.
+await page.getByRole("button", { name: /Quiz/ }).first().click();
+await page.locator("section").getByRole("button", { name: "📜 Historia" }).click(); // tryb quizu, nie zakładka
+const question = await page.locator("blockquote").innerText();
+console.log("Quiz z historii:", question.slice(0, 90));
+await page.locator(".grid.grid-cols-2 button").first().click(); // pierwsza odpowiedź, nie przełącznik trybu
+const feedback = await page.getByText(/Dobrze!|Prawidłowa odpowiedź/).count();
+console.log("Quiz — odpowiedź oceniona:", feedback > 0);
+if (!feedback) errors.push("quiz z historii nie ocenia odpowiedzi");
+
 console.log("Błędy:", errors.length ? errors : "brak");
 await browser.close();

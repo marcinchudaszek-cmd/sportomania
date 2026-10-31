@@ -1,10 +1,12 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Fact, CATEGORIES } from "../data/facts";
 
 interface TimelineProps {
   allFacts: Fact[];
   likedIds: string[];
   onToggleLike: (id: string) => void;
+  /** Rok kliknięty w rozdziale historii — oś przewija się do jego dekady. */
+  focusYear?: number | null;
 }
 
 interface DecadeGroup {
@@ -14,14 +16,24 @@ interface DecadeGroup {
 }
 
 function decadeOf(fact: Fact): { label: string; sortKey: number } {
-  const y = fact.year!;
+  return decadeOfYear(fact.year!);
+}
+
+function decadeOfYear(y: number): { label: string; sortKey: number } {
   if (y < 1900) return { label: "Przed 1900", sortKey: 0 };
   const start = Math.floor(y / 10) * 10;
   return { label: `Lata ${start}–${start + 9}`, sortKey: start };
 }
 
-export default function Timeline({ allFacts, likedIds, onToggleLike }: TimelineProps) {
+export default function Timeline({ allFacts, likedIds, onToggleLike, focusYear }: TimelineProps) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (focusYear == null) return;
+    // skok bez animacji („instant”, bo „auto” dziedziczy scroll-behavior: smooth z CSS) — oś liczy dziesiątki tysięcy pikseli i płynne przewijanie trwało kilka sekund
+    const key = decadeOfYear(focusYear).sortKey;
+    setTimeout(() => document.getElementById(`decade-${key}`)?.scrollIntoView({ behavior: "instant", block: "start" }), 150);
+  }, [focusYear]);
 
   const groups = useMemo<DecadeGroup[]>(() => {
     const dated = allFacts
@@ -49,7 +61,7 @@ export default function Timeline({ allFacts, likedIds, onToggleLike }: TimelineP
 
       <div className="space-y-8">
         {groups.map((group) => (
-          <div key={group.label}>
+          <div key={group.label} id={`decade-${group.sortKey}`} className="scroll-mt-3">
             <div className="sticky top-2 z-20 flex justify-center mb-4">
               <span className="px-5 py-2 rounded-full text-sm font-black text-white bg-gradient-to-r from-emerald-600 to-teal-700 shadow-lg border border-white/20 backdrop-blur-sm">
                 {group.label}

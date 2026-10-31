@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { HISTORY_REGIONS, SPORT_HISTORIES, SportHistory } from "../data/history";
 import { CATEGORIES } from "../data/facts";
+import { findLegendByName } from "../data/legends";
 
 /** Polska odmiana liczebników: 1 epoka, 2–4 epoki, 5+ epok (12–14 też „epok”). */
 function plural(n: number, one: string, few: string, many: string): string {
@@ -18,9 +19,13 @@ function formatYear(y: number): string {
 interface Props {
   /** Przejście do ciekawostek z danej kategorii (zakładka „Przeglądaj”). */
   onOpenCategory: (categoryId: string) => void;
+  /** Otwarcie sylwetki w zakładce „Legendy”. */
+  onOpenLegend: (name: string) => void;
+  /** Przejście do „Osi czasu” na dekadę danego roku. */
+  onOpenYear: (year: number) => void;
 }
 
-export default function History({ onOpenCategory }: Props) {
+export default function History({ onOpenCategory, onOpenLegend, onOpenYear }: Props) {
   const [openId, setOpenId] = useState<string | null>(null);
   const [region, setRegion] = useState<string>("pl");
   const topRef = useRef<HTMLDivElement | null>(null);
@@ -40,7 +45,13 @@ export default function History({ onOpenCategory }: Props) {
   return (
     <div ref={topRef} className="scroll-mt-3">
       {open ? (
-        <HistoryChapter history={open} onBack={() => setOpenId(null)} onOpenCategory={onOpenCategory} />
+        <HistoryChapter
+          history={open}
+          onBack={() => setOpenId(null)}
+          onOpenCategory={onOpenCategory}
+          onOpenLegend={onOpenLegend}
+          onOpenYear={onOpenYear}
+        />
       ) : (
         <>
           <div className="text-center mb-6">
@@ -102,10 +113,14 @@ function HistoryChapter({
   history: h,
   onBack,
   onOpenCategory,
+  onOpenLegend,
+  onOpenYear,
 }: {
   history: SportHistory;
   onBack: () => void;
   onOpenCategory: (categoryId: string) => void;
+  onOpenLegend: (name: string) => void;
+  onOpenYear: (year: number) => void;
 }) {
   const related = h.categories
     .map((id) => CATEGORIES.find((c) => c.id === id))
@@ -153,7 +168,13 @@ function HistoryChapter({
               <li key={`${m.year}-${m.title}`} className="ml-5">
                 <span className={`absolute -left-[9px] mt-1.5 w-4 h-4 rounded-full bg-gradient-to-r ${h.color} ring-4 ring-white`} />
                 <div className="flex items-baseline gap-2 flex-wrap">
-                  <span className="font-black text-gray-900">{formatYear(m.year)}</span>
+                  <button
+                    onClick={() => onOpenYear(m.year)}
+                    title="Pokaż tę dekadę na osi czasu"
+                    className="underline decoration-dotted decoration-gray-300 underline-offset-4 hover:decoration-gray-600"
+                  >
+                    <span className="font-black text-gray-900">{formatYear(m.year)}</span>
+                  </button>
                   <span className="font-bold text-gray-800">{m.title}</span>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed mt-0.5">{m.text}</p>
@@ -166,12 +187,24 @@ function HistoryChapter({
       {/* Legendy */}
       <section>
         <h3 className="text-white font-black text-xl px-1 mb-3">⭐ Ludzie, którzy pisali tę historię</h3>
+        <p className="text-white/50 text-xs px-1 mb-3 -mt-1">Wyróżnione nazwiska mają sylwetkę w zakładce „Legendy” — kliknij, by ją otworzyć.</p>
         <div className="flex flex-wrap gap-2">
-          {h.legends.map((name) => (
-            <span key={name} className="px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-white text-sm font-semibold">
-              {name}
-            </span>
-          ))}
+          {h.legends.map((name) =>
+            findLegendByName(name) ? (
+              <button
+                key={name}
+                onClick={() => onOpenLegend(name)}
+                title="Zobacz sylwetkę w zakładce Legendy"
+                className="px-3 py-1.5 rounded-full bg-white text-emerald-700 text-sm font-bold shadow-md hover:opacity-90 transition-opacity"
+              >
+                ⭐ {name}
+              </button>
+            ) : (
+              <span key={name} className="px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-white text-sm font-semibold">
+                {name}
+              </span>
+            )
+          )}
         </div>
       </section>
 

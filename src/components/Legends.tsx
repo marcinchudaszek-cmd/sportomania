@@ -1,10 +1,20 @@
-import { useMemo, useState } from "react";
-import { LEGENDS, Legend } from "../data/legends";
+import { useEffect, useMemo, useState } from "react";
+import { LEGENDS, Legend, findLegendByName } from "../data/legends";
 import { CATEGORIES } from "../data/facts";
 
-export default function Legends() {
+/** focusName — nazwisko z rozdziału historii: sylwetka zostaje rozwinięta i przewinięta do widoku. */
+export default function Legends({ focusName }: { focusName?: string | null }) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [sportFilter, setSportFilter] = useState<string>("all");
+
+  useEffect(() => {
+    const legend = focusName ? findLegendByName(focusName) : undefined;
+    if (!legend) return;
+    setSportFilter("all");
+    setExpandedId(legend.id);
+    // przewijamy po wyrenderowaniu rozwiniętej karty
+    setTimeout(() => document.getElementById(`legend-${legend.id}`)?.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
+  }, [focusName]);
 
   const sports = useMemo(() => {
     const ids = [...new Set(LEGENDS.map((l) => l.sport))];
@@ -86,7 +96,8 @@ function LegendCard({
 
   return (
     <div
-      className={`bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 cursor-pointer transition-all duration-300 ${
+      id={`legend-${legend.id}`}
+      className={`scroll-mt-3 bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 cursor-pointer transition-all duration-300 ${
         expanded ? "sm:col-span-2" : "hover:-translate-y-0.5 hover:shadow-2xl"
       }`}
       onClick={onToggle}

@@ -598,3 +598,14 @@ export const LEGENDS: Legend[] = [
     emoji: "💪",
   },
 ];
+
+/** Porównanie nazwisk bez względu na wielkość liter i znaki diakrytyczne („Djoković” = „djokovic”). */
+function normalizeName(s: string): string {
+  return s.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ł/g, "l").replace(/Ł/g, "L").toLowerCase().trim();
+}
+
+/** Sylwetka o danym nazwisku — używane przez rozdziały historii do linkowania legend. */
+export function findLegendByName(name: string): Legend | undefined {
+  const n = normalizeName(name);
+  return LEGENDS.find((l) => normalizeName(l.name) === n);
+}

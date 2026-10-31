@@ -1,8 +1,9 @@
 import { useState, useCallback } from "react";
 import { Fact, CATEGORIES } from "../data/facts";
 import { useLocalStorage } from "../utils/useLocalStorage";
+import { SPORT_HISTORIES } from "../data/history";
 
-type QuizKind = "category" | "year";
+type QuizKind = "category" | "year" | "history";
 
 interface QuizOption {
   id: string;
@@ -33,7 +34,28 @@ function generateCategoryQuestion(allFacts: Fact[]): QuizQuestion {
 
 function generateYearQuestion(allFacts: Fact[]): QuizQuestion {
   const dated = allFacts.filter((f) => f.year !== undefined);
-  const fact = dated[Math.floor(Math.random() * dated.length)];
+  return yearQuestionFor(dated[Math.floor(Math.random() * dated.length)]);
+}
+
+/** Przełomowe momenty z rozdziałów historii jako pytania „w którym roku?”. Lata p.n.e. pomijamy. */
+const HISTORY_FACTS: Fact[] = SPORT_HISTORIES.flatMap((h) =>
+  h.milestones
+    .filter((m) => m.year > 0)
+    .map((m, i) => ({
+      id: `hist-${h.id}-${i}`,
+      text: `${h.title} — ${m.title}. ${m.text}`,
+      category: h.categories[0],
+      year: m.year,
+      emoji: h.emoji,
+    }))
+);
+
+function generateHistoryQuestion(): QuizQuestion {
+  const q = yearQuestionFor(HISTORY_FACTS[Math.floor(Math.random() * HISTORY_FACTS.length)]);
+  return { ...q, kind: "history" };
+}
+
+function yearQuestionFor(fact: Fact): QuizQuestion {
   const correctYear = fact.year!;
   const maxYear = new Date().getFullYear();
 
@@ -54,6 +76,7 @@ function generateYearQuestion(allFacts: Fact[]): QuizQuestion {
 }
 
 function generateQuestion(kind: QuizKind, allFacts: Fact[]): QuizQuestion {
+  if (kind === "history") return generateHistoryQuestion();
   return kind === "year" ? generateYearQuestion(allFacts) : generateCategoryQuestion(allFacts);
 }
 
@@ -101,7 +124,7 @@ export default function QuizMode({ allFacts }: { allFacts: Fact[] }) {
   return (
     <div className="space-y-6">
       {/* Kind toggle */}
-      <div className="flex items-center justify-center gap-2">
+      <div className="flex items-center justify-center gap-2 flex-wrap">
         <button
           onClick={() => switchKind("category")}
           className={`px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 ${
@@ -121,6 +144,16 @@ export default function QuizMode({ allFacts }: { allFacts: Fact[] }) {
           }`}
         >
           📆 Zgadnij rok
+        </button>
+        <button
+          onClick={() => switchKind("history")}
+          className={`px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 ${
+            kind === "history"
+              ? "bg-white text-emerald-700 shadow-lg"
+              : "bg-white/10 text-white/70 hover:bg-white/20 border border-white/10"
+          }`}
+        >
+          📜 Historia
         </button>
       </div>
 
@@ -156,10 +189,12 @@ export default function QuizMode({ allFacts }: { allFacts: Fact[] }) {
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-emerald-500 to-green-600 shadow-md mb-4">
             {question.kind === "category"
               ? "🎯 Do jakiej dyscypliny należy ta ciekawostka?"
-              : "📆 W którym roku to się wydarzyło?"}
+              : question.kind === "history"
+                ? "📜 Z historii dyscyplin: w którym roku?"
+                : "📆 W którym roku to się wydarzyło?"}
           </span>
           <blockquote className="text-gray-800 text-lg sm:text-xl leading-relaxed font-medium mt-3">
-            {question.kind === "year" ? maskYears(question.fact.text) : question.fact.text}
+            {question.kind === "category" ? question.fact.text : maskYears(question.fact.text)}
           </blockquote>
         </div>
       </div>
