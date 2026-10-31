@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Fact, CATEGORIES } from "../data/facts";
+import { shareFact, ShareResult } from "../utils/share";
 
 interface FactCardProps {
   fact: Fact;
@@ -9,7 +10,8 @@ interface FactCardProps {
 }
 
 export default function FactCard({ fact, isNew, liked = false, onToggleLike }: FactCardProps) {
-  const [shared, setShared] = useState(false);
+  // wynik ostatniego udostępnienia — pokazujemy go przez chwilę na przycisku
+  const [shareState, setShareState] = useState<ShareResult | "working" | null>(null);
 
   const cat = CATEGORIES.find((c) => c.id === fact.category);
   const gradient = cat?.color || "from-emerald-500 to-green-600";
@@ -18,19 +20,20 @@ export default function FactCard({ fact, isNew, liked = false, onToggleLike }: F
   const isCustom = fact.id.startsWith("custom-");
 
   const handleShare = async () => {
-    const shareUrl = `${window.location.href.split("#")[0]}#fact=${fact.id}`;
-    try {
-      if (navigator.share) {
-        await navigator.share({ title: "SportoMania", text: fact.text, url: shareUrl });
-      } else {
-        await navigator.clipboard.writeText(shareUrl);
-        setShared(true);
-        setTimeout(() => setShared(false), 2000);
-      }
-    } catch {
-      // user cancelled share or clipboard unavailable
-    }
+    if (shareState === "working") return;
+    setShareState("working");
+    const result = await shareFact(fact, catLabel, catEmoji);
+    setShareState(result === "cancelled" ? null : result);
+    if (result !== "cancelled") setTimeout(() => setShareState(null), 2500);
   };
+
+  const shareLabel: Record<string, [string, string]> = {
+    working: ["⏳", "Przygotowuję…"],
+    shared: ["✅", "Udostępniono"],
+    downloaded: ["🖼️", "Pobrano obrazek"],
+    copied: ["✅", "Skopiowano!"],
+  };
+  const [shareIcon, shareText] = (shareState && shareLabel[shareState]) || ["📤", "Udostępnij"];
 
   return (
     <div
@@ -83,13 +86,13 @@ export default function FactCard({ fact, isNew, liked = false, onToggleLike }: F
           <button
             onClick={handleShare}
             className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
-              shared
+              shareState && shareState !== "working"
                 ? "bg-green-100 text-green-600"
                 : "bg-gray-100 text-gray-500 hover:bg-blue-50 hover:text-blue-500"
             }`}
           >
-            <span className="text-base">{shared ? "✅" : "📤"}</span>
-            {shared ? "Skopiowano!" : "Udostępnij"}
+            <span className="text-base">{shareIcon}</span>
+            {shareText}
           </button>
         </div>
       </div>
