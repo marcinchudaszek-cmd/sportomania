@@ -10,7 +10,7 @@ APK: **https://beagleapps.pl/apk/sportomania.apk**
 |---|---|
 | **Losowa** | ciekawostka na chybił trafił |
 | **W tym dniu** | sportowe rocznice dzisiejszej daty |
-| **Historia** | rozdziały o rozwoju dyscyplin: epoki, przełomowe momenty, legendy (18 rozdziałów o polskim sporcie i 4 światowe) |
+| **Historia** | rozdziały o rozwoju dyscyplin: epoki, przełomowe momenty, legendy (18 rozdziałów o polskim sporcie i 11 światowych) |
 | **Oś czasu** | fakty ułożone chronologicznie |
 | **Przeglądaj** | filtrowanie po dyscyplinie |
 | **Quiz** | tryb pytań ze wszystkich kategorii |
