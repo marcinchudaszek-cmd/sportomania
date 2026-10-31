@@ -50,7 +50,7 @@ danego dnia. Dane pobierane na bieżąco z polskiej Wikipedii.
 Silny akcent polski
 Sześć osobnych kategorii poświęconych naszemu sportowi: Polski sport, Polska na
 igrzyskach, Polska na mundialach, Polska na Euro, Polskie kluby i areny, Polskie
-pierwszyzny, a do tego sport w PRL i 18 polskich legend.
+pierwszyzny, a do tego sport w PRL i 49 polskich legend.
 
 Historia sportu w rozdziałach
 18 rozdziałów o tym, jak rozwijał się polski sport — od siatkówki, piłki nożnej
@@ -66,7 +66,7 @@ Zgadnij kategorię albo rok wydarzenia. Wyniki i serie poprawnych odpowiedzi
 zapisują się na urządzeniu.
 
 Legendy sportu
-39 sylwetek zawodników, którzy zmienili swoje dyscypliny — z osiągnięciami
+69 sylwetek zawodników, którzy zmienili swoje dyscypliny — z osiągnięciami
 i krótkimi biografiami.
 
 Osiągnięcia i ulubione

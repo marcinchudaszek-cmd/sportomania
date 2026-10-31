@@ -14,7 +14,7 @@ APK: **https://beagleapps.pl/apk/sportomania.apk**
 | **Oś czasu** | fakty ułożone chronologicznie |
 | **Przeglądaj** | filtrowanie po dyscyplinie |
 | **Quiz** | tryb pytań ze wszystkich kategorii |
-| **Legendy** | 40 sylwetek zawodników |
+| **Legendy** | 69 sylwetek zawodników |
 | **Ulubione** | własna lista zapisanych faktów |
 | **Osiągnięcia** | odznaki za korzystanie z aplikacji |
 
